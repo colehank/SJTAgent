@@ -16,30 +16,110 @@ SJTAgent是一个使用大语言模型(LLM)自动生成个人情境判断测验(
 
 ## 项目结构
 
-```
-SJTAgent/
-├── sjtagent_v0.1.py         # 主程序入口
-├── src/
-│   ├── workflow/            # 核心工作流程模块
-│   │   ├── main.py         # 主要生成函数
-│   │   ├── graph_builder.py # 工作流图构建
-│   │   ├── trait_analysis.py # 特质分析
-│   │   ├── situation_construction.py # 情境构建
-│   │   ├── behavior_adaptation.py # 行为适应
-│   │   └── quality_control.py # 质量控制
-│   └── eval/               # 评估模块
-│       ├── aig_eval.py     # AIG评估
-│       └── item_eval.py    # 题目评估
-├── datasets/               # 数据集
-│   ├── SJTs/              # SJT测验数据
-│   └── aig_prompts/       # AIG提示模板
-├── results/               # 生成结果
-└── docs/                  # 文档和图片
+```mermaid
+flowchart TB
+    %% CLI Layer
+    subgraph "CLI Layer"
+        CLI1(["sjtagent_v0.1.py"]):::cli
+        CLI2(["make_baseline_sjt.py"]):::cli
+        CLI3(["eval_aigs.py"]):::cli
+    end
+
+    %% Data Stores
+    DS(["datasets/"]):::datastore
+    RSJTs(["results/SJTs/"]):::datastore
+    REVAL(["results/eval/"]):::datastore
+
+    %% Workflow Execution
+    subgraph "Workflow Execution"
+        Orch(["main.py"]):::module
+        GB(["graph_builder.py"]):::module
+        TA(["trait_analysis.py"]):::module
+        SC(["situation_construction.py"]):::module
+        BA(["behavior_adaptation.py"]):::module
+        QC(["quality_control.py"]):::module
+        State(["state.py"]):::state
+        LLMUtil(["llm_utils.py"]):::module
+    end
+
+    %% External LLM Service
+    LLM(["LLM API"]):::external
+
+    %% Evaluation Modules
+    subgraph "Evaluation Workflow"
+        AIG(["aig_eval.py"]):::module
+        IE(["item_eval.py"]):::module
+        TEST(["test_structured_output.py"]):::module
+    end
+
+    %% Connections - Generation Workflow
+    CLI1 -->|"invoke generation"| Orch
+    CLI2 -->|"invoke baseline"| Orch
+    DS -->|"read input data"| TA
+    Orch -->|"build DAG"| GB
+    GB -->|"start pipeline"| TA
+    TA -->|"State"| State
+    TA -->|"LLM call"| LLM
+    TA --> SC
+    SC -->|"State"| State
+    SC -->|"LLM call"| LLM
+    SC --> BA
+    BA -->|"State"| State
+    BA -->|"LLM call"| LLM
+    BA --> QC
+    QC -->|"State"| State
+    QC -->|"LLM call"| LLM
+    QC -->|"write SJTs"| RSJTs
+    QC -.->|"revision loop"| BA
+
+    %% Connections - Evaluation Workflow
+    CLI3 -->|"invoke evaluation"| AIG
+    RSJTs -->|"read generated SJTs"| AIG
+    AIG -->|"write eval data"| REVAL
+    CLI3 --> IE
+    IE -->|"read generated SJTs"| RSJTs
+    IE -->|"write CSV"| REVAL
+    TEST -->|"unit tests"| IE
+
+    %% LLM Util Integration
+    TA --> LLMUtil
+    SC --> LLMUtil
+    BA --> LLMUtil
+    QC --> LLMUtil
+
+    %% Click Events
+    click CLI1 "https://github.com/colehank/sjtagent/blob/main/sjtagent_v0.1.py"
+    click CLI2 "https://github.com/colehank/sjtagent/blob/main/make_baseline_sjt.py"
+    click CLI3 "https://github.com/colehank/sjtagent/blob/main/eval_aigs.py"
+    click Orch "https://github.com/colehank/sjtagent/blob/main/src/workflow/main.py"
+    click GB "https://github.com/colehank/sjtagent/blob/main/src/workflow/graph_builder.py"
+    click TA "https://github.com/colehank/sjtagent/blob/main/src/workflow/trait_analysis.py"
+    click SC "https://github.com/colehank/sjtagent/blob/main/src/workflow/situation_construction.py"
+    click BA "https://github.com/colehank/sjtagent/blob/main/src/workflow/behavior_adaptation.py"
+    click QC "https://github.com/colehank/sjtagent/blob/main/src/workflow/quality_control.py"
+    click State "https://github.com/colehank/sjtagent/blob/main/src/workflow/state.py"
+    click LLMUtil "https://github.com/colehank/sjtagent/blob/main/src/workflow/llm_utils.py"
+    click AIG "https://github.com/colehank/sjtagent/blob/main/src/eval/aig_eval.py"
+    click IE "https://github.com/colehank/sjtagent/blob/main/src/eval/item_eval.py"
+    click TEST "https://github.com/colehank/sjtagent/blob/main/src/eval/test_structured_output.py"
+    click DS "https://github.com/colehank/sjtagent/tree/main/datasets/"
+    click RSJTs "https://github.com/colehank/sjtagent/tree/main/results/SJTs/"
+    click REVAL "https://github.com/colehank/sjtagent/tree/main/results/eval/"
+
+    %% Styles
+    classDef cli fill:#bbbbbb,stroke:#333,stroke-width:1px
+    classDef module fill:#ADD8E6,stroke:#333,stroke-width:1px
+    classDef state fill:#EFEFEF,stroke:#333,stroke-width:1px
+    classDef external fill:#FFA500,stroke:#333,stroke-width:1px
+    classDef datastore fill:#90EE90,stroke:#333,stroke-width:1px
 ```
 
 ## 快速开始
 
 1. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
 ```bash
 pip install -r requirements.txt
 ```
