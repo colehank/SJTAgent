@@ -120,16 +120,13 @@ flowchart TB
 ```bash
 pip install -r requirements.txt
 ```
-```bash
-pip install -r requirements.txt
-```
 
-2. 当前v0.1 工作流版本：
+2. 使用当前v0.1 工作流版本：
 sjtagent_v0.1.py
 
 
-3. 生成题目质量评估：
-python eval_aigs.py
+3. 使用生成题目质量评估：
+eval_aigs.py
 
 ## TODO
 
