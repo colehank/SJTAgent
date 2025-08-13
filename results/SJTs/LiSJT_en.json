@@ -1,0 +1,966 @@
+{
+    "Openness": {
+        "1": {
+            "situation": "You have an important presentation at work today, and you wake up feeling under the weather. You think you might have caught a cold. What would you do?",
+            "options": {
+                "A": "I panic and call in sick, feeling overwhelmed by the idea of not performing at my best.",
+                "B": "I feel anxious and stress about how my illness might affect the presentation and worry that it will damage my reputation.",
+                "C": "I assess how I'm feeling and decide to go to work, taking care to manage my health and deliver the presentation as best as I can.",
+                "D": "I consider postponing the presentation, but ultimately decide to go ahead and manage any symptoms professionally."
+            }
+        },
+        "2": {
+            "situation": "While reviewing a project, you realize you made a mistake that could cost the company money. No one else knows yet. What would you do?",
+            "options": {
+                "A": "I feel very anxious and decide to keep quiet about the mistake, worrying about what others might think if I confess.",
+                "B": "I stress over the mistake, feeling depressed and worry about the consequences and my future at the company.",
+                "C": "I acknowledge the mistake and immediately inform my supervisor, focusing on finding a solution.",
+                "D": "I calmly assess the situation, decide how best to address the issue, and work on fixing the mistake."
+            }
+        },
+        "3": {
+            "situation": "During a family dinner, an argument breaks out over political opinions. You find yourself in the middle of a heated debate. What would you do?",
+            "options": {
+                "A": "I withdraw from the conversation, feeling anxious and upset about the conflict.",
+                "B": "I feel overwhelmed and leave the table, worried that my opinions might offend others.",
+                "C": "I stay calm and try to mediate the discussion, hoping to find common ground.",
+                "D": "I express my opinions openly and respectfully, encouraging a healthy debate."
+            }
+        },
+        "4": {
+            "situation": "You are waiting to hear back after applying for a job that you really want. You haven't received any communication from the company yet. What would you do?",
+            "options": {
+                "A": "I feel anxious and start to assume that the silence means I've been rejected.",
+                "B": "I get stressed and obsessively check my email and phone for any updates.",
+                "C": "I remain patient and optimistic, understanding that hiring processes can take time.",
+                "D": "I distract myself with other activities and consider following up with the company in a few days."
+            }
+        },
+        "5": {
+            "situation": "You’ve been given new responsibilities at work that require skills you haven’t mastered yet. What would you do?",
+            "options": {
+                "A": "I worry constantly about failure and feel anxious about my performance.",
+                "B": "I stress over being inadequate and fear I won't be able to meet expectations.",
+                "C": "I accept the challenge positively and plan to seek resources to develop the necessary skills.",
+                "D": "I view this as an opportunity for growth and seek advice from colleagues to improve."
+            }
+        },
+        "6": {
+            "situation": "You overhear colleagues discussing a rumor that there will be layoffs soon, and your job may be at risk. What would you do?",
+            "options": {
+                "A": "I panic and feel convinced that I will be laid off, causing me to worry excessively.",
+                "B": "I become anxious and start looking for new job opportunities, feeling discouraged.",
+                "C": "I choose to remain calm and focus on performing my job duties well, trusting in my abilities.",
+                "D": "I talk to my supervisor to clarify the situation and proactively manage any risks."
+            }
+        },
+        "7": {
+            "situation": "Your friend accuses you of forgetting their birthday, although you are sure you didn't. What would you do?",
+            "options": {
+                "A": "I feel guilty and doubt myself, worrying that I may have indeed forgotten.",
+                "B": "I respond defensively and get upset, fearing that my friend is angry with me.",
+                "C": "I calmly explain the misunderstanding and assure my friend of my intentions.",
+                "D": "I suggest celebrating together soon to reassure both myself and my friend."
+            }
+        },
+        "8": {
+            "situation": "You receive critical feedback on your work from your boss, despite having put in a lot of effort. How do you react?",
+            "options": {
+                "A": "I feel upset and question my abilities, worrying that I'm not good enough.",
+                "B": "I become anxious and dwell on the negative feedback, fearing that I’ve let the team down.",
+                "C": "I view the feedback constructively and plan to use it to improve my work.",
+                "D": "I remain positive, accepting the critique as an opportunity for growth and development."
+            }
+        },
+        "9": {
+            "situation": "You spill coffee on your colleague's important documents moments before a big meeting. What would you do?",
+            "options": {
+                "A": "I feel very anxious and find it hard to face my colleague, worrying about their reaction.",
+                "B": "I apologize profusely, feeling embarrassed and fearing that I've damaged the relationship.",
+                "C": "I apologize sincerely and offer to help restore or reprint the documents before the meeting.",
+                "D": "I address the spill calmly and assist in quickly mitigating the situation."
+            }
+        },
+        "10": {
+            "situation": "Your manager is considering you for a leadership position but has reservations about your experience. How do you respond?",
+            "options": {
+                "A": "I feel anxious and worry about not being good enough for the role, fearing rejection.",
+                "B": "I feel stressed and doubt my capabilities, thinking I'm not ready for leadership.",
+                "C": "I focus on my strengths and plan to demonstrate my potential during the selection process.",
+                "D": "I welcome the challenge and actively seek feedback to become a better candidate."
+            }
+        },
+        "11": {
+            "situation": "You are organizing an event, and one of the key speakers cancels at the last minute. What would you do?",
+            "options": {
+                "A": "I panic and feel overwhelmed, worrying about the event failing.",
+                "B": "I stress about the cancellation and feel anxious about how attendees might react.",
+                "C": "I quickly look for a replacement or adjust the schedule to minimize disruption.",
+                "D": "I evaluate the situation calmly and find solutions to ensure the event's success."
+            }
+        },
+        "12": {
+            "situation": "You receive a mysterious text stating, 'We need to talk,' from your boss. What would you do?",
+            "options": {
+                "A": "I immediately assume the worst and worry incessantly about losing my job.",
+                "B": "I feel anxious and dread the conversation, fearing negative feedback or bad news.",
+                "C": "I choose to stay calm, reminding myself that the conversation could be about anything.",
+                "D": "I prepare for the meeting positively and reflect on my recent work performance."
+            }
+        },
+        "13": {
+            "situation": "You find out that a close colleague has been gossiping about you to others at work. What would you do?",
+            "options": {
+                "A": "I feel hurt and anxious, worrying about the damage to my reputation.",
+                "B": "I internally stress and avoid confrontation, fearing it might worsen the situation.",
+                "C": "I approach my colleague directly to talk about the issue and set boundaries.",
+                "D": "I treat it as a learning experience and strive to maintain professional integrity."
+            }
+        },
+        "14": {
+            "situation": "You are waiting anxiously for medical test results, and they are delayed. What would you do?",
+            "options": {
+                "A": "I feel stressed and fear the worst, imagining all sorts of negative scenarios.",
+                "B": "I become anxious and obsess about potential outcomes, feeling compromised in my daily routine.",
+                "C": "I choose to remain patient and keep myself occupied with other activities.",
+                "D": "I remind myself that delays are normal and focus on staying positive."
+            }
+        },
+        "15": {
+            "situation": "You are given a last-minute deadline by your manager, which could compromise your work-life balance this week. What would you do?",
+            "options": {
+                "A": "I feel overwhelmed and worry about not meeting the deadline, compromising on quality.",
+                "B": "I stress about the added workload and fear burning out due to inadequate time management.",
+                "C": "I prioritize tasks effectively and communicate my situation with the manager for support.",
+                "D": "I plan my schedule strategically to accommodate the deadline, while maintaining balance."
+            }
+        },
+        "16": {
+            "situation": "Your child’s teacher calls you in for a meeting without specifying the reason. What would you do?",
+            "options": {
+                "A": "I feel anxious and anticipate negative news, worrying about my child’s wellbeing.",
+                "B": "I become stressed and expect the worst possible outcome, fearing disappointment.",
+                "C": "I remain calm and hope that the meeting will provide helpful insights.",
+                "D": "I prepare for the meeting with a positive mindset, open to constructive discussion."
+            }
+        },
+        "17": {
+            "situation": "You find out that major changes are happening in your company, but details haven't been disclosed. What would you do?",
+            "options": {
+                "A": "I worry incessantly about job security and fear the worst for my career.",
+                "B": "I feel stressed about the unknowns and spend time speculating on potential impacts.",
+                "C": "I stay informed about official updates and focus on adjusting to changes positively.",
+                "D": "I see this as an opportunity to engage with management and learn more about potential developments."
+            }
+        },
+        "18": {
+            "situation": "You’ve planned a vacation for months, and there’s a sudden unexpected complication that might delay your trip. What would you do?",
+            "options": {
+                "A": "I feel anxious and disappointed, worrying about losing money and time.",
+                "B": "I stress over the complication and fear that the vacation will be ruined completely.",
+                "C": "I stay calm and work through the complication to find alternative solutions.",
+                "D": "I remain optimistic and flexible, planning to adjust any reservations to fit the circumstances."
+            }
+        },
+        "19": {
+            "situation": "Your team receives poor results in a project you led. How do you proceed?",
+            "options": {
+                "A": "I feel anxious and internalize the failure, worrying about my capability to lead.",
+                "B": "I stress over the negative perception and fear losing credibility with my team.",
+                "C": "I analyze the results constructively and focus on improving strategies for future projects.",
+                "D": "I engage the team in feedback discussions to develop better approaches collaboratively."
+            }
+        },
+        "20": {
+            "situation": "After submitting a report, you realize a critical error in the data that impacts findings significantly. What would you do?",
+            "options": {
+                "A": "I panic and worry about my reputation, deciding to keep quiet about the mistake.",
+                "B": "I feel stressed and embarrassed, fearing repercussions from the error.",
+                "C": "I take responsibility and inform stakeholders, focusing on correcting and clarifying the error.",
+                "D": "I address the mistake promptly and propose solutions to mitigate its impact."
+            }
+        },
+        "21": {
+            "situation": "You are asked to speak at a public event, but you are not entirely comfortable with public speaking. How do you handle it?",
+            "options": {
+                "A": "I feel anxious and panic about the prospect, worrying about being judged by the audience.",
+                "B": "I stress over the event and fear that I’ll make mistakes during the speech.",
+                "C": "I prepare thoroughly and plan to do my best, seeking advice to enhance confidence.",
+                "D": "I view it as an opportunity for growth and aim to practice to build my skills."
+            }
+        },
+        "22": {
+            "situation": "You discover that a close friend's social media post seems targeted at you negatively, though they haven’t mentioned you directly. What would you do?",
+            "options": {
+                "A": "I feel hurt and anxious, worrying about the implications of the post on our friendship.",
+                "B": "I overthink the post and fear that I've done something wrong, causing distress and avoidance.",
+                "C": "I approach my friend directly to discuss the post and clear up any misunderstandings.",
+                "D": "I choose to stay calm and assess the context before making assumptions or reacting negatively."
+            }
+        }
+    },
+    "Conscientiousness": {
+        "1": {
+            "situation": "You submitted a report for work and received feedback that there are numerous mistakes. You feel this reflects poorly on your abilities. What would you do?",
+            "options": {
+                "A": "I spend the next few hours worrying and wondering if everyone thinks I am incompetent.",
+                "B": "I avoid bringing up the feedback with my supervisor because I'm too embarrassed about the mistakes.",
+                "C": "I review the feedback, correct the errors, and make a note to be more careful next time.",
+                "D": "I thank my supervisor for the feedback and see this as an opportunity to improve my skills."
+            }
+        },
+        "2": {
+            "situation": "During a team meeting, someone disagrees with your proposal in front of everyone, pointing out a few flaws. How do you respond?",
+            "options": {
+                "A": "I feel flustered and start doubting whether my idea was any good in the first place.",
+                "B": "I don't say anything, and the disagreement eats at me for hours after the meeting.",
+                "C": "I calmly acknowledge their points and suggest ways to refine the proposal.",
+                "D": "I thank them for their feedback, emphasize the strengths of the idea, and move the conversation forward."
+            }
+        },
+        "3": {
+            "situation": "You've been waiting for a text from a friend, but hours have gone by without a response. You start to feel uneasy about it. What do you do?",
+            "options": {
+                "A": "I immediately assume they must be upset with me and replay our last interaction in my head.",
+                "B": "I text them again, worried that I may have offended them.",
+                "C": "I remind myself that they might just be busy or taking a break and wait for their response.",
+                "D": "I leave it for now and try to focus on other things until they respond."
+            }
+        },
+        "4": {
+            "situation": "You are giving a presentation at work, and you accidentally stumble over your words for a brief moment. Everyone is watching. How do you react?",
+            "options": {
+                "A": "I feel deeply embarrassed and worry that everyone thinks I'm unprofessional.",
+                "B": "I try not to look at anyone and hastily finish the presentation to get it over with.",
+                "C": "I laugh at myself and continue the presentation confidently.",
+                "D": "I pause briefly, regain my composure, and carry on with the presentation as usual."
+            }
+        },
+        "5": {
+            "situation": "You overhear two colleagues laughing while glancing in your direction. You start wondering if they are talking about you. How do you respond?",
+            "options": {
+                "A": "I assume they are making fun of me and feel humiliated.",
+                "B": "I avoid interacting with them for the rest of the day in case they were mocking me.",
+                "C": "I shrug it off and assume their laughter isn't related to me.",
+                "D": "I approach them later to engage in conversation without assuming anything negative."
+            }
+        },
+        "6": {
+            "situation": "You're in a group setting and someone makes a joke that you perceive might be targeting you. How do you react?",
+            "options": {
+                "A": "I obsess over the joke and worry that everyone else secretly agrees with it.",
+                "B": "I withdraw from the conversation, feeling hurt and vulnerable.",
+                "C": "I laugh it off or ignore it, assuming it wasn’t malicious.",
+                "D": "I join in the humor by responding lightheartedly to the joke."
+            }
+        },
+        "7": {
+            "situation": "Your manager suddenly calls you into their office without explaining why, and you start feeling nervous. What do you do?",
+            "options": {
+                "A": "I start imagining worst-case scenarios and feel panicked.",
+                "B": "I hesitate before entering the office, worried that I might be in trouble.",
+                "C": "I calmly enter the office and wait to hear what the manager has to say.",
+                "D": "I remind myself that there could be a variety of reasons for the meeting and don’t overthink it."
+            }
+        },
+        "8": {
+            "situation": "You've made a mistake in an important project and now need to inform your team about it. How do you handle the situation?",
+            "options": {
+                "A": "I feel nervous and delay sharing the information, hoping no one will notice.",
+                "B": "I hide the mistake as long as possible, afraid of judgment from my team.",
+                "C": "I promptly inform the team, taking responsibility and proposing a solution.",
+                "D": "I proactively share the mistake and reassure the team that it can be corrected."
+            }
+        },
+        "9": {
+            "situation": "Your coworker receives high praise from your boss for completing a task that you believe you could have done better. How do you react?",
+            "options": {
+                "A": "I feel envious and worry that I'll never be able to measure up.",
+                "B": "I avoid interacting with the coworker for a while, feeling bitter and insecure.",
+                "C": "I smile and congratulate them, knowing that there's room for everyone to succeed.",
+                "D": "I use this as motivation to improve my own performance next time."
+            }
+        },
+        "10": {
+            "situation": "You've just finished explaining an idea in a meeting, and someone cuts you off and changes the topic without acknowledging your point. What would you do?",
+            "options": {
+                "A": "I feel ignored and start second-guessing whether my idea was even worth sharing.",
+                "B": "I remain silent for the rest of the meeting, worrying about how I was perceived.",
+                "C": "I calmly bring the conversation back to my idea once there's an opportunity.",
+                "D": "I assertively speak up to redirect attention to my point without overthinking."
+            }
+        },
+        "11": {
+            "situation": "You are at a social event and accidentally spill your drink in front of someone you were trying to impress. How do you react?",
+            "options": {
+                "A": "I feel mortified and start avoiding that person for the rest of the event.",
+                "B": "I clean up the mess while nervously apologizing repeatedly, feeling ashamed.",
+                "C": "I laugh off the accident, apologize briefly, and continue enjoying the event.",
+                "D": "I casually clean it up, make light conversation about it, and move on."
+            }
+        },
+        "12": {
+            "situation": "You notice someone in your workplace often speaks to you in a curt manner, and you start wondering why. How do you respond?",
+            "options": {
+                "A": "I assume they must dislike me and worry about what I did wrong.",
+                "B": "I start avoiding interactions with them to avoid further discomfort.",
+                "C": "I let it go, realizing their behavior might not be personal.",
+                "D": "I initiate a polite conversation with them to build a better rapport."
+            }
+        },
+        "13": {
+            "situation": "You are running a meeting and someone points out a minor error in your presentation that you overlooked. How do you react?",
+            "options": {
+                "A": "I feel embarrassed and struggle to focus for the remainder of the meeting.",
+                "B": "I apologize excessively and lose confidence in my ability to lead the meeting.",
+                "C": "I acknowledge the mistake and thank them for pointing it out, then continue with the presentation.",
+                "D": "I quickly address the correction and smoothly pivot back to the main content of the presentation."
+            }
+        },
+        "14": {
+            "situation": "You receive an email from your boss asking you to meet them urgently after lunch. How do you feel and behave?",
+            "options": {
+                "A": "I feel anxious and agonize about whether I've done something wrong.",
+                "B": "I spend the whole lunch break worrying instead of eating or relaxing.",
+                "C": "I prepare for the meeting but approach it calmly, waiting to hear what it’s about.",
+                "D": "I acknowledge the uncertainty of the situation, but do not allow it to disturb my focus or well-being."
+            }
+        },
+        "15": {
+            "situation": "A coworker gives you critical feedback on a project you spent weeks working on. How do you handle it?",
+            "options": {
+                "A": "I feel hurt by the criticism and wonder if I'm not as skilled as I thought.",
+                "B": "I feel upset and avoid engaging with the coworker, believing they were too harsh.",
+                "C": "I examine the feedback constructively and use it to improve the project.",
+                "D": "I thank the coworker for their feedback and pursue ways to make the necessary improvements."
+            }
+        },
+        "16": {
+            "situation": "You have to give a performance review to a peer, and you worry about them reacting negatively to constructive criticism. What do you do?",
+            "options": {
+                "A": "I overthink the wording of my feedback so much that I water it down and avoid being honest.",
+                "B": "I feel nervous and find excuses to delay the review altogether.",
+                "C": "I deliver the feedback constructively and focus on ways to help them improve.",
+                "D": "I communicate the feedback directly but tactfully, confident in its value."
+            }
+        },
+        "17": {
+            "situation": "You receive a neutral reply to a friendly email you sent to a colleague and start analyzing their tone. What is your reaction?",
+            "options": {
+                "A": "I assume they are annoyed at me and feel insecure about initiating further communication.",
+                "B": "I wait a long time before emailing them again, feeling uncertain about their attitude toward me.",
+                "C": "I recognize that their tone might not reflect strong emotions and move past it.",
+                "D": "I send another email later, keeping the communication professional and confident."
+            }
+        },
+        "18": {
+            "situation": "You are tasked with a high-pressure assignment but realize midway that you're behind schedule. How do you react?",
+            "options": {
+                "A": "I panic and spend more time stressing about the deadline than working efficiently.",
+                "B": "I keep worrying about failing and consider asking someone if they can take over the project.",
+                "C": "I reassess the timeline calmly and work on a plan to finish as much as possible.",
+                "D": "I communicate with colleagues or supervisors about the situation while focusing on solutions."
+            }
+        },
+        "19": {
+            "situation": "You are asked to speak in front of a group but start worrying that you might forget what to say. What would you do?",
+            "options": {
+                "A": "I fixate on my nerves and keep thinking about how embarrassing it would be to mess up.",
+                "B": "I doubt myself and speak too quickly or nervously during the presentation.",
+                "C": "I prepare as best I can and focus on delivering the message confidently.",
+                "D": "I embrace the opportunity and calmly remind myself that people value content more than perfection."
+            }
+        },
+        "20": {
+            "situation": "You are at a dinner gathering and accidentally say something that you realize might be interpreted as rude. How do you respond?",
+            "options": {
+                "A": "I obsess over whether I offended the person and feel bad for the rest of the evening.",
+                "B": "I avoid talking to the person, feeling flustered and ashamed.",
+                "C": "I briefly apologize if necessary and move forward with the conversation.",
+                "D": "I clarify or apologize casually, confident that no harm was meant."
+            }
+        },
+        "21": {
+            "situation": "You’re asked to take on a new role at work that involves greater responsibility. How do you respond?",
+            "options": {
+                "A": "I immediately worry that I’ll fail and let everyone down.",
+                "B": "I hesitate to accept the role, fearing that I might not be good enough.",
+                "C": "I weigh the opportunity calmly and take it as a chance to grow professionally.",
+                "D": "I accept the role with confidence, recognizing that challenges are part of development."
+            }
+        },
+        "22": {
+            "situation": "You send a text to a close friend about something important and don’t hear back for hours. How do you react?",
+            "options": {
+                "A": "I start imagining worst-case scenarios, like them being upset with me or angry about the message.",
+                "B": "I wonder whether I phrased the text poorly and regret sending it.",
+                "C": "I assume they’re occupied and wait patiently for a reply.",
+                "D": "I give them the benefit of the doubt, trusting that they'll respond when they can."
+            }
+        }
+    },
+    "Extraversion": {
+        "1": {
+            "situation": "You are at a team meeting where your manager praises one of your coworkers for their recent success. This coworker was previously part of a project you worked on, but their contribution was relatively minor. How do you respond?",
+            "options": {
+                "A": "I feel upset and dwell on how unfair the situation is, but say nothing.",
+                "B": "I feel frustrated and bring it up later with another colleague, complaining about the unfairness.",
+                "C": "I acknowledge the manager's praise and remind myself that everyone gets recognition at different times.",
+                "D": "I am unfazed and use it as motivation to excel further in my own work."
+            }
+        },
+        "2": {
+            "situation": "During a social event at work, you overhear colleagues laughing, and you suspect they might be laughing about you. What do you do?",
+            "options": {
+                "A": "I avoid the group for the rest of the event to prevent feeling hurt.",
+                "B": "I ruminate on what I might have done wrong and feel anxious for the rest of the evening.",
+                "C": "I choose to let it go, assuming their laughter is unrelated to me.",
+                "D": "I approach them casually and join the conversation to assess the situation."
+            }
+        },
+        "3": {
+            "situation": "You receive an email from your boss with some critical feedback on your recent project. How do you respond?",
+            "options": {
+                "A": "I feel overwhelmed and immediately start doubting my competence at work.",
+                "B": "I overanalyze the criticism, worry about my boss's opinion of me, and avoid responding right away.",
+                "C": "I acknowledge the feedback and make notes on how to improve on the next project.",
+                "D": "I thank my boss for the feedback and ask clarifying questions to improve my performance."
+            }
+        },
+        "4": {
+            "situation": "While working on a group project, one of your team members takes a different approach than you initially agreed upon. How do you react?",
+            "options": {
+                "A": "I feel anxious about the impact of their decision and avoid discussing it with them.",
+                "B": "I struggle with frustration but ruminate on the potential negative consequences for the project.",
+                "C": "I calmly discuss their approach with them to understand their perspective and ensure alignment.",
+                "D": "I adapt to their approach and focus on keeping the project on track."
+            }
+        },
+        "5": {
+            "situation": "You give a presentation to a client, but they seem distracted and disinterested. How do you feel and respond?",
+            "options": {
+                "A": "I feel humiliated and spend the rest of the day second-guessing everything I said.",
+                "B": "I feel anxious and worry the client has lost faith in me, but I avoid addressing it directly.",
+                "C": "I continue with the presentation, making a note to follow up later for feedback.",
+                "D": "I adapt my approach during the presentation to try and re-engage the client."
+            }
+        },
+        "6": {
+            "situation": "During a discussion with a friend, you accidentally interrupt them, and they seem annoyed. What do you do?",
+            "options": {
+                "A": "I feel terrible and replay the situation in my mind, imagining they're angry with me.",
+                "B": "I feel embarrassed and distance myself from the friend for the rest of the day.",
+                "C": "I apologize immediately and let the conversation continue.",
+                "D": "I laugh lightly, acknowledge my mistake, and let them finish their thought."
+            }
+        },
+        "7": {
+            "situation": "You are behind on a big deadline at work. Your coworker offers to help, but you feel concerned about trusting them with the task. What do you do?",
+            "options": {
+                "A": "I refuse the help because I feel nervous about their ability to handle it as I would.",
+                "B": "I reluctantly accept the help but constantly check on their work out of worry.",
+                "C": "I accept their help and delegate tasks clearly to ensure progress.",
+                "D": "I trust their abilities and express gratitude for their willingness to assist."
+            }
+        },
+        "8": {
+            "situation": "A friend cancels plans with you at the last minute. How do you handle it?",
+            "options": {
+                "A": "I take it personally and worry they don’t value our friendship.",
+                "B": "I feel hurt and spend the rest of the day ruminating on what went wrong.",
+                "C": "I understand their situation and make alternative plans to spend the evening.",
+                "D": "I brush it off and use the time to relax or work on something else."
+            }
+        },
+        "9": {
+            "situation": "You get interrupted multiple times while explaining something during a meeting. How do you react?",
+            "options": {
+                "A": "I feel belittled and dwell on how dismissive my colleagues were.",
+                "B": "I feel awkward and decide to remain silent for the rest of the meeting.",
+                "C": "I wait for a pause in the interruptions and politely ask to finish my point.",
+                "D": "I assertively continue speaking and maintain confidence in sharing my ideas."
+            }
+        },
+        "10": {
+            "situation": "You send an important email with a minor typo that you notice shortly after pressing send. How do you respond?",
+            "options": {
+                "A": "I feel embarrassed and repeatedly check my inbox to see if there’s any negative reaction to it.",
+                "B": "I feel stressed and worry the recipient will think I’m careless.",
+                "C": "I send a quick follow-up email correcting the typo and move on.",
+                "D": "I decide not to stress about it, knowing that minor mistakes happen."
+            }
+        },
+        "11": {
+            "situation": "You're at a family gathering, and someone makes a critical comment about a decision you recently made. How do you respond?",
+            "options": {
+                "A": "I feel embarrassed and try to avoid any further conversations about it.",
+                "B": "I take their comment to heart and spend the rest of the evening worrying about it.",
+                "C": "I thank them for their perspective and calmly explain the reasoning behind my decision.",
+                "D": "I acknowledge their opinion but remain confident in my choices."
+            }
+        },
+        "12": {
+            "situation": "You notice a typo on a report you handed in earlier today to your supervisor. It’s already been shared with others. What do you do?",
+            "options": {
+                "A": "I feel deeply embarrassed and avoid bringing attention to it.",
+                "B": "I worry excessively about how my supervisor and others will perceive my attention to detail.",
+                "C": "I notify my supervisor of the typo and offer to correct it if necessary.",
+                "D": "I recognize the error but let it go, knowing it’s unlikely to undermine the overall quality."
+            }
+        },
+        "13": {
+            "situation": "You run into an old acquaintance who doesn’t seem to remember you. How do you react?",
+            "options": {
+                "A": "I feel awkward and quickly leave the conversation to avoid further embarrassment.",
+                "B": "I feel hurt and keep questioning why they don’t remember me.",
+                "C": "I introduce myself and remind them of how you met.",
+                "D": "I smile and engage in a casual conversation without worrying about past details."
+            }
+        },
+        "14": {
+            "situation": "You are given a last-minute assignment at work, leaving you with only a short time to complete it. How do you handle it?",
+            "options": {
+                "A": "I feel overwhelmed and spend a lot of time stressing about whether I can meet the deadline.",
+                "B": "I dwell on how unfair and stressful the situation is while trying to get the work done.",
+                "C": "I break the assignment into manageable steps and tackle it efficiently.",
+                "D": "I stay calm and focus on completing the most critical aspects to meet the deadline."
+            }
+        },
+        "15": {
+            "situation": "A colleague forgets to invite you to an important meeting and you find out after it’s over. How do you respond?",
+            "options": {
+                "A": "I feel hurt and worry it’s because I’m not valued by my team.",
+                "B": "I feel annoyed and spend hours thinking about why I was left out.",
+                "C": "I calmly talk to my colleague about the situation to understand and avoid future occurrences.",
+                "D": "I brush it off and request the meeting notes to catch up on what I missed."
+            }
+        },
+        "16": {
+            "situation": "During a difficult week, you make a small mistake that requires a tedious correction process. What do you focus on?",
+            "options": {
+                "A": "I feel like everything is going wrong and mentally criticize myself for being careless.",
+                "B": "I dwell on my mistake and keep replaying it in my head.",
+                "C": "I acknowledge the mistake and focus on fixing it as best as I can.",
+                "D": "I recognize the mistake but see it as a normal part of the learning process."
+            }
+        },
+        "17": {
+            "situation": "You have just moved to a new city and are trying to navigate a busy subway system for the first time. You accidentally take the wrong train and end up at the wrong station. How do you respond?",
+            "options": {
+                "A": "I feel overwhelmed and worry I’ll likely make more mistakes navigating the subway.",
+                "B": "I feel anxious and frustrated, criticizing myself for not preparing better.",
+                "C": "I take a deep breath, re-check the map, and get on the correct train.",
+                "D": "I shrug it off and use the experience as a way to explore the city a bit more."
+            }
+        },
+        "18": {
+            "situation": "While hosting a dinner, you realize that one of the dishes you prepared is slightly undercooked. What do you do?",
+            "options": {
+                "A": "I feel embarrassed for the rest of the evening, convinced my guests won’t enjoy the meal.",
+                "B": "I apologize profusely and question my ability to host events properly.",
+                "C": "I acknowledge the issue lightly and make a joke about it, ensuring the guests don’t feel uncomfortable.",
+                "D": "I offer to quickly remake or adjust the dish and continue hosting confidently."
+            }
+        },
+        "19": {
+            "situation": "You accidentally walk into a meeting room where a private conversation is taking place and feel the awkwardness. How do you handle it?",
+            "options": {
+                "A": "I feel humiliated and leave hastily without saying anything.",
+                "B": "I apologize excessively and spend time worrying about how rude I might have appeared.",
+                "C": "I calmly apologize for the intrusion and excuse myself with minimal fuss.",
+                "D": "I smile, apologize briefly, and exit the room without overthinking it."
+            }
+        },
+        "20": {
+            "situation": "You’ve been invited to a networking event where you don’t know anyone. How do you approach it?",
+            "options": {
+                "A": "I feel awkward and stand in a corner, hesitant to initiate conversations.",
+                "B": "I worry about coming across as awkward or uninteresting and avoid the event altogether.",
+                "C": "I make an effort to introduce myself to a few people and ask them about their work.",
+                "D": "I confidently network, seeing it as an opportunity to meet new and interesting people."
+            }
+        },
+        "21": {
+            "situation": "You submit a draft of an important document, and your supervisor asks for multiple revisions in their feedback. How do you react?",
+            "options": {
+                "A": "I feel disappointed in myself and start questioning my abilities as a writer.",
+                "B": "I feel anxious that my supervisor now thinks less of me and dwell on it for days.",
+                "C": "I read through the feedback, addressing the comments systematically to improve the document.",
+                "D": "I welcome the opportunity to revise and see it as a chance to refine my work."
+            }
+        },
+        "22": {
+            "situation": "While demonstrating a new idea during a meeting, one of your colleagues objects strongly, pointing out flaws in your proposal. How do you respond?",
+            "options": {
+                "A": "I feel embarrassed and second-guess my idea, losing confidence for the rest of the meeting.",
+                "B": "I get flustered and stay quiet, ruminating on their objection rather than addressing it.",
+                "C": "I listen to their critique and use it as a chance to clarify or adjust my idea.",
+                "D": "I acknowledge their points and respond constructively, considering their feedback an opportunity to strengthen the idea."
+            }
+        }
+    },
+    "Agreeableness": {
+        "3": {
+            "situation": "You are at a team meeting, and your manager points out a mistake you made in a report in front of everyone. How do you respond?",
+            "options": {
+                "A": "Feel extremely embarrassed and worry that everyone thinks poorly of you.",
+                "B": "Apologize profusely and stress about how it might affect your reputation.",
+                "C": "Acknowledge the mistake and calmly suggest how you plan to fix it.",
+                "D": "Thank your manager for pointing it out and assure everyone it will be corrected."
+            }
+        },
+        "4": {
+            "situation": "You notice your colleague has a tendency to interrupt you during discussions. What do you do?",
+            "options": {
+                "A": "Feel anxious and avoid speaking in meetings altogether.",
+                "B": "Wait until after the meeting and ruminate over why they keep interrupting you.",
+                "C": "Politely ask them to let you finish next time you're interrupted.",
+                "D": "Discuss the issue with them privately, expressing your need to be heard."
+            }
+        },
+        "5": {
+            "situation": "You're at a networking event, and you spill coffee on your shirt before your first conversation. How do you handle it?",
+            "options": {
+                "A": "Feel embarrassed and decide to leave the event.",
+                "B": "Spend the rest of the event worrying about the stain being noticed.",
+                "C": "Make a joke about your clumsiness and continue engaging with people.",
+                "D": "Brush it off and focus on the conversations rather than the stain."
+            }
+        },
+        "6": {
+            "situation": "You send a message to a colleague but accidentally misspelled a word. What do you do?",
+            "options": {
+                "A": "Feel uneasy and worry that it makes you look unprofessional.",
+                "B": "Become irritated with yourself and repeatedly apologize to the colleague.",
+                "C": "Send a quick follow-up message correcting the mistake.",
+                "D": "Let it go, knowing typos happen to everyone."
+            }
+        },
+        "7": {
+            "situation": "You're tasked with delivering a presentation to a large audience. What is your approach?",
+            "options": {
+                "A": "Feel extremely nervous and imagine how you might mess up the presentation.",
+                "B": "Overprepare and obsessively worry about potential negative feedback.",
+                "C": "Practice calmly, focusing on presenting your main points clearly.",
+                "D": "Look forward to sharing the information and engaging with the audience."
+            }
+        },
+        "8": {
+            "situation": "While collaborating on a project, your teammate suggests a change you're unsure about. How do you react?",
+            "options": {
+                "A": "Worry that disagreeing might lead to conflict, so reluctantly agree.",
+                "B": "Feel stressed and internally criticize the suggestion without expressing your thoughts.",
+                "C": "Ask questions to understand the reasoning behind their suggestion.",
+                "D": "Explain your perspective and consider their idea openly."
+            }
+        },
+        "9": {
+            "situation": "You receive feedback that your work should have been completed sooner. How do you respond?",
+            "options": {
+                "A": "Feel anxious and assume that your manager thinks you are incompetent.",
+                "B": "Obsess over the feedback and worry about future evaluations.",
+                "C": "Acknowledge the feedback and ask for advice on improving your turnaround time.",
+                "D": "Accept the feedback constructively and ensure promptness in future tasks."
+            }
+        },
+        "10": {
+            "situation": "You are part of a team, and your idea was rejected in favor of another suggestion. What is your reaction?",
+            "options": {
+                "A": "Feel deflated and assume your ideas are not valued.",
+                "B": "Obsess over why your idea was not chosen and worry about speaking up again.",
+                "C": "Accept the decision and focus on contributing positively to the chosen idea.",
+                "D": "Seek feedback to understand why the other idea was preferred and learn from the experience."
+            }
+        },
+        "11": {
+            "situation": "You are invited to attend a social event with people you don't know well. How do you approach the situation?",
+            "options": {
+                "A": "Feel anxious about not having anyone to talk to and decide not to go.",
+                "B": "Go but worry about fitting in the whole time.",
+                "C": "Look forward to meeting new people and aim to make interesting conversations.",
+                "D": "Attend the event, open to making new connections and having fun."
+            }
+        },
+        "12": {
+            "situation": "A coworker gives you unsolicited advice on improving your work performance. How do you react?",
+            "options": {
+                "A": "Feel defensive and worry that your work is inadequate.",
+                "B": "Obsessively consider their comments and fear more criticism.",
+                "C": "Thank them for the advice and evaluate its relevance calmly.",
+                "D": "Consider their feedback openly and decide how to apply it, if necessary."
+            }
+        },
+        "13": {
+            "situation": "You receive a higher than expected electricity bill. How do you react?",
+            "options": {
+                "A": "Feel overwhelmed and assume you won't be able to afford future bills.",
+                "B": "Spend hours worrying about how you can cut costs.",
+                "C": "Review your usage and see how you can adjust to lower future bills.",
+                "D": "Accept the unexpected bill as part of life and budget for it accordingly."
+            }
+        },
+        "14": {
+            "situation": "You're walking home and realize someone is following closely behind for several blocks. What would you do?",
+            "options": {
+                "A": "Feel anxious and believe you are in danger, hurrying home.",
+                "B": "Start second-guessing every decision, fearing the worst.",
+                "C": "Remain aware of the person while altering your path to feel more secure.",
+                "D": "Pause briefly to let them pass, staying aware but not panicked."
+            }
+        },
+        "15": {
+            "situation": "You have accidentally left something important at home on a day when you really need it. What would you do?",
+            "options": {
+                "A": "Feel stressed and let the situation ruin your entire day.",
+                "B": "Obsess over the forgetfulness and worry about future lapses.",
+                "C": "Decide how to work around the absence for the day with a plan.",
+                "D": "Shake it off and remind yourself to be more careful next time."
+            }
+        },
+        "16": {
+            "situation": "An important meeting is unexpectedly rescheduled to a later date. How do you respond?",
+            "options": {
+                "A": "Worry that the delay signals deeper issues and feel anxious for days.",
+                "B": "Obsess over the change and assume it reflects poorly on your role.",
+                "C": "Use the extra time to further prepare and refine your presentations.",
+                "D": "Accept the reschedule and adjust your plans accordingly without worry."
+            }
+        },
+        "17": {
+            "situation": "During the public speaking event, your microphone suddenly stops working. How do you respond?",
+            "options": {
+                "A": "Feel extremely embarrassed and assume your speech is ruined.",
+                "B": "Worry endlessly about how others are perceiving the situation.",
+                "C": "Pause calmly and work with the technicians to fix the issue.",
+                "D": "Continue speaking loudly until the microphone can be repaired."
+            }
+        },
+        "18": {
+            "situation": "You receive an email with constructive criticism from your supervisor. How do you react?",
+            "options": {
+                "A": "Feel anxious and believe this criticism reflects your overall incompetence.",
+                "B": "Dwell on the criticism and worry incessantly about your job security.",
+                "C": "Read it thoroughly, thank your supervisor, and aim to incorporate their insights.",
+                "D": "Take the feedback positively and see it as an opportunity to enhance your skills."
+            }
+        },
+        "19": {
+            "situation": "Your close friend cancels plans with you at the last minute. How do you feel?",
+            "options": {
+                "A": "Feel rejected and assume they don't value your friendship.",
+                "B": "Worry about whether you've done something wrong to upset them.",
+                "C": "Understand that such things happen and plan an alternative activity.",
+                "D": "Accept the situation and look forward to rescheduling soon."
+            }
+        },
+        "20": {
+            "situation": "You're in a job interview and the interviewer asks you a question you didn't prepare for. How do you react?",
+            "options": {
+                "A": "Panic and worry that you'll give a poor answer.",
+                "B": "Feel deeply anxious, thinking this mistake will cost you the job.",
+                "C": "Take a moment to think about the question and respond as best as you can.",
+                "D": "Stay calm and address the question with openness and honesty."
+            }
+        },
+        "21": {
+            "situation": "Your computer crashes and you lose an important file you were working on. What's your response?",
+            "options": {
+                "A": "Feel utterly defeated and think the whole project is doomed.",
+                "B": "Obsess over your mistakes and worry about the repercussions.",
+                "C": "Look for ways to recover the file and remember lessons learned for future precautions.",
+                "D": "Restart the work with a plan to prevent future losses, accepting it as a learning experience."
+            }
+        },
+        "22": {
+            "situation": "You are running late to an appointment due to unexpected traffic. How do you react?",
+            "options": {
+                "A": "Feel overwhelmed, fearing the negative judgments of the other's waiting.",
+                "B": "Stress about how you should have left earlier and dwell on being late.",
+                "C": "Call ahead to inform them of the delay and continue safely on your way.",
+                "D": "Accept the situation as out of your control and focus on moving forward."
+            }
+        }
+    },
+    "Neuroticism": {
+        "3": {
+            "situation": "You are at a team meeting, and your manager criticizes your recent work in front of your colleagues. How do you react?",
+            "options": {
+                "A": "I feel anxious and worry excessively about losing my job.",
+                "B": "I feel embarrassed and avoid making eye contact with anyone.",
+                "C": "I acknowledge the feedback and consider it a chance to improve.",
+                "D": "I calmly ask for specific examples to understand how I can enhance my work."
+            }
+        },
+        "4": {
+            "situation": "You are invited to a social event where you hardly know anyone. Arriving at the venue, you start feeling uneasy. What do you do?",
+            "options": {
+                "A": "I feel overwhelmed and consider leaving shortly after arrival.",
+                "B": "I stick to the corner, hoping to go unnoticed.",
+                "C": "I introduce myself to a few people and try to engage in conversation.",
+                "D": "I focus on enjoying the event and meeting new people."
+            }
+        },
+        "5": {
+            "situation": "You realize you have sent an email with a significant error to an important client. How do you respond?",
+            "options": {
+                "A": "I panic and repeatedly worry about ruining the relationship with the client.",
+                "B": "I feel ashamed and delay addressing the mistake.",
+                "C": "I promptly send a follow-up email, apologizing and correcting the error.",
+                "D": "I immediately contact the client to explain the situation and offer solutions."
+            }
+        },
+        "6": {
+            "situation": "During a presentation, you accidentally skip over a critical slide, and the audience seems confused. How do you handle this?",
+            "options": {
+                "A": "I feel flustered and try to rush through the remaining slides.",
+                "B": "I feel embarrassed and try to end the presentation quickly.",
+                "C": "I calmly backtrack to the skipped slide and clarify any confusion.",
+                "D": "I acknowledge the mistake lightheartedly and ensure the audience understands the crucial points."
+            }
+        },
+        "7": {
+            "situation": "Your colleague receives recognition for a project you both worked on, but you feel left out. What is your response?",
+            "options": {
+                "A": "I feel resentful and start doubting my capabilities.",
+                "B": "I hold grudges and avoid collaborating with the colleague in the future.",
+                "C": "I congratulate my colleague and discuss it openly with my manager for better recognition next time.",
+                "D": "I reflect on the situation and decide to work on areas where I can shine in the future."
+            }
+        },
+        "8": {
+            "situation": "You receive feedback on a report you wrote, and a significant portion needs revision. How do you react?",
+            "options": {
+                "A": "I feel anxious and worry about being seen as incompetent.",
+                "B": "I feel upset and procrastinate on making the revisions.",
+                "C": "I accept the feedback constructively and start working on improvements.",
+                "D": "I see it as an opportunity to enhance my skills and develop a revised plan."
+            }
+        },
+        "9": {
+            "situation": "You are tasked with leading a project for the first time. The pressure feels overwhelming. What do you do?",
+            "options": {
+                "A": "I feel anxious and doubt my ability to successfully lead the project.",
+                "B": "I worry excessively about failing and stay awake at night.",
+                "C": "I focus on organizing a strategic plan and seek support from colleagues.",
+                "D": "I break the task into manageable parts and address challenges calmly."
+            }
+        },
+        "10": {
+            "situation": "A colleague makes a negative remark about you during a meeting. How do you respond?",
+            "options": {
+                "A": "I feel hurt and ruminate over the comment for days.",
+                "B": "I feel embarrassed and avoid participating in future meetings.",
+                "C": "I address the remark directly, seeking clarification and resolution.",
+                "D": "I choose to talk privately with this colleague to understand their perspective."
+            }
+        },
+        "11": {
+            "situation": "You find out your proposal for a project was rejected, while others were accepted. What is your reaction?",
+            "options": {
+                "A": "I feel frustrated and consider giving up on similar endeavors.",
+                "B": "I question my capabilities and worry about others judging my work.",
+                "C": "I view it as a learning experience and seek feedback for improvement.",
+                "D": "I decide to enhance my approach and work on refining my next proposal."
+            }
+        },
+        "12": {
+            "situation": "While working on a group project, you find that your team is progressing without much communication. How do you handle this situation?",
+            "options": {
+                "A": "I feel anxious and worry about the project not meeting my expectations.",
+                "B": "I become frustrated and withdraw from the group discussions.",
+                "C": "I initiate a meeting to clarify roles and improve communication.",
+                "D": "I approach teammates individually to enhance coordination and productivity."
+            }
+        },
+        "13": {
+            "situation": "Your manager requests you to present another colleague's work at a conference last minute. What do you do?",
+            "options": {
+                "A": "I worry excessively about presenting someone else's work and feeling unprepared.",
+                "B": "I feel stressed and contemplate excusing myself from the task.",
+                "C": "I accept the challenge and start preparing thoroughly.",
+                "D": "I communicate with the colleague to ensure I understand the key points."
+            }
+        },
+        "14": {
+            "situation": "You are in a meeting and notice your ideas are repeatedly ignored. How do you respond?",
+            "options": {
+                "A": "I feel undervalued and start to question my place in the team.",
+                "B": "I fold back and stop contributing to discussions.",
+                "C": "I request a one-on-one with those leading the meeting to understand their perspective.",
+                "D": "I find alternative methods to present my ideas and seek more engaging platforms."
+            }
+        },
+        "15": {
+            "situation": "You overhear colleagues discussing the possibility of layoffs. How do you react?",
+            "options": {
+                "A": "I feel anxious and start doubting my job security.",
+                "B": "I worry extensively and consider looking for other jobs immediately.",
+                "C": "I try to get the facts from reliable sources and respond accordingly.",
+                "D": "I focus on my performance and keep open communication with my manager."
+            }
+        },
+        "16": {
+            "situation": "You are informed of an impromptu office inspection by higher management. How do you handle this situation?",
+            "options": {
+                "A": "I feel stressed and think about all the things that might go wrong.",
+                "B": "I immediately worry about how the team will react and am unsure of where to start.",
+                "C": "I calmly organize necessary documents and brief the team on key points.",
+                "D": "I see it as an opportunity to showcase our strengths and prepare adequately."
+            }
+        },
+        "17": {
+            "situation": "Your colleague receives an opportunity for a prestigious role that you also applied for. What do you do?",
+            "options": {
+                "A": "I feel envious and wonder why my efforts weren't recognized.",
+                "B": "I start worrying about my career path and potential missed chances.",
+                "C": "I congratulate my colleague and analyze ways to enhance my applications.",
+                "D": "I reflect on my career goals and continue progressing toward opportunities."
+            }
+        },
+        "18": {
+            "situation": "During a busy week, you accidentally forget to complete a critical task. How do you respond?",
+            "options": {
+                "A": "I feel panicked and worry nonstop about repercussions.",
+                "B": "I feel embarrassed and avoid confronting the issue initially.",
+                "C": "I address the situation immediately and inform the relevant team of the delay.",
+                "D": "I apologize and strive to make up for the delay with precise and swift action."
+            }
+        },
+        "19": {
+            "situation": "You are trying a new role at work but find yourself struggling to adapt quickly. What do you do?",
+            "options": {
+                "A": "I feel nervous about not performing well and worry about perceived failures.",
+                "B": "I feel insecure and avoid asking for help despite needing guidance.",
+                "C": "I proactively seek feedback and learn from colleagues with more experience.",
+                "D": "I give myself time to adjust and find supportive resources."
+            }
+        },
+        "20": {
+            "situation": "During a meeting, someone makes an incorrect assumption about your part of the project. How do you respond?",
+            "options": {
+                "A": "I feel defensive and worry about my reputation being tarnished.",
+                "B": "I feel embarrassed and choose not to correct them in the meeting.",
+                "C": "I calmly clarify the misunderstanding immediately.",
+                "D": "I find a way to address the issue outside the meeting to ensure correctness."
+            }
+        },
+        "21": {
+            "situation": "You are asked to deliver a group presentation, but notice teammates aren't contributing equally. What do you do?",
+            "options": {
+                "A": "I feel anxious about the presentation failing due to uneven efforts.",
+                "B": "I decide to take on all the work alone to avoid conflict.",
+                "C": "I assign specific roles and encourage more participation through regular check-ins.",
+                "D": "I communicate openly about pulling weight and share responsibilities effectively."
+            }
+        },
+        "22": {
+            "situation": "A major client suddenly pulls out from a deal that was nearly finalized. How do you handle the situation?",
+            "options": {
+                "A": "I worry excessively about the impact on the company and my role.",
+                "B": "I feel defeated and blame myself for not securing the deal.",
+                "C": "I review the situation to learn more and improve future negotiations.",
+                "D": "I strategize with the team on how to recover and maintain other client relationships."
+            }
+        }
+    }
+}

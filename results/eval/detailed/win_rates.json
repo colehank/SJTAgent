@@ -1,0 +1,112 @@
+{
+    "Openness": {
+        "NecessityOfTheSituation": {
+            "mussel": 0.2630853994490358,
+            "li": 0.13911845730027547,
+            "krumm": 0.5977961432506887
+        },
+        "RationalityOfOptions": {
+            "mussel": 0.046143250688705235,
+            "li": 0.29201101928374656,
+            "krumm": 0.6618457300275482
+        },
+        "RationalityOfScoring": {
+            "mussel": 0.24862258953168045,
+            "li": 0.13085399449035812,
+            "krumm": 0.6205234159779615
+        },
+        "OverallItemQuality": {
+            "mussel": 0.26170798898071623,
+            "li": 0.13429752066115702,
+            "krumm": 0.6039944903581267
+        }
+    },
+    "Conscientiousness": {
+        "NecessityOfTheSituation": {
+            "mussel": 0.24380165289256198,
+            "li": 0.08953168044077135,
+            "krumm": 0.6666666666666666
+        },
+        "RationalityOfOptions": {
+            "mussel": 0.05647382920110193,
+            "li": 0.2768595041322314,
+            "krumm": 0.6666666666666666
+        },
+        "RationalityOfScoring": {
+            "mussel": 0.21831955922865015,
+            "li": 0.11501377410468319,
+            "krumm": 0.6666666666666666
+        },
+        "OverallItemQuality": {
+            "mussel": 0.24380165289256198,
+            "li": 0.08953168044077135,
+            "krumm": 0.6666666666666666
+        }
+    },
+    "Extraversion": {
+        "NecessityOfTheSituation": {
+            "mussel": 0.2568870523415978,
+            "li": 0.09641873278236915,
+            "krumm": 0.6466942148760331
+        },
+        "RationalityOfOptions": {
+            "mussel": 0.11432506887052342,
+            "li": 0.24242424242424243,
+            "krumm": 0.6432506887052342
+        },
+        "RationalityOfScoring": {
+            "mussel": 0.2024793388429752,
+            "li": 0.1618457300275482,
+            "krumm": 0.6356749311294766
+        },
+        "OverallItemQuality": {
+            "mussel": 0.2568870523415978,
+            "li": 0.09641873278236915,
+            "krumm": 0.6466942148760331
+        }
+    },
+    "Agreeableness": {
+        "NecessityOfTheSituation": {
+            "mussel": 0.26859504132231404,
+            "li": 0.13911845730027547,
+            "krumm": 0.5922865013774105
+        },
+        "RationalityOfOptions": {
+            "mussel": 0.08884297520661157,
+            "li": 0.30647382920110194,
+            "krumm": 0.6046831955922864
+        },
+        "RationalityOfScoring": {
+            "mussel": 0.2610192837465565,
+            "li": 0.15495867768595042,
+            "krumm": 0.5840220385674931
+        },
+        "OverallItemQuality": {
+            "mussel": 0.2699724517906336,
+            "li": 0.13980716253443526,
+            "krumm": 0.5902203856749312
+        }
+    },
+    "Neuroticism": {
+        "NecessityOfTheSituation": {
+            "mussel": 0.07920110192837465,
+            "li": 0.29476584022038566,
+            "krumm": 0.6260330578512396
+        },
+        "RationalityOfOptions": {
+            "mussel": 0.011019283746556474,
+            "li": 0.3236914600550964,
+            "krumm": 0.6652892561983471
+        },
+        "RationalityOfScoring": {
+            "mussel": 0.05991735537190083,
+            "li": 0.2892561983471074,
+            "krumm": 0.6508264462809917
+        },
+        "OverallItemQuality": {
+            "mussel": 0.081267217630854,
+            "li": 0.29132231404958675,
+            "krumm": 0.6274104683195593
+        }
+    }
+}

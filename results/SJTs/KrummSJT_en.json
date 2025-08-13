@@ -1,0 +1,1002 @@
+{
+    "Openness": {
+        "1": {
+            "situation": "You have been given a challenging project at work with a tight deadline. The project requires innovation and complex problem-solving, and your results will be closely analyzed by senior management. You're aware that collaboration with your team could bring diverse perspectives and enhance the outcome.",
+            "options": {
+                "A": "You immediately gather your team for a brainstorming session to gather different ideas and perspectives. (High Trait: Collaboration)",
+                "B": "You decide to work on the project independently, trusting your own ability to solve the problem. (Low Trait: Collaboration)",
+                "C": "You schedule regular progress meetings to ensure everyone is aligned and contributing effectively. (High Trait: Collaboration)",
+                "D": "You inform your team of the project but prefer minimal interaction, focusing on completing your tasks first. (Low Trait: Collaboration)"
+            }
+        },
+        "2": {
+            "situation": "You have been invited to a conference that will introduce innovative ideas and unconventional approaches within your field of work. The attendees include well-known experts as well as upcoming talents who might challenge traditional practices. You have the opportunity to interact with these individuals and attend diverse sessions.",
+            "options": {
+                "A": "You decide to attend only the sessions led by renowned experts, focusing on established theories. (Low Trait: Openness)",
+                "B": "You actively seek out sessions by newer talents, eager to explore fresh perspectives and ideas. (High Trait: Openness)",
+                "C": "You spend most of your time connecting with familiar colleagues and discussing traditional approaches. (Low Trait: Openness)",
+                "D": "You make a point to engage in discussions with varied attendees, even those outside of your usual network. (High Trait: Openness)"
+            }
+        },
+        "3": {
+            "situation": "Your community is hosting an event focused on cultural diversity, featuring art, music, and food from various traditions you are not familiar with. There will be workshops and discussions open to all attendees to explore different aspects of these cultures.",
+            "options": {
+                "A": "You decide to attend the event, excited to explore new experiences and broaden your understanding of different cultures. (High Trait: Openness)",
+                "B": "You choose to spend time only at the parts of the event that feature practices similar to your own culture. (Low Trait: Openness)",
+                "C": "You actively participate in workshops and engage in conversations with people from different cultural backgrounds. (High Trait: Openness)",
+                "D": "You attend the event but prefer observing from a distance, comfortable with what you already know. (Low Trait: Openness)"
+            }
+        },
+        "4": {
+            "situation": "Your company is implementing a new software system that promises to revolutionize internal processes but requires everyone to learn new methods and adapt. There's an optional training session available to explore advanced features and integrate them into your work.",
+            "options": {
+                "A": "You enthusiastically sign up for the training, eager to explore the advanced features and see how they can improve your workflow. (High Trait: Openness)",
+                "B": "You decide to stick to the basic features of the new software, relying on familiar processes to complete your work. (Low Trait: Openness)",
+                "C": "You look for additional resources and books to understand the new software system from different perspectives. (High Trait: Openness)",
+                "D": "You make minimal changes to your routine and only learn the essentials needed to use the new system. (Low Trait: Openness)"
+            }
+        },
+        "5": {
+            "situation": "You are attending a book club meeting where the theme for this month is to discuss genres that are outside your usual preferences, including fantasy, science fiction, and memoirs. The group encourages members to read and share their thoughts on books that might challenge conventional thinking and broaden perspectives.",
+            "options": {
+                "A": "You select a book from a genre you've never read before, eager to see how it might change your views. (High Trait: Openness)",
+                "B": "You choose to read a book from the genre you are comfortable with, even if it was not suggested. (Low Trait: Openness)",
+                "C": "You engage in discussions, actively listening to others' thoughts and reflecting on new ideas. (High Trait: Openness)",
+                "D": "You stick to sharing your familiar thoughts and experiences during the discussions, avoiding unfamiliar territory. (Low Trait: Openness)"
+            }
+        },
+        "6": {
+            "situation": "You have been invited to participate in a think tank focusing on innovative solutions to global environmental issues. The group includes professionals from diverse backgrounds, and the sessions will include brainstorming unconventional strategies and learning about cutting-edge research.",
+            "options": {
+                "A": "You actively contribute to brainstorming sessions, suggesting bold ideas and embracing unconventional strategies. (High Trait: Openness)",
+                "B": "You prefer to focus on tried-and-tested methods and strategies, contributing ideas that have been successful in the past. (Low Trait: Openness)",
+                "C": "You listen attentively to different perspectives and seek to integrate these new insights into your approach. (High Trait: Openness)",
+                "D": "You rely mostly on your own expertise and experience, hesitant to incorporate unfamiliar concepts into your strategy. (Low Trait: Openness)"
+            }
+        },
+        "7": {
+            "situation": "While on vacation in a foreign country, you stumble upon a local festival celebrating traditions and rituals with which you are unfamiliar. The event promises to offer unique experiences such as traditional dances, mysterious folklore, and exotic foods that are completely new to you.",
+            "options": {
+                "A": "You decide to immerse yourself in the festival, participating in as many activities as possible to fully experience the culture. (High Trait: Openness)",
+                "B": "You observe the festival from a distance, sticking to tourist areas that feel more familiar. (Low Trait: Openness)",
+                "C": "You engage with locals, asking questions and learning the stories behind the traditions and rituals. (High Trait: Openness)",
+                "D": "You enjoy familiar activities away from the festival, preferring not to step too far out of your comfort zone. (Low Trait: Openness)"
+            }
+        },
+        "8": {
+            "situation": "Your boss has announced a company-wide initiative encouraging employees to propose radical changes to improve workplace efficiency and culture. This initiative invites ideas that challenge the current norms and explore new directions, with the potential for significant implementation.",
+            "options": {
+                "A": "You propose a bold, innovative idea that could transform the current work processes, open to experimenting with new approaches. (High Trait: Openness)",
+                "B": "You suggest minor improvements that fit within the existing system, focusing on proven methods. (Low Trait: Openness)",
+                "C": "You collaborate with colleagues to combine diverse ideas into a comprehensive proposal that introduces new concepts. (High Trait: Openness)",
+                "D": "You choose not to participate, doubting the effectiveness of ideas that drastically depart from tradition. (Low Trait: Openness)"
+            }
+        },
+        "9": {
+            "situation": "In your art class, the instructor introduces a project that encourages students to explore and utilize unconventional materials and techniques, pushing the boundaries of traditional art forms. The aim is to discover new ways of expression and challenge your creative limits.",
+            "options": {
+                "A": "You embrace the project by experimenting with unusual materials and techniques, excited to see where your creativity takes you. (High Trait: Openness)",
+                "B": "You opt to use familiar materials and techniques, focusing on creating a polished piece within your comfort zone. (Low Trait: Openness)",
+                "C": "You research avant-garde artists to gain inspiration and incorporate innovative elements into your work. (High Trait: Openness)",
+                "D": "You focus on perfecting traditional techniques, believing that sticking to the basics is the best approach. (Low Trait: Openness)"
+            }
+        },
+        "10": {
+            "situation": "Your local community center is hosting a series of workshops centered around futuristic technology and concepts such as virtual reality, sustainable living innovations, and AI development. Participants are encouraged to engage with these emerging technologies and consider their potential impact on daily life and work.",
+            "options": {
+                "A": "You attend several workshops, eager to learn about and interact with the latest technologies, and consider how they could be integrated into your life. (High Trait: Openness)",
+                "B": "You choose to skip the workshops, preferring to stick with familiar technologies that you understand well. (Low Trait: Openness)",
+                "C": "You actively participate in discussions and explore how these technologies might reshape future industries. (High Trait: Openness)",
+                "D": "You visit the community center but focus on traditional activities, avoiding the speculative nature of the technology workshops. (Low Trait: Openness)"
+            }
+        },
+        "11": {
+            "situation": "You are attending an annual industry conference where a segment is dedicated to exploring cross-disciplinary approaches that combine insights from fields outside your expertise, such as design thinking, behavioral economics, and digital anthropology. These sessions promise to offer new perspectives and challenge conventional practices.",
+            "options": {
+                "A": "You enthusiastically attend sessions outside your usual field, keen to understand how diverse disciplines can inform your work. (High Trait: Openness)",
+                "B": "You stick to sessions strictly related to your field, focusing on concrete applications of familiar concepts. (Low Trait: Openness)",
+                "C": "You engage with speakers from different backgrounds, exploring how integrated approaches might lead to innovation. (High Trait: Openness)",
+                "D": "You network with professionals only within your industry, preferring discussions on established practices. (Low Trait: Openness)"
+            }
+        },
+        "12": {
+            "situation": "Your friend invites you to a potluck dinner where guests are encouraged to bring a dish from a cuisine unfamiliar to them. The idea is to explore diverse culinary traditions and share the stories behind the dishes. It's an opportunity to discover and appreciate new flavors and cultural histories.",
+            "options": {
+                "A": "You take time to research and prepare a dish from a cuisine you have never tried before, eager to see how it will be received. (High Trait: Openness)",
+                "B": "You prepare a dish from a cuisine you are comfortable with, ensuring it will meet your friend's expectations. (Low Trait: Openness)",
+                "C": "You sample every dish at the potluck, keen to learn about and appreciate the variety of flavors and ingredients. (High Trait: Openness)",
+                "D": "You stick to eating dishes that are familiar to you, preferring not to risk trying something you might not like. (Low Trait: Openness)"
+            }
+        },
+        "13": {
+            "situation": "You receive an invitation to attend a seminar that focuses on exploring philosophies and worldviews that differ significantly from your own. The seminar includes lectures, discussions, and interactive sessions aimed at understanding diverse perspectives and reflecting on personal beliefs.",
+            "options": {
+                "A": "You attend the seminar with an open mind, ready to listen and understand alternative philosophies and potentially reassess your own viewpoints. (High Trait: Openness)",
+                "B": "You go to the seminar but only participate in discussions that align closely with your current beliefs, avoiding challenging topics. (Low Trait: Openness)",
+                "C": "You engage actively in debates, eager to dissect and appreciate the nuances in differing worldviews presented. (High Trait: Openness)",
+                "D": "You choose not to attend the seminar, preferring to focus on resources and discussions that reinforce your existing beliefs. (Low Trait: Openness)"
+            }
+        },
+        "14": {
+            "situation": "You are offered the chance to join a pilot program at your university that combines subjects from vastly different disciplines, such as art and engineering, to tackle real-world problems. The program encourages innovative thinking and collaboration across fields to generate unique solutions and approaches.",
+            "options": {
+                "A": "You eagerly join the program, excited to learn how disparate fields can work together to create new solutions. (High Trait: Openness)",
+                "B": "You decline the offer, opting to focus on your major field of study where you feel most comfortable. (Low Trait: Openness)",
+                "C": "You participate in the program and enjoy engaging with students and professors from different disciplines to broaden your perspectives. (High Trait: Openness)",
+                "D": "You stick to courses within your department, preferring to deepen your expertise in familiar territory rather than venturing into unknown areas. (Low Trait: Openness)"
+            }
+        },
+        "15": {
+            "situation": "Your city's library is hosting a series of events featuring authors from around the world who write about topics and genres that are unfamiliar to you. These events include readings, discussions, and workshops designed to challenge conventional narratives and introduce diverse cultural perspectives.",
+            "options": {
+                "A": "You attend several author events, eager to learn about different cultural narratives and styles that might enrich your understanding. (High Trait: Openness)",
+                "B": "You skip the events, choosing instead to read books by authors whose styles and topics you already enjoy. (Low Trait: Openness)",
+                "C": "You engage in discussions with the authors, asking questions to delve deeper into their unique perspectives and approaches. (High Trait: Openness)",
+                "D": "You attend only the events that feature authors writing in genres you are familiar with, preferring not to venture into unknown territory. (Low Trait: Openness)"
+            }
+        },
+        "16": {
+            "situation": "You have been given the opportunity to work on a project in a country where the business culture and practices are drastically different from your own. This project will require you to adapt to new ways of thinking, communicate in a foreign language, and collaborate with international colleagues who approach problems differently.",
+            "options": {
+                "A": "You embrace the opportunity, eager to immerse yourself in a new culture and learn from the different business practices. (High Trait: Openness)",
+                "B": "You decide to rely on your home country's practices as much as possible, minimizing the need to adapt to unfamiliar methods. (Low Trait: Openness)",
+                "C": "You actively seek advice and insights from local colleagues to better understand and integrate into the business culture. (High Trait: Openness)",
+                "D": "You focus on completing your tasks as you normally would, avoiding unfamiliar methods and concentrating on your expertise. (Low Trait: Openness)"
+            }
+        },
+        "17": {
+            "situation": "During the annual community fair, a section is dedicated to showcasing innovations in sustainable living. It includes demonstrations and discussions on emerging technologies like vertical gardening, smart energy solutions, and zero-waste practices. Residents are encouraged to explore these concepts and consider their applicability to daily life.",
+            "options": {
+                "A": "You visit the various stalls with curiosity, engaging with presenters to learn how these innovations might be integrated into your life. (High Trait: Openness)",
+                "B": "You stroll through the fair but spend your time at the traditional sections, familiar with the usual exhibits. (Low Trait: Openness)",
+                "C": "You attend interactive workshops to experiment with these new technologies and discuss their potential impacts with peers. (High Trait: Openness)",
+                "D": "You listen to a few presentations but remain skeptical of ideas that seem too radical, focusing on current, proven practices. (Low Trait: Openness)"
+            }
+        },
+        "18": {
+            "situation": "Your company has introduced a monthly 'Innovation Day' where employees can explore projects outside their usual job scope, such as learning new software, experimenting with creative designs, or collaborating with other departments on unique ideas. Participation is encouraged, but voluntary.",
+            "options": {
+                "A": "You take advantage of the opportunity, choosing a project that challenges your current skills and involves cross-department collaboration. (High Trait: Openness)",
+                "B": "You decide to focus on your regular tasks, doubting the value of experimenting with unfamiliar projects. (Low Trait: Openness)",
+                "C": "You explore new software tools that are outside your usual expertise, eager to see how they might enhance your work. (High Trait: Openness)",
+                "D": "You chat with colleagues participating in Innovation Day but prefer to keep your routine and concentrate on established methods. (Low Trait: Openness)"
+            }
+        },
+        "19": {
+            "situation": "A new exhibit at the local art gallery features avant-garde installations that challenge traditional art forms, incorporating technology and interactive elements. Visitors are encouraged to participate in discussions and workshops to explore the concepts behind these pieces and their impact on modern art.",
+            "options": {
+                "A": "You engage fully with the interactive exhibits and attend workshops to deepen your understanding of avant-garde art. (High Trait: Openness)",
+                "B": "You briefly look at the exhibits but spend most of your time in the sections showcasing classical art. (Low Trait: Openness)",
+                "C": "You participate in discussions with artists and other visitors, eager to explore varying interpretations and insights. (High Trait: Openness)",
+                "D": "You admire the traditional artworks and prefer not to enter the sections that challenge conventional art forms. (Low Trait: Openness)"
+            }
+        },
+        "20": {
+            "situation": "Your town is organizing a festival that features emerging cultural practices from around the world, including music, art, and dance performances that are uncommon in your area. Participants are encouraged to learn about these cultures and engage with global artists to broaden their perspectives.",
+            "options": {
+                "A": "You actively participate in various workshops and performances, eager to immerse yourself in different cultural experiences. (High Trait: Openness)",
+                "B": "You visit the festival but stick to familiar activities and exhibits, unsure about engaging with unfamiliar cultures. (Low Trait: Openness)",
+                "C": "You converse with the international artists, asking them about their cultural practices and looking for ways to incorporate their perspectives into your own life. (High Trait: Openness)",
+                "D": "You choose to attend mainly local performances, preferring not to venture into experiences outside of your known traditions. (Low Trait: Openness)"
+            }
+        },
+        "21": {
+            "situation": "Your local community center is offering a series of classes on unconventional hobbies and skills, such as origami, brewing kombucha, and virtual reality storytelling. These classes aim to encourage creativity and offer fresh perspectives on leisure activities.",
+            "options": {
+                "A": "You enthusiastically sign up for several classes, eager to explore new hobbies that you haven't tried before. (High Trait: Openness)",
+                "B": "You decide not to participate, choosing instead to stick with the hobbies you already know and enjoy. (Low Trait: Openness)",
+                "C": "You attend a few classes and engage with the instructors to learn about how these skills can add a new dimension to your time. (High Trait: Openness)",
+                "D": "You think about trying a class but ultimately choose to spend your time on activities that are more familiar and comfortable. (Low Trait: Openness)"
+            }
+        },
+        "22": {
+            "situation": "Your university is hosting an interdisciplinary symposium where experts from fields like astrophysics, philosophy, and digital media come together to discuss and debate the future of human exploration and communication. Attendees are encouraged to interact with speakers and participate in cross-disciplinary workshops.",
+            "options": {
+                "A": "You attend the symposium and actively participate in workshops to gain insights into how different disciplines can converge to address global challenges. (High Trait: Openness)",
+                "B": "You choose to attend only the sessions related to your field of study, focusing on content you are already familiar with. (Low Trait: Openness)",
+                "C": "You engage with speakers from various disciplines, eager to understand their perspectives and incorporate fresh ideas into your own thinking. (High Trait: Openness)",
+                "D": "You attend a few sessions but spend most of your time networking within your field, preferring not to delve into unfamiliar topics. (Low Trait: Openness)"
+            }
+        }
+    },
+    "Conscientiousness": {
+        "1": {
+            "situation": "You are working in a team on a project with a tight deadline. One of your team members is struggling to meet their part of the deadline because they are not confident in their skills, and their portion of the project is crucial for the team's success. The team leader is looking for someone to assist this team member.",
+            "options": {
+                "A": "Offer to help your team member by working together on their tasks after you have completed your own work, even if it means staying late (High $Trait).",
+                "B": "Suggest that the team leader find someone else to help because you are focused on your own tasks and deadlines (Low $Trait).",
+                "C": "Encourage your team member privately by sharing tips and offering moral support while continuing to prioritize tasks that you have been assigned (High $Trait).",
+                "D": "Avoid getting involved and focus entirely on completing your own part of the project to the best of your ability (Low $Trait)."
+            }
+        },
+        "2": {
+            "situation": "You have been given responsibility for organizing a company event that will take place in two weeks. As the event approaches, you realize there are several important tasks that remain incomplete, and you are unsure if you have enough time to address them all. Your manager is available to assist if needed, but they are busy with their own workload.",
+            "options": {
+                "A": "Create a detailed plan and prioritize the tasks, working late if necessary to ensure everything is completed on time (High Conscientiousness).",
+                "B": "Address tasks as they come up without a specific plan, hoping they will fall into place as the event date approaches (Low Conscientiousness).",
+                "C": "Reach out to your manager for advice and possibly delegate some tasks to ensure efficiency and thorough completion (High Conscientiousness).",
+                "D": "Do the minimum required for organizing the event, leaving non-essential tasks for others to handle later (Low Conscientiousness)."
+            }
+        },
+        "3": {
+            "situation": "You have been assigned a long-term project at work that involves data collection, analysis, and presentation over a period of six months. Two months into the project, you notice that not all data entries are correctly formatted and some are missing. You have other ongoing responsibilities and deadlines as well.",
+            "options": {
+                "A": "Set aside time each week to systematically review and correct the data entries, making sure everything is accurate before proceeding with analysis (High Conscientiousness).",
+                "B": "Continue with the project as planned and make corrections only when absolutely necessary, focusing mostly on upcoming deadlines (Low Conscientiousness).",
+                "C": "Inform your supervisor about the issue and propose a revised timeline to ensure thorough data accuracy and project quality (High Conscientiousness).",
+                "D": "Ignore minor data issues for now and focus on surface-level analysis to keep the project moving forward with minimum effort (Low Conscientiousness)."
+            }
+        },
+        "4": {
+            "situation": "You have been tasked with preparing a presentation for an important client meeting scheduled next week. While working on the presentation, you realize that some of the information provided by other departments may be outdated. You are juggling multiple tasks and are pressed for time.",
+            "options": {
+                "A": "Dedicate additional time to verify and update all information in the presentation, ensuring accuracy before the meeting, even if it means working late (High Conscientiousness).",
+                "B": "Use the information as it is and hope it is not a major issue, focusing instead on the visual appeal of the presentation (Low Conscientiousness).",
+                "C": "Reach out to the departments responsible for the outdated information to confirm and update the details as soon as possible (High Conscientiousness).",
+                "D": "Proceed with preparing the presentation with the current information and plan to address any discrepancies if they arise during the meeting (Low Conscientiousness)."
+            }
+        },
+        "5": {
+            "situation": "You are responsible for maintaining inventory levels at your store. During your weekly check, you notice inconsistencies in the stock records and the actual inventory, suggesting either errors in the records or potential theft. This is a busy week with many tasks on your agenda.",
+            "options": {
+                "A": "Set aside other tasks temporarily to conduct a thorough investigation into the discrepancies, ensuring all records and counts are accurate (High Conscientiousness).",
+                "B": "Make a quick mental note to address it later when you have more time, focusing on completing your immediate tasks first (Low Conscientiousness).",
+                "C": "Notify your supervisor about the issue and offer to work overtime to resolve the inconsistencies and update the records accurately (High Conscientiousness).",
+                "D": "Assume it might be a minor mistake and continue with your regular duties, as the problem might resolve itself in the next check (Low Conscientiousness)."
+            }
+        },
+        "6": {
+            "situation": "You are part of a team responsible for developing a new product, and your role involves ensuring all specifications meet industry standards. During a review, you notice that some components may not comply with the latest regulations. The launch date is fast approaching, and the team is under pressure to deliver.",
+            "options": {
+                "A": "Suggest a temporary halt in development to address compliance issues, ensuring the product meets standards before launch (High Conscientiousness).",
+                "B": "Continue with the development as planned, assuming the issues are minor and can be fixed after the launch (Low Conscientiousness).",
+                "C": "Take immediate steps to research and propose adjustments for specifications, prioritizing compliance despite the tight schedule (High Conscientiousness).",
+                "D": "Plan to address any compliance issues only if they are raised during post-launch evaluation, focusing on meeting the deadline (Low Conscientiousness)."
+            }
+        },
+        "7": {
+            "situation": "You are responsible for preparing the monthly financial report for your department. As you start compiling the data, you realize there is a discrepancy in the numbers provided by different units, which could significantly impact the report's accuracy. The report is due in two days, and you have other pressing tasks to complete.",
+            "options": {
+                "A": "Prioritize resolving the discrepancies by reaching out to relevant units for clarification, ensuring the report is accurate before submission, even if it means working overtime (High Conscientiousness).",
+                "B": "Submit the report with a note indicating potential discrepancies and address them only if questioned later, focusing on completing other tasks (Low Conscientiousness).",
+                "C": "Immediately inform your supervisor of the discrepancies and propose a plan to correct them before the deadline, prioritizing accuracy and thoroughness (High Conscientiousness).",
+                "D": "Ignore the discrepancies for now and proceed with compiling the report as best as you can given the circumstances, choosing to prioritize speed over precision (Low Conscientiousness)."
+            }
+        },
+        "8": {
+            "situation": "You are a project manager overseeing a complex project with multiple stakeholders. You notice that one of the team's progress reports contains errors and incomplete sections, which could lead to misunderstandings and delays. The report is scheduled to be presented at a stakeholder meeting in two days, and there are numerous other tasks that demand your attention.",
+            "options": {
+                "A": "Devote extra time to carefully review and correct the report, ensuring all information is accurate and complete before the meeting (High Conscientiousness).",
+                "B": "Send the report as it is with a disclaimer about potential inaccuracies, focusing instead on preparing for other aspects of the meeting (Low Conscientiousness).",
+                "C": "Delegate the report corrections to a reliable team member and oversee the process to make sure everything is properly updated before the presentation (High Conscientiousness).",
+                "D": "Ignore the minor errors in the report and concentrate on presenting it in a positive light, assuming discrepancies can be clarified during the meeting (Low Conscientiousness)."
+            }
+        },
+        "9": {
+            "situation": "You are organizing a major conference for your company, which includes coordinating speakers, logistics, and attendee registrations. A week before the event, you realize several speakers have not submitted their presentation materials, which are required for the conference handbook. There are many other tasks on your agenda as the event approaches.",
+            "options": {
+                "A": "Immediately reach out to the speakers to remind them about the submission deadline and follow up until you receive the materials, ensuring the handbook is complete before printing (High Conscientiousness).",
+                "B": "Ignore the missing materials and proceed with printing the handbook as is, focusing instead on other last-minute preparations (Low Conscientiousness).",
+                "C": "Ask your team to contact the speakers while you handle other logistics, ensuring the handbook is updated as soon as materials arrive (High Conscientiousness).",
+                "D": "Assume the missing presentations are not crucial for the handbook and move forward with the available content to avoid delays (Low Conscientiousness)."
+            }
+        },
+        "10": {
+            "situation": "You work in quality control at a factory, and you've noticed an increase in minor defects in the products over the past week. While these defects don't pose any immediate safety concerns, they do affect overall product quality and customer satisfaction. You also have several other routine checks to complete by the end of the week.",
+            "options": {
+                "A": "Initiate a detailed investigation into the cause of the defects, even if it means staying beyond work hours, to improve product quality (High Conscientiousness).",
+                "B": "Continue with your routine checks and address the defects if they become a bigger issue, prioritizing immediate tasks at hand (Low Conscientiousness).",
+                "C": "Report the issue to your manager and suggest a temporary hold on production to fix the defects, ensuring that quality standards are maintained (High Conscientiousness).",
+                "D": "Keep track of the defects but wait to take any significant action until instructed by a supervisor, maintaining focus on completing your scheduled checks (Low Conscientiousness)."
+            }
+        },
+        "11": {
+            "situation": "You are responsible for the annual budget planning for your department, which requires collecting data from various teams. As you gather the input, you notice discrepancies in the projections provided by some teams, which could potentially impact overall budget accuracy. The deadline for submission is in three days, and you're already busy with other end-of-year duties.",
+            "options": {
+                "A": "Dedicate time to meticulously review and correct the discrepancies, ensuring that the budget is accurate and reliable, even if it means reprioritizing other tasks (High Conscientiousness).",
+                "B": "Submit the budget as received, noting the discrepancies for future reference, and focus on finishing your other pressing duties (Low Conscientiousness).",
+                "C": "Contact the teams responsible for inconsistencies to obtain clarified data, ensuring accurate budget projections before submission (High Conscientiousness).",
+                "D": "Assume that the discrepancies are minor and proceed with the budget as is to avoid compromising your other responsibilities (Low Conscientiousness)."
+            }
+        },
+        "12": {
+            "situation": "As a senior member of your company's research team, you are finalizing a crucial report that will influence strategic decisions in the upcoming year. Upon review, you discover that some of the data analysis contains errors that could lead to incorrect conclusions. The report is due tomorrow, and you have meetings scheduled throughout the day.",
+            "options": {
+                "A": "Reschedule some of your meetings to focus on correcting the errors, ensuring the report is accurate and reliable before submitting it (High Conscientiousness).",
+                "B": "Submit the report with a disclaimer about the potential errors, planning to address them if higher-ups find any issues (Low Conscientiousness).",
+                "C": "Stay late if necessary to fix the errors, prioritizing the integrity of the report over your other commitments (High Conscientiousness).",
+                "D": "Alert your manager about the errors and finalize the report as is due to time constraints, hoping the mistakes won't significantly impact decisions (Low Conscientiousness)."
+            }
+        },
+        "13": {
+            "situation": "You are tasked with auditing the company's supply chain to identify any inefficiencies or areas for improvement. During your audit, you find several inconsistencies in the documentation that could point to waste or unreported issues. The final report is due next week, and you are already scheduled for other important tasks this week.",
+            "options": {
+                "A": "Prioritize addressing the inconsistencies immediately, restructuring your schedule to ensure the audit report is as precise and informative as possible (High Conscientiousness).",
+                "B": "Proceed with the audit as planned, noting the inconsistencies for future reference without immediate investigation, focusing on other commitments (Low Conscientiousness).",
+                "C": "Bring the issue to your team's attention and collaborate with colleagues to resolve the inconsistencies and improve the audit report's quality before the deadline (High Conscientiousness).",
+                "D": "Assume the inconsistencies are not critical and finalize the report with the available information, prioritizing your other tasks (Low Conscientiousness)."
+            }
+        },
+        "14": {
+            "situation": "You are managing a software development project that requires regular updates and thorough testing before the final release. With the deadline a week away, you discover that a recent update has caused unexpected bugs, potentially affecting key functionalities. You must also prepare a presentation for a different project happening soon.",
+            "options": {
+                "A": "Delay work on the presentation to focus on identifying and fixing the bugs immediately, ensuring the software quality meets standards before release (High Conscientiousness).",
+                "B": "Submit the software as is and prepare to fix any bugs in a future update, concentrating on your presentation task for now (Low Conscientiousness).",
+                "C": "Organize a meeting with the development team to address the bugs collaboratively, prioritizing the software's performance over the presentation (High Conscientiousness).",
+                "D": "Proceed with preparing the presentation and plan to address the software bugs if users report significant issues post-release (Low Conscientiousness)."
+            }
+        },
+        "15": {
+            "situation": "You are a team leader working on a marketing campaign that involves a series of planned activities and deadlines. During a progress review, you find out that some team members are behind on their tasks, which could jeopardize the campaign's timeline. You are also expected to attend several meetings and handle daily operations.",
+            "options": {
+                "A": "Reorganize your schedule to provide support to those team members, helping them address their delays and ensuring the campaign stays on track (High Conscientiousness).",
+                "B": "Send a reminder to the team members about their deadlines and hope they manage to catch up, focusing on your other responsibilities (Low Conscientiousness).",
+                "C": "Hold an emergency team meeting to address the delays, collaboratively brainstorming ways to redistribute tasks and meet the campaign timeline (High Conscientiousness).",
+                "D": "Continue attending your meetings and managing daily operations, trusting team members will find ways to meet their deadlines (Low Conscientiousness)."
+            }
+        },
+        "16": {
+            "situation": "You are overseeing the quarterly inventory check for your department. Halfway through the process, you notice that the numbers are not aligning with the previous records, indicating potential inventory mismanagement or reporting errors. The full inventory report is due at the end of the week, and you have other projects that are demanding your attention.",
+            "options": {
+                "A": "Conduct a thorough recount and review of the inventory yourself to identify and correct any discrepancies before submitting the report (High Conscientiousness).",
+                "B": "Proceed with the inventory check based on the existing numbers and submit the report as is, deciding to investigate discrepancies only if questioned (Low Conscientiousness).",
+                "C": "Delegate some of your current projects to a colleague, allowing you more time to focus on resolving the inventory issues and ensuring report accuracy (High Conscientiousness).",
+                "D": "Complete your other projects first and attempt to address the discrepancies in the inventory check later, depending on available time (Low Conscientiousness)."
+            }
+        },
+        "17": {
+            "situation": "You are a product manager responsible for launching a new product line. During the final review before launch, you discover that the packaging design has a critical error that could confuse customers about product usage. The launch is scheduled for next week, and your calendar is packed with promotional events.",
+            "options": {
+                "A": "Notify the design team immediately to correct the error, even if it means postponing some promotional events to ensure the product is launched correctly (High Conscientiousness).",
+                "B": "Proceed with the launch as planned, focusing on the promotional events and addressing the packaging issue in future production batches (Low Conscientiousness).",
+                "C": "Quickly collaborate with the design team to devise a workaround, such as temporary labels, to fix the error without delaying the launch (High Conscientiousness).",
+                "D": "Discuss possible solutions with the marketing team, but prioritize attending the promotional events and hope the error doesn't significantly impact customers (Low Conscientiousness)."
+            }
+        },
+        "18": {
+            "situation": "You are responsible for organizing your company's annual performance review process. As you compile feedback from different departments, you notice some evaluations are missing crucial data that could affect the fairness and accuracy of the reviews. Other departments are waiting on your compiled report to finalize their plans, and you're juggling several ongoing projects.",
+            "options": {
+                "A": "Pause your other projects and focus on obtaining the missing data to ensure each evaluation is complete and accurate before distributing the report (High Conscientiousness).",
+                "B": "Send out the report with a note detailing the missing data, allowing departments to proceed while you continue with your other projects (Low Conscientiousness).",
+                "C": "Reach out to the relevant departments immediately for the missing information and adjust your schedule to accommodate the delay, prioritizing report accuracy (High Conscientiousness).",
+                "D": "Complete the report with the available data and offer to provide updates if needed later, focusing primarily on your other responsibilities (Low Conscientiousness)."
+            }
+        },
+        "19": {
+            "situation": "You are in charge of preparing the quarterly safety and compliance report for your company. While gathering the necessary documentation, you realize some safety inspections were not conducted as scheduled, which could lead to penalties during an upcoming audit. The report submission deadline is in two days, and you have other critical tasks to manage.",
+            "options": {
+                "A": "Drop the other tasks temporarily and work on arranging the missed inspections immediately, ensuring the report is comprehensive and audit-ready (High Conscientiousness).",
+                "B": "Submit the report with a note about the missed inspections and focus on getting caught up with the rest of your workload (Low Conscientiousness).",
+                "C": "Coordinate with the departments responsible for the inspections to quickly conduct them, allowing you to update the report with accurate information (High Conscientiousness).",
+                "D": "Proceed with completing the report using available data, planning to address any issues raised during the audit as they occur (Low Conscientiousness)."
+            }
+        },
+        "20": {
+            "situation": "You are responsible for organizing a client deliverable that requires input from multiple team members. Two days before the deadline, you notice that one team member has not completed their portion of the work, and their task is key to the final product. Meanwhile, you are also managing another urgent project with a close deadline.",
+            "options": {
+                "A": "Reach out to the team member immediately to offer assistance and work with them to complete their portion on time, even if it means reprioritizing your other tasks (High Conscientiousness).",
+                "B": "Submit the deliverable as is, noting the incomplete portion and plan to address it only if the client objects (Low Conscientiousness).",
+                "C": "Speak to your manager to inform them of the situation and request additional support to ensure the deliverable is complete and meets the deadline (High Conscientiousness).",
+                "D": "Focus on your other project and let the team member handle their portion, assuming they will manage to complete it in time (Low Conscientiousness)."
+            }
+        },
+        "21": {
+            "situation": "You are leading a critical research project that requires precise data collection from various sources. Halfway through the project, you find out that some data entries are inconsistent and could compromise the integrity of the research findings. The project submission is due next week, and you have other pressing deadlines to meet.",
+            "options": {
+                "A": "Prioritize correcting the data inconsistencies by double-checking the entries and consulting with the team to ensure the research results are valid (High Conscientiousness).",
+                "B": "Continue with the project using the inconsistent data and plan to address any issues only if they affect the final presentation (Low Conscientiousness).",
+                "C": "Inform your team about the inconsistencies and collaboratively devise a strategy to rectify them while managing your other deadlines effectively (High Conscientiousness).",
+                "D": "Focus on meeting your other deadlines and leave the data inconsistencies for later review, assuming they won't heavily impact the results (Low Conscientiousness)."
+            }
+        },
+        "22": {
+            "situation": "You are tasked with developing training materials for new employees, and the materials need to be comprehensive and up-to-date. As you review the information provided by various departments, you find several outdated procedures that could confuse new hires. The deadline for the training rollout is fast approaching, and your schedule is already packed with other priorities.",
+            "options": {
+                "A": "Set aside time to update the procedures by consulting with the departments involved to ensure the training materials are current and accurate, even if it means working late (High Conscientiousness).",
+                "B": "Use the existing materials and plan to verbally clarify any outdated procedures during training sessions, focusing on meeting other deadlines (Low Conscientiousness).",
+                "C": "Quickly coordinate with department heads to get the latest information and adjust the training materials accordingly, prioritizing clarity and accuracy (High Conscientiousness).",
+                "D": "Proceed with the training rollout using the current materials and address any confusion as it arises during the sessions, trusting that overall training will suffice (Low Conscientiousness)."
+            }
+        }
+    },
+    "Extraversion": {
+        "1": {
+            "situation": "During a team meeting, a crucial decision needs to be made about which direction the project should take. The team is divided, with some members feeling strongly about one approach while others are equally passionate about an alternative. As someone who often takes the lead in discussions, you find that the room has suddenly fallen silent, with all eyes on you for guidance.",
+            "options": {
+                "A": "Suggest taking a vote to make sure everyone’s opinion is considered and go with the majority decision.",
+                "B": "Share your own opinion confidently and provide a well-reasoned argument to persuade others.",
+                "C": "Encourage an open discussion to ensure that all viewpoints are heard and considered equally.",
+                "D": "Pass the decision to someone else, indicating that you think another team member might be better qualified to make the call."
+            }
+        },
+        "2": {
+            "situation": "You are at a networking event where you don't know anyone. As you look around the room, you notice that most attendees are engaged in lively conversations. You know that making connections tonight could be beneficial for your career.",
+            "options": {
+                "A": "Approach a group of people who seem friendly and introduce yourself, joining their conversation.",
+                "B": "Find a quiet corner and observe the interactions around you, waiting for someone to approach you first.",
+                "C": "Start a conversation with someone standing alone, and see if you can both join a larger group together.",
+                "D": "Focus on the refreshments and busy yourself with your phone until the event wraps up."
+            }
+        },
+        "3": {
+            "situation": "You’ve just joined a new club that matches your interests, but you don’t know anyone there yet. During the first meeting, the group leader encourages everyone to mingle and get to know each other before the main activity begins.",
+            "options": {
+                "A": "Walk up to a few different groups and introduce yourself, trying to learn about as many people as you can.",
+                "B": "Look around for someone who looks as new as you feel and start a conversation with them.",
+                "C": "Stay near the edges of the room, observing how interactions unfold to get a sense of the group dynamics.",
+                "D": "Find a seat and wait for the activity to begin, content to interact only if others approach you."
+            }
+        },
+        "4": {
+            "situation": "You are attending a conference with numerous attendees and various breakout sessions. As the session you are most interested in finishes, a coffee break is announced. The room is filled with small clusters of people who are chatting and engaging in discussions.",
+            "options": {
+                "A": "Walk up to a group discussing a topic you're interested in and actively join the conversation.",
+                "B": "Find a quiet spot to sit and reflect on the session, enjoying the break on your own.",
+                "C": "Approach someone standing alone and start a conversation about the session you both attended.",
+                "D": "Spend the break primarily checking your phone, avoiding initiating conversations unless someone approaches you."
+            }
+        },
+        "5": {
+            "situation": "You have recently moved into a new neighborhood. The community is hosting a block party, inviting everyone to join for food, games, and socializing. It's a great opportunity to meet your neighbors and learn more about the local community.",
+            "options": {
+                "A": "Dive into the crowd, introducing yourself to as many people as possible and joining group activities.",
+                "B": "Find a spot to enjoy the food while observing the party, waiting for someone to initiate conversation with you.",
+                "C": "Locate a small group that seems interesting and start a conversation, gradually getting to know the participants.",
+                "D": "Stay on the sidelines, occasionally interacting if approached, but primarily focusing on the events from a distance."
+            }
+        },
+        "6": {
+            "situation": "Your workplace is hosting an after-work social event at a local restaurant, aimed at helping team members unwind and strengthen their relationships. Upon arrival, you notice that your colleagues are scattered around, engaging in conversations and enjoying the evening.",
+            "options": {
+                "A": "Join a lively group conversation and contribute enthusiastically to the discussion.",
+                "B": "Find a table on your own, enjoying the atmosphere while occasionally greeting familiar faces.",
+                "C": "Approach a colleague you don't know well yet and start a conversation to learn more about them.",
+                "D": "Stay in a quieter area of the restaurant, engaging sparingly as others pass by and say hello."
+            }
+        },
+        "7": {
+            "situation": "You are attending a friend's wedding reception where you know only a few attendees. The atmosphere is vibrant, with music playing and guests mingling across the venue. Your friend encourages you to enjoy and make new connections during the evening.",
+            "options": {
+                "A": "Join the dance floor where many guests are having fun, and engage with those around you.",
+                "B": "Sit at a table with people you already know, focusing on conversations with familiar faces.",
+                "C": "Approach a group of guests near the bar and introduce yourself, asking how they know the couple.",
+                "D": "Find a comfortable spot away from the crowd and enjoy the music, speaking only if someone approaches you."
+            }
+        },
+        "8": {
+            "situation": "You've been invited to a weekend retreat by a colleague you're friendly with, where employees from various departments will be present. Upon arrival, you notice there are numerous activities planned, including group games, workshops, and social gatherings.",
+            "options": {
+                "A": "Sign up for as many group activities as possible and actively participate, aiming to meet different colleagues.",
+                "B": "Select a few workshops that interest you and focus on those, interacting mostly during the scheduled sessions.",
+                "C": "Join a group game and start conversations with participants to learn more about their roles in the company.",
+                "D": "Spend more time in solitary activities or relaxation areas, engaging minimally unless approached."
+            }
+        },
+        "9": {
+            "situation": "You've decided to attend a community volunteering event, even though you don't know anyone there. The event involves various tasks that are being assigned to small groups, and there's a break scheduled for socializing afterwards.",
+            "options": {
+                "A": "During the break, approach a group of volunteers and introduce yourself, sharing your thoughts on the event.",
+                "B": "Primarily focus on your assigned tasks and during the break, keep to yourself unless someone initiates conversation.",
+                "C": "Seek out group tasks that require collaboration, allowing you to naturally converse and connect with others.",
+                "D": "Complete your assigned tasks independently, and during the break, find a quiet spot to relax alone."
+            }
+        },
+        "10": {
+            "situation": "You are attending an art workshop where attendees are encouraged to share feedback and thoughts on each other's work. Most participants are mingling and discussing their projects during the breaks.",
+            "options": {
+                "A": "Approach other attendees to discuss their work and openly share your feedback and ideas.",
+                "B": "Wait for others to approach you first and then engage in conversation if they start talking about their work.",
+                "C": "Join a small group discussing art techniques and eagerly participate in the exchange of ideas.",
+                "D": "Focus on your own art project quietly, engaging only if directly asked for feedback or opinions."
+            }
+        },
+        "11": {
+            "situation": "You've signed up for a weekend hiking trip organized by a local adventure club. As you arrive at the starting point, you notice clusters of people chatting and preparing for the hike. The organizers encourage everyone to interact and find partners to hike with.",
+            "options": {
+                "A": "Approach a group and introduce yourself, suggesting you all hike together and share stories along the way.",
+                "B": "Find a quiet spot to wait until the hike starts, hoping someone will invite you to join their group.",
+                "C": "Identify someone who looks enthusiastic about the hike and start a conversation about the trail.",
+                "D": "Prepare your hiking gear alone, focusing on the journey ahead rather than socializing."
+            }
+        },
+        "12": {
+            "situation": "You have enrolled in a cooking class that is meant to enhance your culinary skills. As the class begins, the instructor asks everyone to pair up and work on a dish together. Most participants quickly start chatting and choosing partners.",
+            "options": {
+                "A": "Scan the room for someone working alone and approach them to suggest teaming up.",
+                "B": "Wait for others to come and ask you to be their partner before engaging.",
+                "C": "Join a pair that's short on participants and offer to make it a team of three, initiating conversation with both.",
+                "D": "Stay at your station quietly until someone else is assigned to work with you."
+            }
+        },
+        "13": {
+            "situation": "You've recently joined a public speaking club to improve your presentation skills. At your first meeting, members are encouraged to participate in impromptu speech sessions, where they pick a topic and speak about it for a few minutes in front of the group.",
+            "options": {
+                "A": "Volunteer early to give an impromptu speech, eager to share your thoughts and get feedback.",
+                "B": "Observe others as they give their speeches, planning to volunteer only if there is enough time left.",
+                "C": "Engage with fellow members during breaks to discuss their speeches and build a rapport before volunteering.",
+                "D": "Stay quiet and keep to yourself, hoping to avoid giving a speech until you've attended a few more meetings."
+            }
+        },
+        "14": {
+            "situation": "You've been invited to a friend's game night where a mix of board games and party games are set up. Most guests are already seated at different game tables, laughing and engaging energetically. Your friend encourages you to jump in and join a game.",
+            "options": {
+                "A": "Approach a table playing a game you're unfamiliar with and ask if you can join, eager to learn and socialize.",
+                "B": "Spot a quieter game with fewer players and ask if you can participate, preferring a more low-key interaction.",
+                "C": "Join the game your friend is participating in, sticking to the comfort of familiar company.",
+                "D": "Look around for a game to observe first, intending to join only after you're sure about the rules and dynamics."
+            }
+        },
+        "15": {
+            "situation": "Your department is hosting a brainstorming session to come up with ideas for an upcoming project. The facilitator encourages everyone to contribute freely and interact with one another to build on ideas. Some team members are already enthusiastically sharing, while others are quietly observing.",
+            "options": {
+                "A": "Actively share your ideas early in the session and encourage others to discuss and expand on them.",
+                "B": "Listen to what others are sharing and only contribute if you feel strongly about a particular idea.",
+                "C": "Engage with the group by building on others' ideas and sparking further discussion.",
+                "D": "Wait for a quieter moment to share your thoughts, focusing on observing the overall discussion first."
+            }
+        },
+        "16": {
+            "situation": "You're attending a book club meeting for the first time and notice that most participants are already engaged in animated discussions about the month's reading. The organizer invites newcomers to introduce themselves and share their thoughts on the book.",
+            "options": {
+                "A": "Introduce yourself confidently to the group and express your opinions about the book, welcoming any discussion.",
+                "B": "Wait until the formal session begins before speaking, listening to others' views to gauge the group's dynamic.",
+                "C": "Join a smaller conversation circle, introducing yourself and sharing your insights to connect with a few members.",
+                "D": "Stay quiet and listen attentively, preparing to share your thoughts only if directly asked."
+            }
+        },
+        "17": {
+            "situation": "You've decided to attend a local music festival, where multiple stages are set up, and various activities are taking place. The atmosphere is lively with people dancing, chatting, and exploring different areas. A group of festival-goers invites you to join them for a dance near one of the stages.",
+            "options": {
+                "A": "Join them on the dance floor, eager to meet new people and soak up the vibrant atmosphere.",
+                "B": "Politely decline the invitation and continue exploring the festival on your own, enjoying the experience quietly.",
+                "C": "Engage in light conversation with the group before accepting the invitation, balancing socializing with enjoying the music.",
+                "D": "Observe the dancing and festivities from a distance, considering joining only if you feel more comfortable later on."
+            }
+        },
+        "18": {
+            "situation": "You have enrolled in a weekend photography workshop, which includes both learning sessions and social activities. At the end of the first day, participants are invited to gather around a campfire to discuss their experiences and photography ideas.",
+            "options": {
+                "A": "Eagerly join the campfire circle, sharing your thoughts and asking others about their work to create an engaging discussion.",
+                "B": "Find a spot close to the campfire where you can listen to others share their ideas, contributing only if you feel comfortable.",
+                "C": "Approach individuals who seem interested in similar photography styles and start one-on-one conversations with them.",
+                "D": "Sit slightly away from the campfire, enjoying the atmosphere quietly and only participating if directly invited."
+            }
+        },
+        "19": {
+            "situation": "You've volunteered to help organize a charity event that includes various activities like games, auctions, and social gatherings. As the event kicks off, attendees start arriving, and there are numerous opportunities for networking and engagement.",
+            "options": {
+                "A": "Take a proactive role in welcoming guests and initiating conversations to make them feel comfortable and engaged.",
+                "B": "Focus on your assigned tasks quietly, preferring to interact with guests only when necessary.",
+                "C": "Join a group of attendees who are discussing the event activities and contribute your thoughts and enthusiasm.",
+                "D": "Stay near the edges of the event space, observing the proceedings and participating minimally in discussions."
+            }
+        },
+        "20": {
+            "situation": "You've just started a new language course at a local community center. On the first day, the instructor organizes an icebreaker activity where participants are encouraged to pair up and practice simple dialogues in the new language. Most of the class seems eager to dive in, while a few appear more reserved.",
+            "options": {
+                "A": "Approach someone who looks hesitant and suggest pairing up, making an effort to encourage their participation.",
+                "B": "Wait for the instructor to assign partners, quietly preparing for the activity until then.",
+                "C": "Join a pair near you and suggest working as a trio to maximize interaction and practice.",
+                "D": "Focus on your own materials and subtly observe the interactions until you're paired by default."
+            }
+        },
+        "21": {
+            "situation": "You are attending a technology expo where numerous companies are showcasing their latest innovations. The event is bustling with tech enthusiasts eagerly exploring the booths and engaging in discussions with exhibitors and fellow attendees.",
+            "options": {
+                "A": "Approach multiple booths, asking detailed questions and engaging in conversations with the exhibitors to maximize networking opportunities.",
+                "B": "Select a few booths that interest you the most and focus on interacting with exhibitors there, ensuring meaningful exchanges.",
+                "C": "Walk through the expo at your own pace, taking in the displays and engaging in conversations only when approached.",
+                "D": "Stay on the periphery of the event, observing the trends and technologies quietly, and engaging minimally."
+            }
+        },
+        "22": {
+            "situation": "You’ve been invited to a team-building retreat with colleagues from different departments. At the start of the retreat, there is a social mixer designed to help attendees get to know each other better before the activities begin. The room is filled with stations offering interactive games and discussion prompts.",
+            "options": {
+                "A": "Dive into the mixer by participating in as many games as possible, introducing yourself and engaging with a variety of colleagues.",
+                "B": "Identify a few colleagues you already know and stick with them, interacting primarily within your comfort zone.",
+                "C": "Start conversations with individuals you don’t know well, using the discussion prompts to learn about their roles and interests.",
+                "D": "Take a seat in a quieter area and observe the interactions, joining only if someone approaches or invites you."
+            }
+        }
+    },
+    "Agreeableness": {
+        "1": {
+            "situation": "You are working on a team project at your workplace. During a critical meeting, the project manager presents a new strategy that requires everyone to adopt a different approach than originally planned. Some team members seem unsure about their roles under the new strategy and express their reluctance to change their work habits.",
+            "options": {
+                "A": "Take the initiative to clarify the new strategy to your colleagues and suggest ways to ease the transition to the new approach. (High $Trait)",
+                "B": "Express your own reluctance to the project manager, focusing on how the change affects you personally. (Low $Trait)",
+                "C": "Assist the project manager in creating a detailed plan that addresses team members’ concerns and helps them adapt smoothly. (High $Trait)",
+                "D": "Wait to see if issues will resolve themselves over time without involving yourself further. (Low $Trait)"
+            }
+        },
+        "2": {
+            "situation": "Your colleague is struggling to meet a deadline and approaches you for help, knowing that you have completed your tasks ahead of schedule. The colleague seems stressed and anxious about the workload and fears the repercussions of missing the deadline.",
+            "options": {
+                "A": "Offer to help your colleague by sharing some of their workload and provide emotional support to ease their stress. (High Agreeableness)",
+                "B": "Lightly suggest that they should manage their time better and focus on finishing their tasks without offering any help. (Low Agreeableness)",
+                "C": "Volunteer to assist with the most urgent parts of the project, while also suggesting some strategies to help them better manage their time. (High Agreeableness)",
+                "D": "Tell your colleague that you are unable to help and suggest they speak to their manager for assistance. (Low Agreeableness)"
+            }
+        },
+        "3": {
+            "situation": "During a department meeting, a heated discussion arises about a new policy that affects everyone's workflow. Several colleagues are expressing strong opinions and the atmosphere is becoming tense. You notice that some team members are not voicing their thoughts and seem uncomfortable with the escalating tension.",
+            "options": {
+                "A": "Try to mediate the discussion by acknowledging everyone's points and suggest finding a compromise that can benefit the group. (High Agreeableness)",
+                "B": "Stay silent and let the colleagues who are arguing sort out the issue among themselves without intervention. (Low Agreeableness)",
+                "C": "Support the opinion of the colleagues you agree with the most, without considering the views of those who are quiet or disagreeing. (Low Agreeableness)",
+                "D": "Encourage the quieter team members to share their perspectives and propose setting up a follow-up meeting to calmly discuss potential solutions. (High Agreeableness)"
+            }
+        },
+        "4": {
+            "situation": "You are assigned to lead a project that depends heavily on collaboration among team members. During the initial meetings, you notice that a few members have conflicting opinions on how to proceed, which is starting to create a divide in the team. Some members are visibly frustrated, and discussions are becoming increasingly unproductive.",
+            "options": {
+                "A": "Address the conflicts directly by organizing a team-building activity to strengthen relationships and enhance communication. (High Agreeableness)",
+                "B": "Ignore the unresolved conflicts and instruct the team to focus solely on their individual responsibilities within the project. (Low Agreeableness)",
+                "C": "Facilitate an open discussion where everyone can express their viewpoints and work towards a mutually agreeable solution. (High Agreeableness)",
+                "D": "Allow the team to continue working as they are, believing the conflict will resolve naturally as the project progresses. (Low Agreeableness)"
+            }
+        },
+        "5": {
+            "situation": "You overhear a group of your colleagues discussing a new policy and notice that they are upset because they believe the policy is unfair. They are considering collectively approaching management to voice their concerns but are hesitant about the potential repercussions.",
+            "options": {
+                "A": "Encourage your colleagues to approach management and offer to join them in the discussion to support their concerns. (High Agreeableness)",
+                "B": "Advise them to move on and focus on their work, suggesting that it's better not to challenge management decisions. (Low Agreeableness)",
+                "C": "Suggest that they carefully prepare their points and recommend going through proper channels to express their concerns formally. (High Agreeableness)",
+                "D": "Distance yourself from the situation and decide not to get involved in the discussion with management. (Low Agreeableness)"
+            }
+        },
+        "6": {
+            "situation": "During a collaborative group project at university, two of your team members have a disagreement about the direction the project should take. The disagreement has created tension and is impacting the team's progress. The rest of the team is unsure how to proceed, and the atmosphere has become uncomfortable.",
+            "options": {
+                "A": "Intervene by facilitating a discussion aimed at finding common ground, and suggest compromises that incorporate ideas from both sides. (High Agreeableness)",
+                "B": "Stay neutral and let the two team members settle their disagreement between themselves, as it’s not directly your issue. (Low Agreeableness)",
+                "C": "Take charge and make a decision yourself to avoid further delays, even if it means bypassing the concerns of the team members involved. (Low Agreeableness)",
+                "D": "Encourage the team to focus on the overarching project goals and remind everyone of the importance of working collaboratively despite individual differences. (High Agreeableness)"
+            }
+        },
+        "7": {
+            "situation": "A new employee has joined your team and appears to be struggling with fitting into the group dynamic. During lunch breaks, you notice that they often sit alone and rarely engage in conversations with others. Some of your colleagues have mentioned that the new employee seems reserved and hard to approach.",
+            "options": {
+                "A": "Invite the new employee to join your table for lunch and introduce them to your colleagues to help them feel more comfortable. (High Agreeableness)",
+                "B": "Continue to sit with your usual group and leave the new employee to adjust at their own pace without interference. (Low Agreeableness)",
+                "C": "Approach the new employee later and offer assistance or guidance if they require help settling in. (High Agreeableness)",
+                "D": "Mention to your colleagues that the new employee should make more of an effort to integrate with the team. (Low Agreeableness)"
+            }
+        },
+        "8": {
+            "situation": "You are part of a volunteer organization planning a charity event. One of the experienced volunteers has a different idea for the event that contradicts the current plan, causing friction in the group. Some members feel their efforts might be wasted if the plan changes, while others are open to new ideas.",
+            "options": {
+                "A": "Facilitate a group discussion to explore the merits of both the current plan and new idea, aiming to find a collaborative solution. (High Agreeableness)",
+                "B": "Stick to the original plan and discourage further discussion to avoid confusion and ensure smooth execution. (Low Agreeableness)",
+                "C": "Advocate for the new idea and persuade others to support the change, disregarding the concerns of those opposed. (Low Agreeableness)",
+                "D": "Encourage the experienced volunteer to present their idea in a structured proposal, promoting respectful consideration by the group. (High Agreeableness)"
+            }
+        },
+        "9": {
+            "situation": "You are part of a community gardening group that meets regularly to maintain shared green spaces. During a meeting, a disagreement arises about which plants to prioritize for the upcoming season. Some members prefer native plants, while others want to introduce more exotic species, leading to a divide within the group.",
+            "options": {
+                "A": "Suggest organizing a vote to ensure everyone's opinion is considered and respect the outcome as the group's decision. (High Agreeableness)",
+                "B": "Align yourself with the group supporting exotic plants without addressing the concerns of those who prefer native species. (Low Agreeableness)",
+                "C": "Recommend splitting the garden areas to accommodate both preferences, thereby satisfying both parties. (High Agreeableness)",
+                "D": "Let the disagreement continue without stepping in, as it's not directly affecting you. (Low Agreeableness)"
+            }
+        },
+        "10": {
+            "situation": "You are part of a book club that meets monthly to discuss selected books. During a meeting, two members have a disagreement about the interpretation of a character's motivation. The debate becomes intense, making the atmosphere awkward for other members who are more interested in enjoying the discussion rather than getting involved in the disagreement.",
+            "options": {
+                "A": "Intervene by acknowledging both interpretations and suggesting that diverse viewpoints enrich the discussion, encouraging others to share their thoughts. (High Agreeableness)",
+                "B": "Let the two members continue their debate, as it's their right to express divergent opinions, without getting involved yourself. (Low Agreeableness)",
+                "C": "Ask both members to agree to disagree and refocus the group on other parts of the book that haven't been discussed yet. (High Agreeableness)",
+                "D": "Side with the member whose opinion you agree with and support their points, adding fuel to the debate. (Low Agreeableness)"
+            }
+        },
+        "11": {
+            "situation": "You are working on a group assignment for a course, and one team member is consistently late with their contributions, causing frustration among the rest of the group. During a team discussion, the other members begin openly criticizing the late team member in a manner that seems confrontational and could escalate quickly.",
+            "options": {
+                "A": "Step in to calm the group and suggest discussing the issue with the late team member one-on-one to avoid creating unnecessary tension. (High Agreeableness)",
+                "B": "Sit back and let the group handle the situation, as the criticism is justified given the delays. (Low Agreeableness)",
+                "C": "Defend the late team member and downplay the issue, even though their behavior has caused delays for the group. (High Agreeableness)",
+                "D": "Join in on the criticism to make it clear that the team member needs to change their behavior immediately. (Low Agreeableness)"
+            }
+        },
+        "12": {
+            "situation": "You are part of a neighborhood committee organizing a local event. One member suggests a plan that some of the older community members might find difficult to participate in due to mobility issues. The team is split, with some advocating for inclusivity and others prioritizing modern activities.",
+            "options": {
+                "A": "Advocate for modifying the plan to ensure inclusivity, proposing alternative activities that accommodate everyone. (High Agreeableness)",
+                "B": "Support the original plan, emphasizing the need to modernize the event, despite concerns from some members. (Low Agreeableness)",
+                "C": "Suggest organizing two separate events to cater to different preferences, aiming to make everyone feel valued. (High Agreeableness)",
+                "D": "Remain neutral and let the discussion unfold without contributing, since your priority is not to conflict with others. (Low Agreeableness)"
+            }
+        },
+        "13": {
+            "situation": "You are attending a team-building retreat with your company. During a group activity that requires working closely together, two team members begin to disagree strongly over the approach being taken, turning what was meant to be a fun challenge into an awkward situation for the rest of the group. The disagreement threatens to derail the activity entirely.",
+            "options": {
+                "A": "Encourage both members to take a short break and refocus the group on the shared objectives of the activity, emphasizing teamwork. (High Agreeableness)",
+                "B": "Allow the disagreement to play out without interference, thinking it will resolve on its own as the activity progresses. (Low Agreeableness)",
+                "C": "Join the group discussion by suggesting a compromise that incorporates elements of both approaches, aiming to create harmony. (High Agreeableness)",
+                "D": "Take charge of the activity and impose the approach you believe is best, sidelining the arguments for the sake of efficiency. (Low Agreeableness)"
+            }
+        },
+        "14": {
+            "situation": "During a friends' night out, a couple of your friends start arguing about the choice of restaurant. The disagreement seems to be escalating and is affecting the mood of the entire group, with some friends feeling uncomfortable and unsure of how to proceed.",
+            "options": {
+                "A": "Suggest taking a vote on the restaurant choice to include everyone’s opinion, promoting a fair and collective decision. (High Agreeableness)",
+                "B": "Propose splitting into smaller groups that can go to different restaurants, catering to individuals' preferences. (High Agreeableness)",
+                "C": "Remain silent, allowing the friends to resolve their argument without getting involved, as it's not directly your issue. (Low Agreeableness)",
+                "D": "Agree with the friend whose choice aligns with yours, encouraging others to go along with their decision to quickly end the argument. (Low Agreeableness)"
+            }
+        },
+        "15": {
+            "situation": "You are part of a parent-teacher association at your child's school. During a meeting to plan the annual school fair, two parents strongly disagree over the type of entertainment to be provided, leading to a heated debate that halts progress.",
+            "options": {
+                "A": "Encourage both parents to share their ideas in writing and propose evaluating them collectively at the next meeting, fostering a collaborative atmosphere. (High Agreeableness)",
+                "B": "Suggest sticking with last year's entertainment plan to avoid conflict, even if it doesn't incorporate new ideas. (Low Agreeableness)",
+                "C": "Support the opinion of the parent you agree with and push to conclude the discussion quickly to resume planning. (Low Agreeableness)",
+                "D": "Facilitate a brainstorming session where all parents can suggest entertainment options, aiming to combine ideas into a balanced program. (High Agreeableness)"
+            }
+        },
+        "16": {
+            "situation": "You are part of a committee responsible for choosing a new software system for your organization. Two committee members have opposing views on which system will best meet the organization's needs. The debate becomes tense, affecting the group's ability to make a decision.",
+            "options": {
+                "A": "Encourage a pause in the debate and suggest gathering more data on both systems to make an informed decision together. (High Agreeableness)",
+                "B": "Tell the committee to proceed with the system you favor without further discussion, prioritizing speed over consensus. (Low Agreeableness)",
+                "C": "Facilitate a discussion to explore the strengths and weaknesses of each system, and aim for a consensus that incorporates everyone's concerns. (High Agreeableness)",
+                "D": "Allow the debate to continue without engaging, expecting the group to eventually settle the conflict on its own. (Low Agreeableness)"
+            }
+        },
+        "17": {
+            "situation": "You are part of a sports team, and during practice, two teammates start arguing about the best strategy to win an upcoming match. The argument begins to distract other team members and disrupts the practice session, causing unease among those who just want to focus on training.",
+            "options": {
+                "A": "Suggest holding a team meeting after practice to discuss strategies calmly and ensure everyone's voice is heard. (High Agreeableness)",
+                "B": "Remain passive and let the coach handle the argument, as it's not your responsibility to mediate team disputes. (Low Agreeableness)",
+                "C": "Propose testing both strategies during practice to see which works better, promoting cooperation and experimentation. (High Agreeableness)",
+                "D": "Side with the teammate whose strategy you support and encourage the team to follow that plan without further debate. (Low Agreeableness)"
+            }
+        },
+        "18": {
+            "situation": "You are part of a volunteer group working on a community clean-up project. When planning the schedule, two group leaders begin to disagree on the distribution of tasks, leading to confusion among the volunteers. Some members look overwhelmed by the lack of direction.",
+            "options": {
+                "A": "Step in to suggest a temporary compromise that includes input from both leaders, aiming to keep the project moving smoothly. (High Agreeableness)",
+                "B": "Allow the leaders to resolve their disagreement privately, focusing on your own tasks until they reach an agreement. (Low Agreeableness)",
+                "C": "Propose a voting system where all volunteers can decide on the preferred task distribution method, fostering a democratic solution. (High Agreeableness)",
+                "D": "Support the leader whose distribution plan you prefer, encouraging the group to follow that plan without further debate. (Low Agreeableness)"
+            }
+        },
+        "19": {
+            "situation": "You are part of a book club that has been meeting virtually. During a video call, two members start arguing over the interpretation of a controversial book topic, creating tension that makes other members uncomfortable and reluctant to participate.",
+            "options": {
+                "A": "Suggest setting aside the contentious topic for now and shift the discussion to another part of the book, aiming to create a more inclusive environment. (High Agreeableness)",
+                "B": "Remain silent and let the argument continue, assuming it will resolve itself without intervention. (Low Agreeableness)",
+                "C": "Encourage both members to express their viewpoints while inviting others to share different perspectives, promoting a balanced conversation. (High Agreeableness)",
+                "D": "Support the opinion of the member whose interpretation you agree with, pushing for your viewpoint to dominate the discussion. (Low Agreeableness)"
+            }
+        },
+        "20": {
+            "situation": "You are in a project team tasked with creating a marketing campaign for a new product. Two team members have a disagreement about the target audience, with each advocating for different demographics. The disagreement is causing delays in the project's progress and some team members are starting to feel frustrated.",
+            "options": {
+                "A": "Organize a brainstorming session to explore ideas from both perspectives, encouraging input from all team members to find a comprehensive solution. (High Agreeableness)",
+                "B": "Stay out of the dispute, allowing it to continue while focusing on completing your own tasks as assigned. (Low Agreeableness)",
+                "C": "Take a firm stance on the side you agree with and try to persuade the rest of the team to follow that direction. (Low Agreeableness)",
+                "D": "Propose conducting a quick market research to gather data on both demographics, helping to inform a mutual decision based on evidence. (High Agreeableness)"
+            }
+        },
+        "21": {
+            "situation": "You are part of a local theater group preparing for an upcoming performance. During a rehearsal, two actors disagree over their lines and how to portray their characters, resulting in rising tension that affects the entire group's morale and focus.",
+            "options": {
+                "A": "Suggest taking a break to allow everyone to cool down and then reconvene to discuss each actor's perspective more objectively. (High Agreeableness)",
+                "B": "Let the disagreement play out until the director intervenes, staying focused on your own role without getting involved. (Low Agreeableness)",
+                "C": "Encourage both actors to experiment with their lines in different ways during rehearsal to see what works best, fostering cooperation. (High Agreeableness)",
+                "D": "Support the actor whose portrayal aligns with your vision and advocate for their approach without considering the other's viewpoint. (Low Agreeableness)"
+            }
+        },
+        "22": {
+            "situation": "You are attending a family reunion where two relatives begin to argue over differing political views, causing discomfort for others trying to enjoy the event. The disagreement is getting louder, drawing attention away from the celebration and creating a tense atmosphere.",
+            "options": {
+                "A": "Gently suggest shifting the conversation to a more neutral topic and involve others in discussing shared family memories to ease tension. (High Agreeableness)",
+                "B": "Quietly leave the area and let the relatives resolve their disagreement, choosing not to get involved. (Low Agreeableness)",
+                "C": "Encourage each relative to explain their point calmly and facilitate a respectful discussion where both can express their views. (High Agreeableness)",
+                "D": "Take a side in the argument and loudly express your support for one relative's viewpoint, adding to the debate. (Low Agreeableness)"
+            }
+        }
+    },
+    "Neuroticism": {
+        "1": {
+            "situation": "You have been working as part of a team to complete a crucial project at work. As the deadline approaches, one of your teammates starts to make several mistakes and seems visibly stressed. Your supervisor has asked you to ensure that the project stays on schedule.",
+            "options": {
+                "A": "Offer to help your teammate with their tasks, suggesting a short break to discuss how you can support each other.",
+                "B": "Discuss with your supervisor the possibility of reallocating tasks to balance the workload among team members.",
+                "C": "Ignore your teammate's mistakes and focus solely on finishing your own tasks to ensure the project is completed on time.",
+                "D": "Remind your teammate of the importance of meeting the deadline and emphasize that everyone needs to manage their own workload effectively."
+            }
+        },
+        "2": {
+            "situation": "You are asked to deliver a presentation to a large audience about a project you recently completed. You’ve never presented to a group of this size before, and there is limited time left for preparation. You feel a mix of excitement and nervousness leading up to the event.",
+            "options": {
+                "A": "Practice your presentation repeatedly, focusing on every small detail, and worry about potential mistakes you might make during the event.",
+                "B": "Focus on the positive outcomes of the presentation, such as showcasing your hard work, and remind yourself that small mistakes are normal.",
+                "C": "Procrastinate on preparing for the presentation because thinking about it makes you too anxious, leaving preparation for the last minute.",
+                "D": "Create a detailed outline of your presentation and allocate specific chunks of time for preparation in order to manage the pressure."
+            }
+        },
+        "3": {
+            "situation": "After a long day at work, you receive a last-minute invitation from a friend to join a group dinner party. You have been feeling quite tired and also have some work emails piled up that need attention. You worry about the balance between socializing and completing your tasks.",
+            "options": {
+                "A": "Politely decline the invitation, explaining that you need time to rest and catch up on your work.",
+                "B": "Accept the invitation immediately, convincing yourself that it's important to spend time with friends despite the pending tasks.",
+                "C": "Decide to go but spend most of the evening worrying about unfinished work and contemplating leaving early.",
+                "D": "Explain your situation to your friend and suggest joining for a short while before heading home to finish your tasks."
+            }
+        },
+        "4": {
+            "situation": "You have just submitted an important report to your manager, and you are now awaiting feedback. You know the report plays a critical role in an upcoming project, and you're concerned about any potential criticism it might receive.",
+            "options": {
+                "A": "Spend the waiting period occupied with other tasks, reminding yourself that you did your best and that constructive feedback will be helpful.",
+                "B": "Constantly check your email for feedback, feeling anxious about any potential mistakes that might have been overlooked.",
+                "C": "Distract yourself by engaging in a relaxing activity, reasoning that worrying will not change the outcome.",
+                "D": "Replay the report details in your mind, dwelling on every potential error that might result in negative feedback from your manager."
+            }
+        },
+        "5": {
+            "situation": "You are planning a holiday trip with friends and are in charge of booking all accommodations and travel arrangements. A few days before the trip, you realize that one of the bookings hasn’t been confirmed yet, and your friends are counting on you to ensure everything runs smoothly.",
+            "options": {
+                "A": "Check all details of the other bookings carefully and contact the hotel immediately to resolve the issue, prioritizing solutions over stress.",
+                "B": "Feel overwhelmed and anxious, repeatedly worrying about how this might ruin the trip and disappoint your friends.",
+                "C": "Decide to send a brief message to your friends about the issue, focused mainly on venting your concerns and expressing the pressure you're feeling.",
+                "D": "Calmly update your friends on the situation and reassure them that you'll find a solution, seeking their input on alternative options."
+            }
+        },
+        "6": {
+            "situation": "You're preparing for a performance review meeting with your supervisor, which is scheduled for next week. You've been working hard, but you still worry about your performance and the feedback you might receive. Your supervisor has a reputation for being very straightforward and detailed in evaluations.",
+            "options": {
+                "A": "Spend the days leading up to the meeting feeling anxious and fearing the worst, despite having received positive feedback in the past.",
+                "B": "Reflect on your accomplishments and prepare notes highlighting your achievements, while remaining open to constructive feedback.",
+                "C": "Constantly seek reassurance from colleagues about your performance, worrying excessively about potential criticisms.",
+                "D": "Engage in relaxation techniques to manage your stress and maintain a balanced perspective, focusing on areas for improvement rather than potential negative outcomes."
+            }
+        },
+        "7": {
+            "situation": "You have been asked to lead a major project at work that has significant visibility from upper management. This is your first time leading a project of this scale, and while excited, you feel apprehensive about the challenges it might present. You're aware that your team relies on you for guidance and leadership.",
+            "options": {
+                "A": "Spend a lot of time worrying about potential pitfalls and how any mistakes could tarnish your reputation with the upper management.",
+                "B": "Focus on organizing your team and resources efficiently, using any concerns as motivation to plan thoroughly and proactively address potential issues.",
+                "C": "Frequently seek validation and reassurance from your colleagues, expressing your doubts about being able to handle the project effectively.",
+                "D": "Approach the project methodically by breaking tasks into manageable sections, aiming to continuously improve rather than stressing over perfection."
+            }
+        },
+        "8": {
+            "situation": "You've been given an opportunity to speak at a prestigious conference, which could significantly boost your career. As the date approaches, you start to feel nervous about presenting to experts in your field and worry about facing tough questions.",
+            "options": {
+                "A": "Spend the days leading up to the conference imagining worst-case scenarios, such as forgetting your material or being unable to answer questions.",
+                "B": "Prepare thoroughly by practicing your presentation and researching potential questions, focusing on the excitement of the opportunity.",
+                "C": "Obtain constant reassurance from colleagues about your presentation skills and express fears about failing in front of the audience.",
+                "D": "Balance your preparation with stress management techniques, emphasizing constructive feedback rather than fears of criticism."
+            }
+        },
+        "9": {
+            "situation": "You receive an unexpected call from your doctor’s office asking you to come in for a follow-up appointment regarding recent medical tests. They do not provide any specific details over the phone, leaving you feeling uncertain about what the tests might have revealed.",
+            "options": {
+                "A": "Spend the time until the appointment constantly worrying about the worst possible outcomes and unable to focus on other daily activities.",
+                "B": "Remind yourself that follow-up appointments are often routine, and focus on maintaining a normal schedule until you have more information.",
+                "C": "Look up symptoms and possible conditions online, increasing your anxiety and feeling convinced that something serious is wrong.",
+                "D": "Distract yourself with hobbies and reassuring thoughts, preparing questions to ask the doctor to clarify any uncertainties at the appointment."
+            }
+        },
+        "10": {
+            "situation": "You are at a social gathering with colleagues where an important industry leader is present. You have been meaning to introduce yourself but feel anxious about making a good impression, worrying about saying the wrong thing or appearing unprofessional.",
+            "options": {
+                "A": "Choose to avoid introducing yourself, spending the evening feeling anxious about missed opportunities and worrying about your social skills.",
+                "B": "Prepare a brief introduction and a couple of conversational topics, reminding yourself of your strengths and focusing on building a connection.",
+                "C": "Obsess over potential mistakes and embarrassing moments, replaying worst-case scenarios in your mind as you consider approaching.",
+                "D": "Approach calmly and confidently, introducing yourself with genuine interest in the leader's work, focusing on mutual professional goals rather than worries."
+            }
+        },
+        "11": {
+            "situation": "You've been working on a collaborative project that has reached a critical phase. However, a key team member disagrees with your approach and voices their concerns unexpectedly during a team meeting, catching you off guard.",
+            "options": {
+                "A": "Feel overwhelmed and defensive, worrying that their disagreement might create lasting conflict within the team and damage the project's success.",
+                "B": "Acknowledge their concerns calmly and suggest setting up a meeting to discuss and find a solution collectively, focusing on project goals rather than the disagreement.",
+                "C": "Spend the rest of the meeting quietly, ruminating over the possibility of your approach being flawed and doubting your past decisions.",
+                "D": "Consider their viewpoint as a positive challenge and evaluate your approach without stress, aiming to integrate diverse perspectives."
+            }
+        },
+        "12": {
+            "situation": "You have recently started a new job and are eager to make a good impression. After submitting your first major assignment, you realize there might be a minor error that was overlooked. You aren't sure if your supervisor has reviewed it yet.",
+            "options": {
+                "A": "Spend your time worrying about the possibility of being reprimanded for the error, constantly checking for feedback.",
+                "B": "Decide to proactively inform your supervisor about the potential error, demonstrating your willingness to correct it if needed.",
+                "C": "Ruminate over the error, imagining worst-case scenarios where it impacts your reputation and employment status.",
+                "D": "Acknowledge the mistake internally but assure yourself it's an opportunity for learning, planning to discuss improvements during your next meeting."
+            }
+        },
+        "13": {
+            "situation": "You've been organizing a large event for your company, which is set to take place tomorrow. Earlier today, you received news that the keynote speaker might not be able to attend due to a sudden family emergency. You're worried about the implications this might have on the event's success.",
+            "options": {
+                "A": "Panic about the potential fallout and spend the evening fixated on worst-case scenarios impacting your career.",
+                "B": "Quickly brainstorm alternative plans, such as finding a replacement or adjusting the schedule, while considering the speaker's situation.",
+                "C": "Feel anxious and overwhelmed, repeatedly second-guessing every aspect of your event planning.",
+                "D": "Reach out to colleagues for support and focus on contingency plans that could mitigate the impact, keeping a level-headed approach."
+            }
+        },
+        "14": {
+            "situation": "You receive an email notification that your long-awaited exam results are available online. You've been anxious about your performance ever since you took the exam, especially because the results are crucial for your future plans.",
+            "options": {
+                "A": "Delay checking the results due to overwhelming fear of disappointment, worrying about how a bad outcome could impact your future.",
+                "B": "Open the results promptly, prepared to assess both positive and negative aspects constructively, and plan your next steps accordingly.",
+                "C": "Spend the entire day feeling restless and avoiding other tasks, constantly imagining various negative outcomes before checking the results.",
+                "D": "Remind yourself of the efforts you put in during preparation and decide to check the results with a focus on learning and improvement."
+            }
+        },
+        "15": {
+            "situation": "You're preparing for an important interview for a job you have been eyeing for months. The interview is scheduled for tomorrow, and as the time draws closer, you begin to feel increasingly anxious about making a good impression.",
+            "options": {
+                "A": "Allow yourself to become increasingly anxious, imagining worst-case scenarios where you fail to answer questions adequately and lose the opportunity.",
+                "B": "Practice common interview questions and focus on your qualifications and achievements, reassuring yourself that you've prepared as much as possible.",
+                "C": "Spend the night before the interview unable to sleep, fixating on every potential mistake you might make during the interview.",
+                "D": "Engage in relaxation techniques and remind yourself of your capabilities, focusing on being as present and composed as possible during the interview."
+            }
+        },
+        "16": {
+            "situation": "You've just received feedback on a project you worked on for several months. While most of the feedback is positive, there are a few critical comments that suggest areas for improvement. This was a significant project for you, and your emotions are running high.",
+            "options": {
+                "A": "Focus solely on the negative feedback, worrying excessively about the criticism and doubting your overall competence and worth.",
+                "B": "Acknowledge the criticism and plan to address these areas constructively, while also taking pride in the positive aspects of the feedback.",
+                "C": "Rehash the critical comments repeatedly, becoming anxious about what others might now think of your professional abilities.",
+                "D": "Reflect on the positive feedback to boost your confidence, using the criticism as a guide to enhance your skills moving forward."
+            }
+        },
+        "17": {
+            "situation": "You are about to host a dinner party at your home and notice that the weather forecast predicts heavy rain on the day of the event. This prediction worries you because your plans include outdoor activities and seating arrangements that depend on good weather.",
+            "options": {
+                "A": "Spend the days leading up to the event worrying about how the rain might ruin your party, imagining scenarios where your guests are dissatisfied.",
+                "B": "Develop a backup plan for indoor activities and seating, reassuring yourself and focusing on making the event enjoyable regardless of the weather.",
+                "C": "Continuously check the weather updates, becoming increasingly anxious and feeling helpless about your plans falling apart.",
+                "D": "Consider the forecast as an opportunity to get creative with your arrangements, involving your guests in fun and unexpected ways indoors."
+            }
+        },
+        "18": {
+            "situation": "You've volunteered to coordinate a charity event, and everything seems to be going smoothly. However, a key supplier calls at the last minute to inform you that they can't deliver essential supplies as scheduled. With the event just a day away, you feel stressed about how this will affect the plans.",
+            "options": {
+                "A": "Spend the night worrying excessively about the inability to resolve the issue and feeling anxious about the event's potential failure.",
+                "B": "Contact alternative suppliers immediately and communicate with team members to brainstorm quick solutions, fostering a collaborative problem-solving approach.",
+                "C": "Dwell on the possibility of disappointing everyone involved, letting the stress affect your overall handling of the situation.",
+                "D": "View this as a challenge to enhance your crisis management skills, using it to learn and improve for future events while focusing on potential solutions."
+            }
+        },
+        "19": {
+            "situation": "During a routine team meeting, your manager unexpectedly announces a major restructuring within the department, leaving everyone surprised. You immediately start to worry about what this means for your job security and future roles within the organization.",
+            "options": {
+                "A": "Spend the following days fixated on the idea of losing your job, letting the anxiety affect your concentration and productivity.",
+                "B": "Reach out to your manager to seek clarification and express your willingness to adapt, focusing on understanding how you can contribute positively to the transition.",
+                "C": "Regularly discuss your fears with colleagues, reinforcing your anxiety about the unknowns of the restructuring and its impact on your employment.",
+                "D": "Take proactive steps to update your resume and skill set, preparing for any outcome while focusing on potential opportunities the change might bring."
+            }
+        },
+        "20": {
+            "situation": "You are part of a project team and have just been assigned a complex task that you've never done before. Although excited, you're worried about making mistakes and the impact it might have on the project's success.",
+            "options": {
+                "A": "Feel consumed by anxiety about potential errors, frequently doubting your ability to successfully complete the task.",
+                "B": "Research and seek advice from experienced colleagues, approaching the task as a valuable learning opportunity.",
+                "C": "Regularly express your concerns to team members, focusing on all the ways the task might go wrong.",
+                "D": "Set up a detailed plan and timeline, breaking down the task into smaller, manageable parts to reduce stress and enhance focus."
+            }
+        },
+        "21": {
+            "situation": "You've just found out that your close friend is going through a difficult time, and you're unsure how to help. You're worried that you might say the wrong thing and inadvertently make the situation worse.",
+            "options": {
+                "A": "Feel overwhelmed by the fear of saying the wrong thing, leading to avoidance of the conversation altogether.",
+                "B": "Reach out to your friend, actively listen to their concerns, and offer support based on their needs, focusing on being present rather than perfect.",
+                "C": "Constantly agonize over every possible thing you could say or do wrong, and obsess over your perceived inadequacy as a friend.",
+                "D": "Prepare yourself by researching ways to provide emotional support and communicate your willingness to help, maintaining openness to your friend's feelings."
+            }
+        },
+        "22": {
+            "situation": "You've been invited to present your work at an international conference, but you find out that your session is scheduled just before a renowned expert in the field. You're feeling anxious about the comparison and worried about how your presentation will be received.",
+            "options": {
+                "A": "Obsess over the possibility of being overshadowed by the expert, worrying about how your presentation might seem inadequate in comparison.",
+                "B": "Focus on perfecting your presentation, aiming to convey your ideas clearly and preparing to address questions confidently.",
+                "C": "Discuss your concerns with peers, frequently seeking reassurance about your presentation's quality and fearing negative judgment.",
+                "D": "Use the opportunity to learn from the expert, planning to engage in constructive discussions after your presentation while keeping self-doubt in check."
+            }
+        }
+    }
+}
