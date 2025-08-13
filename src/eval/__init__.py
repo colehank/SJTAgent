@@ -4,6 +4,7 @@ from .aig_eval import (
     CostConfig,
     DimensionManager,
 )
+from .item_eval import PsychologicalItemEvaluator
 
 
 def save_evaluation_results(results, figures, results_dir):

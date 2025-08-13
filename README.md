@@ -72,8 +72,52 @@ python eval_aigs.py
 
 ### v0.1工作流
 
-![工作流程](docs/workflow.png)
+```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	trait_analysis(trait_analysis)
+	situation_construction(situation_construction)
+	behavior_adaptation(behavior_adaptation)
+	quality_check(quality_check)
+	revise(revise)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> trait_analysis;
+	behavior_adaptation --> quality_check;
+	quality_check -. &nbsp;stop&nbsp; .-> __end__;
+	quality_check -.-> revise;
+	revise --> behavior_adaptation;
+	situation_construction --> behavior_adaptation;
+	trait_analysis --> situation_construction;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
 
-### 评估方法
+### item评估
 
-![评估方法](docs/item_eval.png)
+```mermaid
+%%{init:{ "flowchart": { "curve": "linear" } }}%%
+graph TD;
+  __start__([__start__]):::first
+  generate_pairs(generate_pairs)
+  batch_evaluations(batch_evaluations)
+  process_batch(process_batch)
+  aggregate_results(aggregate_results)
+  create_dataframe(create_dataframe)
+  __end__([__end__]):::last
+  __start__ --> generate_pairs;
+  aggregate_results --> create_dataframe;
+  batch_evaluations -. "end" .-> aggregate_results;
+  batch_evaluations -. "continue" .-> process_batch;
+  generate_pairs --> batch_evaluations;
+  process_batch --> batch_evaluations;
+  create_dataframe --> __end__;
+  classDef default fill:#f2f0ff,line-height:1.2
+  classDef first fill-opacity:0
+  classDef last fill:#bfb6fc
+```
