@@ -12,7 +12,7 @@ from .quality_control import quality_check_node, revise_node, should_revise
 from .llm_utils import TDEF
 
 
-def pack_item(state: PSJTState) -> Dict[str, Any]:
+def pack_item(state: PSJTState) -> dict[str, Any]:
     """
     Package the final state into a structured output format.
     

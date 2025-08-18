@@ -68,7 +68,7 @@ class DimensionEvaluation(BaseModel):
                 self.__fields__[key] = Field(..., description=f"Evaluation result for {key} dimension")
         super().__init__(**data)
 
-def create_dimension_model(dimensions: List[Dict[str, str]]) -> type:
+def create_dimension_model(dimensions: list[dict[str, str]]) -> type:
     """动态创建包含所有维度的Pydantic模型"""
     from pydantic import create_model
     
@@ -85,14 +85,14 @@ def create_dimension_model(dimensions: List[Dict[str, str]]) -> type:
 
 class EvaluationState(TypedDict):
     """LangGraph状态定义 - 使用TypedDict和reducers"""
-    test_items: Dict[str, Dict[str, Any]]
-    dimensions: List[Dict[str, str]]
+    test_items: dict[str, dict[str, Any]]
+    dimensions: list[dict[str, str]]
     
     # 处理过程数据 - 使用reducers避免并发更新冲突
-    pairs_to_evaluate: Annotated[List[Tuple[str, str, str]], operator.add]
-    completed_evaluations: Annotated[List[PairwiseEvaluation], operator.add]
-    current_batch: List[Tuple[str, str, str]]
-    batch_results: Annotated[List[PairwiseEvaluation], operator.add]
+    pairs_to_evaluate: Annotated[list[tuple[str, str, str]], operator.add]
+    completed_evaluations: Annotated[list[PairwiseEvaluation], operator.add]
+    current_batch: list[tuple[str, str, str]]
+    batch_results: Annotated[list[PairwiseEvaluation], operator.add]
     
     # 输出数据
     final_results: Optional[pd.DataFrame]
@@ -152,7 +152,7 @@ class PsychologicalItemEvaluator:
         """计算文本的token数量"""
         return len(self.tokenizer.encode(text))
     
-    def setup_structured_output(self, dimensions: List[Dict[str, str]]) -> None:
+    def setup_structured_output(self, dimensions: list[dict[str, str]]) -> None:
         """设置结构化输出解析器"""
         # 创建动态维度模型
         self.dimension_model = create_dimension_model(dimensions)
@@ -161,9 +161,9 @@ class PsychologicalItemEvaluator:
     
     def estimate_cost_for_evaluation(
         self,
-        test_items: Dict[str, Dict[str, Any]],
-        dimensions: List[Dict[str, str]]
-    ) -> Tuple[TokenUsage, float]:
+        test_items: dict[str, dict[str, Any]],
+        dimensions: list[dict[str, str]]
+    ) -> tuple[TokenUsage, float]:
         """预估评估的token使用量和费用"""
         
         # 计算配对数
@@ -229,7 +229,7 @@ class PsychologicalItemEvaluator:
         
         return workflow.compile()
     
-    def generate_pairs(self, state: EvaluationState) -> Dict[str, Any]:
+    def generate_pairs(self, state: EvaluationState) -> dict[str, Any]:
         """生成所有需要评估的配对（每个配对评估所有维度）"""
         pairs = []
         item_ids = list(state['test_items'].keys())
@@ -261,7 +261,7 @@ class PsychologicalItemEvaluator:
             'progress_bar': progress_bar
         }
     
-    def batch_evaluations(self, state: EvaluationState) -> Dict[str, Any]:
+    def batch_evaluations(self, state: EvaluationState) -> dict[str, Any]:
         """准备下一批评估"""
         remaining_pairs = [
             pair for pair in state['pairs_to_evaluate'] 
@@ -279,7 +279,7 @@ class PsychologicalItemEvaluator:
             'batch_results': []
         }
     
-    def process_batch(self, state: EvaluationState) -> Dict[str, Any]:
+    def process_batch(self, state: EvaluationState) -> dict[str, Any]:
         """处理当前批次的评估（同步版本）"""
         
         async def async_batch_processing():
@@ -340,12 +340,12 @@ class PsychologicalItemEvaluator:
     
     async def evaluate_pair_all_dimensions_async(
         self,
-        item1: Dict[str, Any],
-        item2: Dict[str, Any],
+        item1: dict[str, Any],
+        item2: dict[str, Any],
         item1_id: str,
         item2_id: str,
-        dimensions: List[Dict[str, str]]
-    ) -> Tuple[List[PairwiseEvaluation], TokenUsage]:
+        dimensions: list[dict[str, str]]
+    ) -> tuple[list[PairwiseEvaluation], TokenUsage]:
         """异步评估单个配对的所有维度，使用结构化输出"""
         
         # 确保结构化输出解析器已设置
@@ -421,9 +421,9 @@ class PsychologicalItemEvaluator:
     
     def create_single_eval(
         self,
-        item1: Dict[str, Any],
-        item2: Dict[str, Any],
-        dimensions: List[Dict[str, str]]
+        item1: dict[str, Any],
+        item2: dict[str, Any],
+        dimensions: list[dict[str, str]]
     ) -> str:
         """创建多维度评估提示词，优化结构化输出"""
         # 构建维度说明
@@ -461,8 +461,8 @@ class PsychologicalItemEvaluator:
     def _parse_multi_dimension_evaluation_response_fallback(
         self, 
         response: str, 
-        dimensions: List[Dict[str, str]]
-    ) -> Dict[str, str]:
+        dimensions: list[dict[str, str]]
+    ) -> dict[str, str]:
         """回退方案：解析多维度LLM评估响应（使用原始JSON解析方法）"""
         try:
             parsed = self._parse_json_with_retry(response)
@@ -522,8 +522,8 @@ class PsychologicalItemEvaluator:
     def _parse_multi_dimension_evaluation_response(
         self, 
         response: str, 
-        dimensions: List[Dict[str, str]]
-    ) -> Dict[str, str]:
+        dimensions: list[dict[str, str]]
+    ) -> dict[str, str]:
         """解析多维度LLM评估响应"""
         try:
             parsed = self._parse_json_with_retry(response)
@@ -559,7 +559,7 @@ class PsychologicalItemEvaluator:
         
         return "continue" if remaining_pairs else "end"
     
-    def aggregate_results(self, state: EvaluationState) -> Dict[str, Any]:
+    def aggregate_results(self, state: EvaluationState) -> dict[str, Any]:
         """聚合评估结果"""
         # 完成进度条
         if state.get('progress_bar'):
@@ -573,12 +573,12 @@ class PsychologicalItemEvaluator:
         
         # 显示完成信息
         total_evaluations = len(state['completed_evaluations'])
-        total_dimensions = len(set(eval.dimension for eval in state['completed_evaluations']))
-        total_items = len(set(
+        total_dimensions = len({eval.dimension for eval in state['completed_evaluations']})
+        total_items = len({
             eval.item1_id for eval in state['completed_evaluations']
-        ).union(set(
+        }.union({
             eval.item2_id for eval in state['completed_evaluations']
-        )))
+        }))
         
         print(f"\n🎉 评估完成!")
         print(f"📊 总计: {total_evaluations} 个配对评估")
@@ -603,7 +603,7 @@ class PsychologicalItemEvaluator:
         
         return {}
     
-    def create_dataframe(self, state: EvaluationState) -> Dict[str, Any]:
+    def create_dataframe(self, state: EvaluationState) -> dict[str, Any]:
         """创建最终的DataFrame结果"""
         data = [asdict(eval) for eval in state['completed_evaluations']]
         df = pd.DataFrame(data)
@@ -649,8 +649,8 @@ class PsychologicalItemEvaluator:
             
     def evaluate_test_items(
         self,
-        test_items: Dict[str, Dict[str, Any]],
-        dimensions: List[Dict[str, str]],
+        test_items: dict[str, dict[str, Any]],
+        dimensions: list[dict[str, str]],
         batch_size: int = 10,
         max_concurrent: int = 5,
         show_progress: bool = True

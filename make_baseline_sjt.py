@@ -51,10 +51,10 @@ LI_PROMPT_PATH = op.join(DATASET_DIR, 'aig_prompts', li_prompt)
 
 def load_data():
     """Load required datasets and templates."""
-    with open(MUSSEL_SJT_PATH, 'r') as f:
+    with open(MUSSEL_SJT_PATH) as f:
         mussel_sjt = json.load(f)
     
-    with open(TRAIT_DEF_PATH, 'r') as f:
+    with open(TRAIT_DEF_PATH) as f:
         trait_def = json.load(f)
     
     krumm_aig = TemplateLLM(KRUMM_PROMPT_PATH)
@@ -70,7 +70,7 @@ class BaseSJTGenerator:
         self.base_llm = lmitf.BaseLLM()
         self.history = None
 
-    def _build_context_message(self, role: str, content: str) -> Dict[str, str]:
+    def _build_context_message(self, role: str, content: str) -> dict[str, str]:
         """Build a message dict for context."""
         return {'role': role, 'content': content}
 
@@ -78,7 +78,7 @@ class BaseSJTGenerator:
 class KrummGenerator(BaseSJTGenerator):
     """Krumm approach: Iterative SJT generation."""
 
-    def generate(self, trait: str, n_items: int, model: str = MODEL) -> Dict[str, Any]:
+    def generate(self, trait: str, n_items: int, model: str = MODEL) -> dict[str, Any]:
         """Generate SJT items iteratively."""
         if LANGUAGE == 'en':
             iter_prompt = (f"Can you create another SJT item measuring {trait}? "
@@ -105,7 +105,7 @@ class KrummGenerator(BaseSJTGenerator):
         self.history = context
         return sjts
     
-    def _call_llm(self, context: List[Dict], model: str) -> Any:
+    def _call_llm(self, context: list[dict], model: str) -> Any:
         """Call LLM with error handling."""
         return self.base_llm.call(
             messages=context,
@@ -117,7 +117,7 @@ class KrummGenerator(BaseSJTGenerator):
 class LiGenerator(BaseSJTGenerator):
     """Li approach: Batch SJT generation with examples."""
 
-    def generate_reference_items(self, trait: str, dataset: Dict, n_ref: int = 2) -> str:
+    def generate_reference_items(self, trait: str, dataset: dict, n_ref: int = 2) -> str:
         """Generate reference items string from dataset."""
         ref_items = []
         for i in range(n_ref):
@@ -125,8 +125,8 @@ class LiGenerator(BaseSJTGenerator):
             ref_items.append({f"Scenario {i+1}": item})
         return str(ref_items)
 
-    def generate(self, trait: str, trait_definition: str, dataset: Dict, n_items: int, 
-                model: str = MODEL) -> Dict[str, Any]:
+    def generate(self, trait: str, trait_definition: str, dataset: dict, n_items: int, 
+                model: str = MODEL) -> dict[str, Any]:
         """Generate SJT items using template approach."""
         sjts = self.template_llm.call(
             Trait=trait,
@@ -141,7 +141,7 @@ class LiGenerator(BaseSJTGenerator):
         self.history = self.template_llm.prompt_template.copy()
         return {trait: sjts}
 
-async def generate_trait_sjts(trait: str, pbar, mussel_sjt: Dict, trait_def: Dict, 
+async def generate_trait_sjts(trait: str, pbar, mussel_sjt: dict, trait_def: dict, 
                               krumm_aig: TemplateLLM, li_aig: TemplateLLM) -> tuple:
     """Generate SJTs for a single trait using both approaches."""
     try:
@@ -170,7 +170,7 @@ async def generate_trait_sjts(trait: str, pbar, mussel_sjt: Dict, trait_def: Dic
         pbar.write(f"Error processing {trait}: {e}")
         raise
     
-async def process_all_traits(mussel_sjt: Dict, trait_def: Dict, 
+async def process_all_traits(mussel_sjt: dict, trait_def: dict, 
                            krumm_aig: TemplateLLM, li_aig: TemplateLLM) -> tuple:
     """Process all traits concurrently and return results."""
     krumm_sjt = {}
@@ -192,7 +192,7 @@ async def process_all_traits(mussel_sjt: Dict, trait_def: Dict,
 
     return krumm_sjt, li_sjt
     
-def filter_sjt_keys(sjt_dict: Dict[str, Any]) -> Dict[str, Any]:
+def filter_sjt_keys(sjt_dict: dict[str, Any]) -> dict[str, Any]:
     """Extract only situation and options from SJT items."""
     filtered = {}
     for trait, items in sjt_dict.items():
@@ -205,7 +205,7 @@ def filter_sjt_keys(sjt_dict: Dict[str, Any]) -> Dict[str, Any]:
     return filtered
 
 
-def save_results(krumm_sjt: Dict, li_sjt: Dict) -> None:
+def save_results(krumm_sjt: dict, li_sjt: dict) -> None:
     """Save SJT results to JSON files."""
     os.makedirs(RESULT_DIR, exist_ok=True)
 
