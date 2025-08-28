@@ -19,7 +19,7 @@ def generate_psjt_item(
     bfi_item: str,
     population_profile: str = "中国在读大学生",
     language: str = "zh"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Generate a single PSJT item for the given personality trait.
     

@@ -11,7 +11,7 @@ from .state import PSJTState
 from .llm_utils import llm, json_guard
 
 
-def _distinct_ratio(options: List[Dict[str, Any]]) -> float:
+def _distinct_ratio(options: list[dict[str, Any]]) -> float:
     """Calculate the distinctiveness ratio of behavioral options."""
     if not options:
         return 0.0
@@ -24,7 +24,7 @@ def _distinct_ratio(options: List[Dict[str, Any]]) -> float:
     return unique / max(1, len(texts))
 
 
-def _level_coverage(options: List[Dict[str, Any]]) -> float:
+def _level_coverage(options: list[dict[str, Any]]) -> float:
     """Calculate trait level coverage of behavioral options."""
     levels = {o.get("trait_level", "?").lower() for o in options}
     want = {"high", "mid", "low"}

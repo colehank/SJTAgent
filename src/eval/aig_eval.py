@@ -14,8 +14,8 @@ import re
 @dataclass
 class EvaluationConfig:
     """Configuration for psychological item evaluation"""
-    traits: List[str]
-    data_paths: Dict[str, str]
+    traits: list[str]
+    data_paths: dict[str, str]
     cost_config: CostConfig
     batch_size: int = 3000
     max_concurrent: int = 1000
@@ -25,7 +25,7 @@ class DimensionManager:
     """Manages evaluation dimensions for psychological traits"""
     
     @staticmethod
-    def get_dimensions(traits: List[str]) -> List[Dict[str, str]]:
+    def get_dimensions(traits: list[str]) -> list[dict[str, str]]:
         """Generate evaluation dimensions for a given trait"""
         dimensions = {
             trait: [
@@ -52,14 +52,14 @@ class DimensionManager:
 class DataLoader:
     """Handles loading and preprocessing of psychological test data"""
     
-    def __init__(self, data_paths: Dict[str, str]):
+    def __init__(self, data_paths: dict[str, str]):
         self.data_paths = data_paths
         self.logger = logging.getLogger(__name__)
         
-    def load_json_data(self, filepath: str) -> Dict:
+    def load_json_data(self, filepath: str) -> dict:
         """Load JSON data with error handling"""
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(filepath, encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
             self.logger.error(f"File not found: {filepath}")
@@ -70,9 +70,9 @@ class DataLoader:
     
     def load_all_datasets(
         self, 
-        traits: List[str],
+        traits: list[str],
         aig_names: list
-        ) -> Dict[str, Dict]:
+        ) -> dict[str, dict]:
         """Load all datasets for given traits"""
         datasets = {}
         
@@ -96,7 +96,7 @@ class DataLoader:
 
         return self._flatten_datasets(datasets)
     
-    def _flatten_datasets(self, datasets: Dict) -> Dict:
+    def _flatten_datasets(self, datasets: dict) -> dict:
         """Flatten nested dataset structure for evaluation"""
         flattened = {}
         for trait, tests in datasets.items():
@@ -112,9 +112,9 @@ class WinRateCalculator:
     @staticmethod
     def calculate_win_rates(
         df: pd.DataFrame, 
-        dimensions: Optional[List[str]] = None,
-        test_types: Optional[List[str]] = None
-        ) -> Dict[str, Dict[str, float]]:
+        dimensions: Optional[list[str]] = None,
+        test_types: Optional[list[str]] = None
+        ) -> dict[str, dict[str, float]]:
         """Calculate win rates for each test type and dimension"""
         win_rates = {}
         if test_types is None:
@@ -147,11 +147,11 @@ class WinRateCalculator:
     
     @staticmethod
     def calculate_overall_win_rates(
-        win_rates_by_trait: Dict[str, Dict],                           
-        traits: List[str],
-        test_types: Optional[List[str]],
-        dimensions: Optional[List[str]] = None,
-        ) -> Dict[str, Dict[str, float]]:
+        win_rates_by_trait: dict[str, dict],                           
+        traits: list[str],
+        test_types: Optional[list[str]],
+        dimensions: Optional[list[str]] = None,
+        ) -> dict[str, dict[str, float]]:
         """Calculate overall win rates across all traits"""
         overall_win_rates = {}
         if test_types is None:
@@ -180,7 +180,7 @@ class WinRateCalculator:
 class RadarChartVisualizer:
     """Creates elegant radar charts for psychological test evaluation results"""
 
-    def __init__(self, test_types: List[str]):
+    def __init__(self, test_types: list[str]):
         self.setup_matplotlib()
         self.test_types = test_types
         self.colors = plt.cm.Set2(np.linspace(0, 1, len(test_types)))
@@ -192,9 +192,9 @@ class RadarChartVisualizer:
         plt.rcParams['figure.dpi'] = 100
         plt.rcParams['savefig.dpi'] = 300
     
-    def create_multi_trait_radar(self, win_rates: Dict[str, Dict], 
-                               traits: List[str],
-                               figsize: Tuple[int, int] = (20, 4),
+    def create_multi_trait_radar(self, win_rates: dict[str, dict], 
+                               traits: list[str],
+                               figsize: tuple[int, int] = (20, 4),
                                save_path: Optional[str] = None) -> Figure:
         """Create radar charts for multiple traits"""
         fig, axes = plt.subplots(1, len(traits), figsize=figsize, 
@@ -213,8 +213,8 @@ class RadarChartVisualizer:
         
         return fig
     
-    def create_overall_radar(self, overall_win_rates: Dict[str, Dict[str, float]], 
-                           figsize: Tuple[int, int] = (8, 8),
+    def create_overall_radar(self, overall_win_rates: dict[str, dict[str, float]], 
+                           figsize: tuple[int, int] = (8, 8),
                            save_path: Optional[str] = None) -> Figure:
         """Create overall performance radar chart"""
         fig, ax = plt.subplots(figsize=figsize, subplot_kw=dict(projection='polar'))
@@ -246,7 +246,7 @@ class RadarChartVisualizer:
         
         return fig
     
-    def _plot_single_radar(self, ax, trait_win_rates: Dict[str, Dict[str, float]], 
+    def _plot_single_radar(self, ax, trait_win_rates: dict[str, dict[str, float]], 
                           trait: str, show_legend: bool = False):
         """Plot radar chart for a single trait"""
         dimensions = list(trait_win_rates.keys())
@@ -269,7 +269,7 @@ class RadarChartVisualizer:
         if show_legend:
             ax.legend(loc='upper left', bbox_to_anchor=(-0.3, 1.1), fontsize=10)
     
-    def _format_dimension_labels(self, dimensions: List[str]) -> List[str]:
+    def _format_dimension_labels(self, dimensions: list[str]) -> list[str]:
         """Format dimension labels for better readability"""
         formatted = []
         for d in dimensions:
@@ -284,8 +284,8 @@ class PsychologicalTestEvaluator:
     def __init__(
         self, 
         config: EvaluationConfig, 
-        aig_names: List[str],
-        dimensions: Optional[Dict[str, List[Dict[str, str]]]] = None,
+        aig_names: list[str],
+        dimensions: Optional[dict[str, list[dict[str, str]]]] = None,
     ):
         self.config = config
         self.aig_names = aig_names
@@ -308,7 +308,7 @@ class PsychologicalTestEvaluator:
         )
         return logging.getLogger(__name__)
     
-    def run_evaluation(self, model='qwen-plus') -> Dict[str, Any]:
+    def run_evaluation(self, model='qwen-plus') -> dict[str, Any]:
         """Run complete evaluation pipeline"""
         self.logger.info("Starting psychological test evaluation...")
         
@@ -357,8 +357,8 @@ class PsychologicalTestEvaluator:
             'overall_win_rates': overall_win_rates
         }
     
-    def create_visualizations(self, evaluation_results: Dict[str, Any], 
-                            save_plots: bool = True, output_dir: str = "./plots") -> Dict[str, Figure]:
+    def create_visualizations(self, evaluation_results: dict[str, Any], 
+                            save_plots: bool = True, output_dir: str = "./plots") -> dict[str, Figure]:
         """Create all visualization plots"""
         if save_plots:
             Path(output_dir).mkdir(exist_ok=True)
@@ -382,7 +382,7 @@ class PsychologicalTestEvaluator:
         
         return figures
         
-    def export_results(self, evaluation_results: Dict[str, Any], 
+    def export_results(self, evaluation_results: dict[str, Any], 
                       output_path: str = "./results.json"):
         """Export evaluation results to JSON"""
         # Convert DataFrames to dictionaries for JSON serialization
@@ -401,7 +401,7 @@ class PsychologicalTestEvaluator:
         
         self.logger.info(f"Results exported to {output_path}")
     
-    def print_summary(self, evaluation_results: Dict[str, Any]):
+    def print_summary(self, evaluation_results: dict[str, Any]):
         """Print summary of evaluation results"""
         print("\n" + "="*60)
         print("PSYCHOLOGICAL TEST EVALUATION SUMMARY")

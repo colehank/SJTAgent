@@ -20,12 +20,12 @@ class PSJTState(TypedDict, total=False):
     population_profile: str             # 目标群体画像（如："中国大学生"、"基层管理者"）
     language: str                       # 输出语言（"zh"/"en"）
 
-    trait_analysis: Dict[str, Any]      # 特质解析结果（认知/情感/行为 -> 线索/依据/反馈 映射）
-    situation_outline: Dict[str, Any]   # 情境大纲（原型、场景、任务、冲突、线索清单...）
+    trait_analysis: dict[str, Any]      # 特质解析结果（认知/情感/行为 -> 线索/依据/反馈 映射）
+    situation_outline: dict[str, Any]   # 情境大纲（原型、场景、任务、冲突、线索清单...）
     scenario_text: str                  # 场景叙事（最终题干）
-    options: List[Dict[str, Any]]       # 反应选项（A-E：行为+理由+特质水平）
+    options: list[dict[str, Any]]       # 反应选项（A-E：行为+理由+特质水平）
 
-    quality: Dict[str, Any]             # 质量评估指标与说明
+    quality: dict[str, Any]             # 质量评估指标与说明
     revise_notes: str                   # 需要修订的反馈（供下一轮）
     iter: int                           # 迭代计数
 
@@ -177,14 +177,14 @@ def behavior_adaptation_node(state: PSJTState) -> PSJTState:
 # 4) 质量评估 & 迭代修订
 # -----------------------------
 
-def _distinct_ratio(options: List[Dict[str, Any]]) -> float:
+def _distinct_ratio(options: list[dict[str, Any]]) -> float:
     if not options: return 0.0
     texts = [json.dumps({"a":o.get("action"),"r":o.get("rationale")}, ensure_ascii=False) for o in options]
     unique = len(set(texts))
     return unique / max(1, len(texts))
 
 
-def _level_coverage(options: List[Dict[str, Any]]) -> float:
+def _level_coverage(options: list[dict[str, Any]]) -> float:
     levels = {o.get("trait_level","?").lower() for o in options}
     want = {"high","mid","low"}
     return len(levels & want) / len(want)
@@ -270,7 +270,7 @@ def revise_node(state: PSJTState) -> PSJTState:
     state["iter"] = state.get("iter", 0) + 1
     return state
 
-def pack_item(state: PSJTState) -> Dict[str, Any]:
+def pack_item(state: PSJTState) -> dict[str, Any]:
     return {
         "id": state.get("request_id"),
         "trait": state.get("trait_name"),

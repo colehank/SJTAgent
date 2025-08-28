@@ -167,9 +167,9 @@ if __name__ == "__main__":
     ipip120_fp = op.abspath(op.join("..", "datasets", "IPIP", "ipip120_zh.json"))
     traits_fp = op.abspath(op.join("..", "datasets", "IPIP", "meta.json"))
 
-    with open(ipip120_fp, "r", encoding="utf-8") as f:
+    with open(ipip120_fp, encoding="utf-8") as f:
         ipip120 = json.load(f)
-    with open(traits_fp, "r", encoding="utf-8") as f:
+    with open(traits_fp, encoding="utf-8") as f:
         traits = json.load(f)
 
     generator = SJTAgent(

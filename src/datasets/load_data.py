@@ -14,7 +14,7 @@ class DatasetConfig:
         self.base_dir = base_dir or Path(__file__).parent
         self._data_paths = self._build_data_paths()
     
-    def _build_data_paths(self) -> Dict[str, Dict[str, Path]]:
+    def _build_data_paths(self) -> dict[str, dict[str, Path]]:
         """Build dataset paths configuration."""
         return {
             "IPIP120": {
@@ -43,7 +43,7 @@ class DatasetConfig:
         }
     
     @property
-    def data_paths(self) -> Dict[str, Dict[str, Path]]:
+    def data_paths(self) -> dict[str, dict[str, Path]]:
         """Get dataset paths."""
         return self._data_paths
     
@@ -92,7 +92,7 @@ class DataLoader:
         self._cache = {}
     
     @property
-    def available_datasets(self) -> Dict[str, Dict[str, Path]]:
+    def available_datasets(self) -> dict[str, dict[str, Path]]:
         """Get available datasets and their language variants."""
         return self.config.data_paths
     
@@ -125,13 +125,13 @@ class DataLoader:
         except (ValueError, FileNotFoundError):
             return False
     
-    def _load_json_file(self, file_path: Path) -> Dict[str, Any]:
+    def _load_json_file(self, file_path: Path) -> dict[str, Any]:
         """Load JSON file with proper error handling."""
         if not file_path.exists():
             raise FileNotFoundError(f"Dataset file not found: {file_path}")
         
         try:
-            with open(file_path, "r", encoding="utf-8") as f:
+            with open(file_path, encoding="utf-8") as f:
                 data = json.load(f)
             logger.debug(f"Successfully loaded data from {file_path}")
             return data
@@ -147,7 +147,7 @@ class DataLoader:
         dataset_name: str,
         language: str = "en",
         use_cache: bool = True
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """Load dataset with specified language.
         
         Args:
@@ -199,7 +199,7 @@ class DataLoader:
             else:
                 raise
     
-    def load_meta(self, dataset_name: str, use_cache: bool = True) -> Dict[str, Any]:
+    def load_meta(self, dataset_name: str, use_cache: bool = True) -> dict[str, Any]:
         """Load metadata for specified dataset.
         
         Args:
@@ -242,7 +242,7 @@ class DataLoader:
         self._cache.clear()
         logger.info("Cache cleared")
     
-    def get_dataset_info(self, dataset_name: str) -> Dict[str, Any]:
+    def get_dataset_info(self, dataset_name: str) -> dict[str, Any]:
         """Get comprehensive information about a dataset.
         
         Args:
