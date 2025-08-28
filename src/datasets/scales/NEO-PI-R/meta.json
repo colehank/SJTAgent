@@ -1,0 +1,36 @@
+{
+  "N1": {"facet_name": "Worry", "domain": "Neuroticism" },
+  "N2": {"facet_name": "Anger", "domain": "Neuroticism" },
+  "N3": {"facet_name": "Discouragement", "domain": "Neuroticism" },
+  "N4": {"facet_name": "Self-consciousness", "domain": "Neuroticism" },
+  "N5": {"facet_name": "Impulsivity", "domain": "Neuroticism" },
+  "N6": {"facet_name": "Vulnerability", "domain": "Neuroticism" },
+
+  "E1": {"facet_name": "Warmth", "domain": "Extraversion" },
+  "E2": {"facet_name": "Gregariousness", "domain": "Extraversion" },
+  "E3": {"facet_name": "Assertiveness", "domain": "Extraversion" },
+  "E4": {"facet_name": "Activity", "domain": "Extraversion" },
+  "E5": {"facet_name": "Excitement-seeking", "domain": "Extraversion" },
+  "E6": {"facet_name": "Positive Emotions", "domain": "Extraversion" },
+
+  "O1": {"facet_name": "Fantasy", "domain": "Openness" },
+  "O2": {"facet_name": "Aesthetics", "domain": "Openness" },
+  "O3": {"facet_name": "Feelings", "domain": "Openness" },
+  "O4": {"facet_name": "Actions", "domain": "Openness" },
+  "O5": {"facet_name": "Ideas", "domain": "Openness" },
+  "O6": {"facet_name": "Values", "domain": "Openness" },
+
+  "A1": {"facet_name": "Trust", "domain": "Agreeableness" },
+  "A2": {"facet_name": "Straightforwardness", "domain": "Agreeableness" },
+  "A3": {"facet_name": "Altruism", "domain": "Agreeableness" },
+  "A4": {"facet_name": "Compliance", "domain": "Agreeableness" },
+  "A5": {"facet_name": "Modesty", "domain": "Agreeableness" },
+  "A6": {"facet_name": "Tender-Mindedness", "domain": "Agreeableness" },
+
+  "C1": {"facet_name": "Competence", "domain": "Conscientiousness" },
+  "C2": {"facet_name": "Order", "domain": "Conscientiousness" },
+  "C3": {"facet_name": "Dutifulness", "domain": "Conscientiousness" },
+  "C4": {"facet_name": "Achievement Striving", "domain": "Conscientiousness" },
+  "C5": {"facet_name": "Self-Discipline", "domain": "Conscientiousness" },
+  "C6": {"facet_name": "Deliberation", "domain": "Conscientiousness" }
+}

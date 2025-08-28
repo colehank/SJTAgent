@@ -11,6 +11,16 @@ from src.eval import (
     save_evaluation_results
 )
 # %%
+from lmitf.pricing import DMX
+MODEL = 'gpt-5-mini'
+
+dmxapi = DMX('https://www.dmxapi.cn/pricing')
+
+price = dmxapi.get_model_price(MODEL)
+input_token_rate = price.input_per_m
+output_token_rate = price.output_per_m
+balance = dmxapi.fetch_balance()
+# %%
 TRAITS = ['Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Neuroticism']
 DATA_PATHS = {
     'mussel': op.join('datasets', 'SJTs', 'Mussel_zh.json'),
@@ -20,16 +30,16 @@ DATA_PATHS = {
 AIG_NAMES = list(DATA_PATHS.keys())
 # %%
 cost_config = CostConfig(
-    input_token_rate=0.8,
-    output_token_rate=2.0
+    input_token_rate=input_token_rate,
+    output_token_rate=output_token_rate,
 )
 
 config = EvaluationConfig(
     traits=TRAITS,
     data_paths=DATA_PATHS,
     cost_config=cost_config,
-    batch_size=1000,
-    max_concurrent=1000,
+    batch_size=1500,
+    max_concurrent=1500,
     show_progress=True
 )
 
@@ -41,7 +51,7 @@ evaluator = PsychologicalTestEvaluator(
     dimensions=dimensions
 )
 # %%
-results = evaluator.run_evaluation(model='gpt-4o-mini')
+results = evaluator.run_evaluation(model=MODEL)
 figures = evaluator.create_visualizations(results, save_plots=False)
 evaluator.print_summary(results)
 #%%

@@ -13,6 +13,8 @@ from typing import Dict, List, Any
 
 import lmitf
 from lmitf import TemplateLLM
+import src
+
 from tqdm.autonotebook import tqdm
 import argparse
 from dotenv import load_dotenv
@@ -32,31 +34,32 @@ LANGUAGE = args.language
 MODEL = args.model
 N_ITEMS = args.n_items
 TRAITS = [
-    "Openness",
-    "Conscientiousness", 
-    "Extraversion",
-    "Agreeableness",
-    "Neuroticism",
+    "Openness-Openness to Ideas",
+    "Conscientiousness-Self-Discipline", 
+    "Extraversion-Gregariousness",
+    "Agreeableness-Compliance",
+    "Neuroticism-Self-Consciousness",
 ]
 krumm_prompt = f"Krumm_{LANGUAGE}.py"
 li_prompt = f"Li_{LANGUAGE}.py"
 # File paths
+
+data_loader = src.DataLoader()
+KRUMM_PROMPT_PATH = data_loader.load("aig_prompts_Krumm", LANGUAGE)
+LI_PROMPT_PATH = data_loader.load("aig_prompts_Li", LANGUAGE)
+
 DATASET_DIR = op.join('datasets')
 RESULT_DIR = op.join('results', 'SJTs')
 MUSSEL_SJT_PATH = op.join(DATASET_DIR, 'SJTs', 'Mussel.json')
 TRAIT_DEF_PATH = op.join(DATASET_DIR, 'trait_knowledge', 'def_bf.json')
-KRUMM_PROMPT_PATH = op.join(DATASET_DIR, 'aig_prompts', krumm_prompt)
-LI_PROMPT_PATH = op.join(DATASET_DIR, 'aig_prompts', li_prompt)
 
 
 def load_data():
     """Load required datasets and templates."""
-    with open(MUSSEL_SJT_PATH, 'r') as f:
-        mussel_sjt = json.load(f)
-    
-    with open(TRAIT_DEF_PATH, 'r') as f:
-        trait_def = json.load(f)
-    
+    dataloader = src.DataLoader()
+    mussel_sjt = dataloader.load("PSJT-Mussel", LANGUAGE)
+    trait_def = dataloader.load("_traits_definition", "en")  # Trait definitions
+
     krumm_aig = TemplateLLM(KRUMM_PROMPT_PATH)
     li_aig = TemplateLLM(LI_PROMPT_PATH)
     
@@ -73,7 +76,6 @@ class BaseSJTGenerator:
     def _build_context_message(self, role: str, content: str) -> Dict[str, str]:
         """Build a message dict for context."""
         return {'role': role, 'content': content}
-
 
 class KrummGenerator(BaseSJTGenerator):
     """Krumm approach: Iterative SJT generation."""
@@ -131,7 +133,7 @@ class LiGenerator(BaseSJTGenerator):
         sjts = self.template_llm.call(
             Trait=trait,
             TraitDescription=trait_definition,
-            Example=self.generate_reference_items(trait, dataset),
+            Example=self.generate_reference_items(trait.split('-')[0], dataset),
             Nitem=n_items,
             model=model,
             response_format='json',
@@ -154,7 +156,7 @@ async def generate_trait_sjts(trait: str, pbar, mussel_sjt: Dict, trait_def: Dic
             krumm.generate, trait=trait, n_items=N_ITEMS, model=MODEL
         )
         li_task = asyncio.to_thread(
-            li.generate, trait=trait, trait_definition=trait_def[trait], 
+            li.generate, trait=trait, trait_definition=trait_def[trait.split('-')[0]], 
             dataset=mussel_sjt, n_items=N_ITEMS, model=MODEL
         )
 
@@ -208,12 +210,13 @@ def filter_sjt_keys(sjt_dict: Dict[str, Any]) -> Dict[str, Any]:
 def save_results(krumm_sjt: Dict, li_sjt: Dict) -> None:
     """Save SJT results to JSON files."""
     os.makedirs(RESULT_DIR, exist_ok=True)
-
+    krumm_sjt_ = {k.split('-')[0]: v for k, v in krumm_sjt.items()}
+    li_sjt_ = {k.split('-')[0]: v for k, v in li_sjt.items()}
     with open(op.join(RESULT_DIR, f'KrummSJT_{LANGUAGE}.json'), 'w') as f:
-        json.dump(krumm_sjt, f, indent=4, ensure_ascii=False)
+        json.dump(krumm_sjt_, f, indent=4, ensure_ascii=False)
 
     with open(op.join(RESULT_DIR, f'LiSJT_{LANGUAGE}.json'), 'w') as f:
-        json.dump(li_sjt, f, indent=4, ensure_ascii=False)
+        json.dump(li_sjt_, f, indent=4, ensure_ascii=False)
 
 def main() -> None:
     """Main execution function."""
