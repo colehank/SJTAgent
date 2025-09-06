@@ -12,7 +12,7 @@
 ### 主要特性
 
 - **多阶段工作流程**：智能化的题目生成流程  
-- **内置题库**：[NEO-PI-R / IPIP / Mussel's SJT的中英文题目](src/datasets/aig_prompts)，可通过`src.data_loader`模块加载
+- **内置题库**：[NEO-PI-R / IPIP / Mussel's SJT的中英文题目](src/datasets)，可通过`src.data_loader`模块加载
 - **内置方法**：[Li, Krumm的SJT生成方法](make_baseline_sjt.py), 已生成在`results/SJTs`中
 - **质量评估**：[内置题目质量评估功能](eval_aigs.py)
 
