@@ -1,5 +1,5 @@
 # %%
-from src.workflow_new import SJTAgent
+from src.workflow import SJTAgent
 import src
 import concurrent.futures
 
@@ -9,7 +9,6 @@ neopir = data_loader.load("NEO-PI-R", 'zh')
 neopir_meta = data_loader.load_meta("NEO-PI-R")
 #%%
 traits = ["O5", "C5", "E2", "A4", "N4"] #Mussel's 5 big traits
-# traits = ["O5", "C5"] #Mussel's 5 big traits
 
 neopir_items = {
     trait: [

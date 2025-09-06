@@ -12,7 +12,7 @@ langgraph>=0.1.0
 lmitf
 
 # API service
-lmitf=0.1.11
+lmitf
 mypy>=1.0.0
 
 # Data handling and utilities

@@ -1,5 +1,5 @@
 # %%
-from src.workflow import generate_psjt_item
+from src.workflow_lg import generate_psjt_item
 
 DEMO_BFI = {
     "尽责性-条理性": "我做事有计划并保持条理。",
