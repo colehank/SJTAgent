@@ -193,7 +193,6 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-aig_prompts/
 .pypirc
 
 .claude
