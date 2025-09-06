@@ -1,200 +1,122 @@
 # SJTAgent
 
-基于LLM的情境判断测验(SJT)自动生成系统，用于生成个性化的人格评估题目。
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
+
+
+基于大语言模型的 **情境判断测验(SJT)** 自动生成系统。
 
 ## 项目简介
 
-SJTAgent是一个使用大语言模型(LLM)自动生成个人情境判断测验(Personal Situation Judgment Test, PSJT)的智能系统。该项目通过多阶段工作流程，将传统的自评量表题目转换为更加真实有效的情境化评估题目。
+**SJTAgent** 是一个使用大语言/视觉模型(LLM/LVM)自动生成个人情境判断测验(Personal Situation Judgment Test, PSJT)的智能系统。该项目通过多阶段工作流程，将传统的自评量表题目转换为更加真实有效的情境化评估题目。
 
-### 核心特性
+### 主要特性
 
-- **多阶段工作流**: 包括特质分析、情境构建、行为适应、质量控制等步骤
-- **自动化生成**: 基于Big Five人格特质理论，自动生成高质量的情境判断题目
-- **质量评估**: 内置评估模块，确保生成题目的有效性和一致性
-- **多语言支持**: 支持中文和英文题目生成
+- **多阶段工作流程**：智能化的题目生成流程  
+- **内置题库**：[NEO-PI-R / IPIP / Mussel's SJT的中英文题目](src/datasets/aig_prompts)，可通过`src.data_loader`模块加载
+- **内置方法**：[Li, Krumm的SJT生成方法](make_baseline_sjt.py), 已生成在`results/SJTs`中
+- **质量评估**：[内置题目质量评估功能](eval_aigs.py)
 
-
-## 项目结构
-
-```mermaid
-flowchart TB
-    %% CLI Layer
-    subgraph "CLI Layer"
-        CLI1(["sjtagent_v0.1.py"]):::cli
-        CLI2(["make_baseline_sjt.py"]):::cli
-        CLI3(["eval_aigs.py"]):::cli
-    end
-
-    %% Data Stores
-    DS(["datasets/"]):::datastore
-    RSJTs(["results/SJTs/"]):::datastore
-    REVAL(["results/eval/"]):::datastore
-
-    %% Workflow Execution
-    subgraph "Workflow Execution"
-        Orch(["main.py"]):::module
-        GB(["graph_builder.py"]):::module
-        TA(["trait_analysis.py"]):::module
-        SC(["situation_construction.py"]):::module
-        BA(["behavior_adaptation.py"]):::module
-        QC(["quality_control.py"]):::module
-        State(["state.py"]):::state
-        LLMUtil(["llm_utils.py"]):::module
-    end
-
-    %% External LLM Service
-    LLM(["LLM API"]):::external
-
-    %% Evaluation Modules
-    subgraph "Evaluation Workflow"
-        AIG(["aig_eval.py"]):::module
-        IE(["item_eval.py"]):::module
-        TEST(["test_structured_output.py"]):::module
-    end
-
-    %% Connections - Generation Workflow
-    CLI1 -->|"invoke generation"| Orch
-    CLI2 -->|"invoke baseline"| Orch
-    DS -->|"read input data"| TA
-    Orch -->|"build DAG"| GB
-    GB -->|"start pipeline"| TA
-    TA -->|"State"| State
-    TA -->|"LLM call"| LLM
-    TA --> SC
-    SC -->|"State"| State
-    SC -->|"LLM call"| LLM
-    SC --> BA
-    BA -->|"State"| State
-    BA -->|"LLM call"| LLM
-    BA --> QC
-    QC -->|"State"| State
-    QC -->|"LLM call"| LLM
-    QC -->|"write SJTs"| RSJTs
-    QC -.->|"revision loop"| BA
-
-    %% Connections - Evaluation Workflow
-    CLI3 -->|"invoke evaluation"| AIG
-    RSJTs -->|"read generated SJTs"| AIG
-    AIG -->|"write eval data"| REVAL
-    CLI3 --> IE
-    IE -->|"read generated SJTs"| RSJTs
-    IE -->|"write CSV"| REVAL
-    TEST -->|"unit tests"| IE
-
-    %% LLM Util Integration
-    TA --> LLMUtil
-    SC --> LLMUtil
-    BA --> LLMUtil
-    QC --> LLMUtil
-
-    %% Click Events
-    click CLI1 "https://github.com/colehank/sjtagent/blob/main/sjtagent_v0.1.py"
-    click CLI2 "https://github.com/colehank/sjtagent/blob/main/make_baseline_sjt.py"
-    click CLI3 "https://github.com/colehank/sjtagent/blob/main/eval_aigs.py"
-    click Orch "https://github.com/colehank/sjtagent/blob/main/src/workflow/main.py"
-    click GB "https://github.com/colehank/sjtagent/blob/main/src/workflow/graph_builder.py"
-    click TA "https://github.com/colehank/sjtagent/blob/main/src/workflow/trait_analysis.py"
-    click SC "https://github.com/colehank/sjtagent/blob/main/src/workflow/situation_construction.py"
-    click BA "https://github.com/colehank/sjtagent/blob/main/src/workflow/behavior_adaptation.py"
-    click QC "https://github.com/colehank/sjtagent/blob/main/src/workflow/quality_control.py"
-    click State "https://github.com/colehank/sjtagent/blob/main/src/workflow/state.py"
-    click LLMUtil "https://github.com/colehank/sjtagent/blob/main/src/workflow/llm_utils.py"
-    click AIG "https://github.com/colehank/sjtagent/blob/main/src/eval/aig_eval.py"
-    click IE "https://github.com/colehank/sjtagent/blob/main/src/eval/item_eval.py"
-    click TEST "https://github.com/colehank/sjtagent/blob/main/src/eval/test_structured_output.py"
-    click DS "https://github.com/colehank/sjtagent/tree/main/datasets/"
-    click RSJTs "https://github.com/colehank/sjtagent/tree/main/results/SJTs/"
-    click REVAL "https://github.com/colehank/sjtagent/tree/main/results/eval/"
-
-    %% Styles
-    classDef cli fill:#bbbbbb,stroke:#333,stroke-width:1px
-    classDef module fill:#ADD8E6,stroke:#333,stroke-width:1px
-    classDef state fill:#EFEFEF,stroke:#333,stroke-width:1px
-    classDef external fill:#FFA500,stroke:#333,stroke-width:1px
-    classDef datastore fill:#90EE90,stroke:#333,stroke-width:1px
-```
 
 ## 快速开始
 
-1. 安装依赖：
+### 1. 环境准备
+
 ```bash
+git clone https://github.com/colehank/SJTAgent.git
+cd SJTAgent
 pip install -r requirements.txt
 ```
 
-2. 使用当前v0.1 工作流版本：
-sjtagent_v0.1.py
+### 2. 配置 API 密钥
 
+```bash
+# 复制配置文件模板
+cp .env_example .env
 
-3. 使用生成题目质量评估：
-eval_aigs.py
-
-## TODO
-
-### sjtagent_v0.1 待完成任务
-- [ ] 优化生成算法，使其能够产生符合eval模块评估标准的高质量测验题目
-- [ ] 完善质量控制机制，提高题目的心理测量学指标
-- [ ] 增强评估模块的准确性和全面性
-
-### sjtagent_v0.2 计划功能
-- [ ] **ReAct功能**: 实现推理-行动(Reasoning-Acting)循环，提升生成过程的自适应能力
-- [ ] **GroupDiscuss功能**: 引入多智能体讨论机制，通过群体协作提升题目质量
-- [ ] **高级工作流**: 支持更复杂的生成策略和优化算法
-- [ ] **批量生成**: 支持大规模题目批量生成和管理
-- [ ] **自定义特质**: 支持用户定义的个性特质和评估维度
-
-
-## 贡献
-
-欢迎小伙伴们提交Issue和Pull Request来推进项目。
-
-### v0.1工作流
-
-```mermaid
----
-config:
-  flowchart:
-    curve: linear
----
-graph TD;
-	__start__([<p>__start__</p>]):::first
-	trait_analysis(trait_analysis)
-	situation_construction(situation_construction)
-	behavior_adaptation(behavior_adaptation)
-	quality_check(quality_check)
-	revise(revise)
-	__end__([<p>__end__</p>]):::last
-	__start__ --> trait_analysis;
-	behavior_adaptation --> quality_check;
-	quality_check -. &nbsp;stop&nbsp; .-> __end__;
-	quality_check -.-> revise;
-	revise --> behavior_adaptation;
-	situation_construction --> behavior_adaptation;
-	trait_analysis --> situation_construction;
-	classDef default fill:#f2f0ff,line-height:1.2
-	classDef first fill-opacity:0
-	classDef last fill:#bfb6fc
+# 编辑 .env 文件，添加你的 API 配置
+# OPENAI_API_KEY=your_api_key_here
+# OPENAI_BASE_URL=your_base_url_here
 ```
 
-### item评估
+### 3. 使用示例
 
-```mermaid
-%%{init:{ "flowchart": { "curve": "linear" } }}%%
-graph TD;
-  __start__([__start__]):::first
-  generate_pairs(generate_pairs)
-  batch_evaluations(batch_evaluations)
-  process_batch(process_batch)
-  aggregate_results(aggregate_results)
-  create_dataframe(create_dataframe)
-  __end__([__end__]):::last
-  __start__ --> generate_pairs;
-  aggregate_results --> create_dataframe;
-  batch_evaluations -. "end" .-> aggregate_results;
-  batch_evaluations -. "continue" .-> process_batch;
-  generate_pairs --> batch_evaluations;
-  process_batch --> batch_evaluations;
-  create_dataframe --> __end__;
-  classDef default fill:#f2f0ff,line-height:1.2
-  classDef first fill-opacity:0
-  classDef last fill:#bfb6fc
+#### 3.1 加载 NEO-PI-R 题目数据
+
+```python
+from src import data_loader
+
+data_loader = src.DataLoader()
+
+# 加载 NEO-PI-R 题目 (支持中文 'zh' 或英文 'en')
+neopir = data_loader.load("NEO-PI-R", 'zh')
+
+# 获取题目元信息
+neopir_meta = data_loader.load_meta("NEO-PI-R")
+```
+
+#### 3.2 提取目标题目与构念信息
+
+```python
+# 例如：提取自我意识(N4)第16题
+trait = 'N4'
+trait_name = f"{neopir_meta[trait]['domain']}-{neopir_meta[trait]['facet_name']}"
+item = neopir[trait]['items']['16']
+
+print(f"构念名称: {trait_name}")
+print(f"题目内容: {item}")
+```
+
+#### 3.3 生成情境判断题目
+
+```python
+from src.workflow import SJTAgent
+
+# 设置情境主题（可自定义场景）
+generator = SJTAgent(situation_theme="大学校园里的日常生活")
+
+# 生成 SJT 题目
+sjt_items = generator.generate_items(
+    trait_name=trait_name, 
+    item=item, 
+    n_item=2  # 生成2个SJT题目
+)
+
+# 查看生成的题目
+for i, sjt_item in enumerate(sjt_items, 1):
+    print(f"题目 {i}:")
+    print(sjt_item)
+    print("-" * 50)
+```
+
+### 4. 题目质量评估
+
+使用内置的成对比较评估功能：
+
+```bash
+# 详细使用方法请参考
+python eval_aigs.py
+```
+
+## 贡献指南
+
+我们热烈欢迎社区贡献！如果你有任何想法或发现了问题：
+
+1. **报告 Bug**：请在 [Issues](https://github.com/colehank/SJTAgent/issues) 中详细描述问题
+2. **功能建议**：欢迎提出新的功能想法
+3. **代码贡献**：欢迎提交 Pull Request
+
+### 贡献步骤
+
+```bash
+# 1. Fork 项目
+# 2. 创建分支
+git checkout -b feature/your-feature-name
+
+# 3. 提交更改
+git commit -m "Add your feature description"
+
+# 4. 推送到分支
+git push origin feature/your-feature-name
+
+# 5. 创建 Pull Request
 ```
