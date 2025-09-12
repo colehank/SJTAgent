@@ -3,9 +3,12 @@ from src.workflow import SJTAgent
 import src
 import concurrent.futures
 
+# data_loader是数据加载器
 data_loader = src.DataLoader()
 
-neopir = data_loader.load("NEO-PI-R", 'zh')
+# 这里是加载NEO-PI-R数据，语言是中文，可以选zh，可以选en
+neopir = data_loader.load("NEO-PI-R", 'zh') 
+# 这里是加载NEO-PI-R的元数据
 neopir_meta = data_loader.load_meta("NEO-PI-R")
 #%%
 traits = ["O5", "C5", "E2", "A4", "N4"] #Mussel's 5 big traits

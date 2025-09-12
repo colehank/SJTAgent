@@ -34,7 +34,8 @@ class SJTAgent:
 
     async def _generate_items(
         self, 
-        trait_name, 
+        trait_name,
+        trait_description,
         item, 
         n_item,
         model = 'gpt-4o',
@@ -46,6 +47,7 @@ class SJTAgent:
         res_td = await asyncio.to_thread(
             self.td.call,
             trait_name=trait_name,
+            trait_description=trait_description,
             item=item,
             response_format="json",
             model=model
@@ -126,7 +128,7 @@ class SJTAgent:
 
         return final_item
 
-    def generate_items(self, trait_name, item, n_item, model = 'gpt-4o'):
+    def generate_items(self, trait_name, trait_description, item, n_item, model = 'gpt-4o'):
         try:
             loop = asyncio.get_running_loop()
         except RuntimeError:
@@ -162,25 +164,3 @@ class SJTAgent:
         """
 
         return html_output
-# %%
-if __name__ == "__main__":
-    ipip120_fp = op.abspath(op.join("..", "datasets", "IPIP", "ipip120_zh.json"))
-    traits_fp = op.abspath(op.join("..", "datasets", "IPIP", "meta.json"))
-
-    with open(ipip120_fp, encoding="utf-8") as f:
-        ipip120 = json.load(f)
-    with open(traits_fp, encoding="utf-8") as f:
-        traits = json.load(f)
-
-    generator = SJTAgent(
-        situation_theme="大学校园里的日常生活",
-        max_concurrency=22
-    )
-
-    facet_id = "N1"
-    trait_name = traits[facet_id]["facet_name"]
-    item = ipip120[facet_id]['items']["1"]["item"]
-    n_item = 2  # 你当前的参数
-
-    items = generator.generate_items(trait_name, item, n_item)
-# %%
