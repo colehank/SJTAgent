@@ -26,15 +26,20 @@ class SJTAgent:
         sb_prompt_a = op.join(current_dir, "prompts", "scenario_builder_a.py")
         sb_prompt_b = op.join(current_dir, "prompts", "scenario_builder_b.py")
         td_prompt = op.join(current_dir, "prompts", "trait_decoder.py")
+        tp_prompt = op.join(current_dir, "prompts", "trait_polisher.py")
 
         self.ba = TemplateLLM(ba_prompt)
         self.sb_a = TemplateLLM(sb_prompt_a)
         self.sb_b = TemplateLLM(sb_prompt_b)
         self.td = TemplateLLM(td_prompt)
+        self.tp = TemplateLLM(tp_prompt)
 
     async def _generate_items(
         self, 
-        trait_name, 
+        trait_name,
+        trait_description,
+        low_score,
+        high_score,
         item, 
         n_item,
         model = 'gpt-4o',
@@ -46,7 +51,19 @@ class SJTAgent:
         res_td = await asyncio.to_thread(
             self.td.call,
             trait_name=trait_name,
+            trait_description=trait_description,
+            low_score=low_score,
+            high_score=high_score,
             item=item,
+            response_format="json",
+            model=model
+        )
+        res_tp = await asyncio.to_thread(
+            self.tp.call,
+            trait_name=trait_name,
+            trait_description=trait_description,
+            low_score=res_td['low_score'],
+            high_score=res_td['high_score'],
             response_format="json",
             model=model
         )
@@ -56,13 +73,13 @@ class SJTAgent:
             trait_name=trait_name,
             situation_theme=self.situation_theme,
             n_cue=n_item,
-            cognitive=res_td["cognitive"],
-            emotional=res_td["emotional"],
-            behavioral=res_td["behavioral"],
+            low_score=res_tp['low_score'],
+            high_score=res_tp['high_score'],
             response_format="json",
             model=model
         )
         self.res_td = res_td
+        self.res_tp = res_tp
         self.res_sb_a = cues
 
         cue_list = cues.get("cues", [])
@@ -76,9 +93,8 @@ class SJTAgent:
                         trait_name=trait_name,
                         cue=cue,
                         n_situ=1,
-                        cognitive=res_td["cognitive"],
-                        emotional=res_td["emotional"],
-                        behavioral=res_td["behavioral"],
+                        low_score=res_tp['low_score'],
+                        high_score=res_tp['high_score'],
                         response_format="json",
                         model=model
                     )
@@ -87,9 +103,8 @@ class SJTAgent:
                         self.ba.call,
                         situation=res_sb_b["situation"][0],
                         trait_name=trait_name,
-                        cognitive=res_td["cognitive"],
-                        emotional=res_td["emotional"],
-                        behavioral=res_td["behavioral"],
+                        low_score=res_tp['low_score'],
+                        high_score=res_tp['high_score'],
                         response_format="json",
                         model=model
                     )
@@ -116,6 +131,7 @@ class SJTAgent:
 
         final_item['n_item'] = n_item
         final_item['trait_decoder'] = res_td
+        final_item['trait_polisher'] = res_tp
         final_item['cues'] = cue_list
         if n_item == 1:
             final_item['items'] = results[0]
@@ -126,16 +142,30 @@ class SJTAgent:
 
         return final_item
 
-    def generate_items(self, trait_name, item, n_item, model = 'gpt-4o'):
+    def generate_items(
+        self, 
+        trait_name, 
+        trait_description, 
+        low_score,
+        high_score,
+        item, 
+        n_item, 
+        model = 'gpt-4o',
+        ):
         try:
             loop = asyncio.get_running_loop()
         except RuntimeError:
-            result = asyncio.run(self._generate_items(trait_name, item, n_item, model=model))
+            result = asyncio.run(self._generate_items(
+                trait_name,
+                trait_description,
+                low_score,
+                high_score,
+                item, n_item, model=model))
         else:
             import nest_asyncio
 
             nest_asyncio.apply()
-            result = loop.run_until_complete(self._generate_items(trait_name, item, n_item, model=model))
+            result = loop.run_until_complete(self._generate_items(trait_name, trait_description, item, n_item, model=model))
         return result
     
     def _repr_html_(self):
@@ -162,25 +192,3 @@ class SJTAgent:
         """
 
         return html_output
-# %%
-if __name__ == "__main__":
-    ipip120_fp = op.abspath(op.join("..", "datasets", "IPIP", "ipip120_zh.json"))
-    traits_fp = op.abspath(op.join("..", "datasets", "IPIP", "meta.json"))
-
-    with open(ipip120_fp, encoding="utf-8") as f:
-        ipip120 = json.load(f)
-    with open(traits_fp, encoding="utf-8") as f:
-        traits = json.load(f)
-
-    generator = SJTAgent(
-        situation_theme="大学校园里的日常生活",
-        max_concurrency=22
-    )
-
-    facet_id = "N1"
-    trait_name = traits[facet_id]["facet_name"]
-    item = ipip120[facet_id]['items']["1"]["item"]
-    n_item = 2  # 你当前的参数
-
-    items = generator.generate_items(trait_name, item, n_item)
-# %%
