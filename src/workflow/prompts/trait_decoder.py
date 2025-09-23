@@ -33,13 +33,15 @@ conditioned_frame = """
 心理构念(特质): $trait_name
 特质描述：$trait_description
 量表题目: $item
+高分特点：$high_score
+低分特点：$low_score
 """
 
 trait = "神经质-焦虑"
 item = """我是一个充满烦恼的人。"""
-trait_description ="""焦虑的个体忧虑、恐惧、容易担忧、紧张、神经过敏。得高分的人更可能有自由浮动的焦虑和恐惧。低分的人则是平静的、放松的。他们不会总是担心事情可能会出问题。
-高分特点：焦虑，容易感觉到危险和威胁，容易紧张、恐惧、担忧、不安。
-低分特点：心态平静，放松，不容易感到害怕，不会总是担心事情可能会出问题，情绪平静、放松、稳定"""
+trait_description ="焦虑的个体忧虑、恐惧、容易担忧、紧张、神经过敏。"
+high_score="得高分的人更可能有自由浮动的焦虑和恐惧。"
+low_score='低分的人则是平静的、放松的。他们不会总是担心事情可能会出问题。'
 
 one_shot_output = """
 high_score:
@@ -52,15 +54,17 @@ low_score:
 "behavioral": "在面对压力或挑战时，能够保持冷静和理智，展现出良好的情绪调节能力，行为表现沉着且有条理。"}
 """
 
-user_prompt = Template(conditioned_frame).substitute(
+one_shot_input = Template(conditioned_frame).substitute(
     trait_name=trait,
     item=item,
     trait_description=trait_description,
+    high_score=high_score,
+    low_score=low_score
 )
 
 prompt_template = [
     {'role': 'system', 'content': sys_prompt},
-    {'role': 'user', 'content': user_prompt},
+    {'role': 'user', 'content': one_shot_input},
     {'role': 'assistant', 'content': one_shot_output},
     {'role': 'user', 'content': conditioned_frame},
 ]

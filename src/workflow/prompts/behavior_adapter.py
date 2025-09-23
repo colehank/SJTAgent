@@ -37,9 +37,8 @@ conditioned_frame = """
 请在情景的约束下，根据构念及其相关的认知，行为与情绪特征设计该情景下不同特质水平的反应项：
 情景: $situation
 心理构念(特质): $trait_name
-认知特征: $cognitive
-情感特征: $emotional
-行为特征: $behavioral
+低分表现：$low_score
+高分表现：$high_score
 """
 trait_name = "外向性-社交"
 situation = "在社团活动中，一位陌生人突然邀请你加入他们的游戏活动，你会怎么做？"
@@ -58,17 +57,17 @@ one_shot_output="""
     ]
 }"""
 
-user_prompt = Template(conditioned_frame).substitute(
-    trait_name=trait_name,
-    situation=situation,
-    cognitive=cognitive,
-    emotional=emotional,
-    behavioral=behavioral,
-)
+# user_prompt = Template(conditioned_frame).substitute(
+#     trait_name=trait_name,
+#     situation=situation,
+#     cognitive=cognitive,
+#     emotional=emotional,
+#     behavioral=behavioral,
+# )
 
 prompt_template = [
     {'role': 'system', 'content': sys_prompt},
-    {'role': 'user', 'content': user_prompt},
-    {'role': 'assistant', 'content': one_shot_output},
+    # {'role': 'user', 'content': user_prompt},
+    # {'role': 'assistant', 'content': one_shot_output},
     {'role': 'user', 'content': conditioned_frame},
 ]

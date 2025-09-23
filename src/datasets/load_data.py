@@ -30,7 +30,7 @@ class DatasetConfig:
                 "zh": self.base_dir / "scales" / "SJTs" / "mussel_zh.json",
             },
             "_traits_definition": {
-                "en": self.base_dir / "TRAIT_DEF" / "BF_en.json",
+                "zh": self.base_dir / "TRAIT_DEF" / "BF_zh_detailed.json",
             },
             "aig_prompts_Li": {
                 "en": self.base_dir / "aig_prompts" / "Li_en.py",

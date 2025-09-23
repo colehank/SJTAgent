@@ -37,9 +37,8 @@ conditioned_frame = """
 
 触发事件: $cue
 心理构念(特质): $trait_name
-认知特征: $cognitive
-情感特征: $emotional
-行为特征: $behavioral
+低分特质描述: $low_score
+高分特质描述: $high_score
 """
 
 trait_name = "外向性-社交"
@@ -54,18 +53,18 @@ one_shot_output="""
     situation: ["在社团活动中，一位陌生人突然邀请你加入他们的游戏活动，你会怎么做？"]
 }"""
 
-user_prompt = Template(conditioned_frame).substitute(
-    cue=cue,
-    trait_name=trait_name,
-    n_situ=n_situ,
-    cognitive=cognitive,
-    emotional=emotional,
-    behavioral=behavioral,
-)
+# user_prompt = Template(conditioned_frame).substitute(
+#     cue=cue,
+#     trait_name=trait_name,
+#     n_situ=n_situ,
+#     cognitive=cognitive,
+#     emotional=emotional,
+#     behavioral=behavioral,
+# )
 
 prompt_template = [
     {'role': 'system', 'content': sys_prompt},
-    {'role': 'user', 'content': user_prompt},
-    {'role': 'assistant', 'content': one_shot_output},
+    # {'role': 'user', 'content': user_prompt},
+    # {'role': 'assistant', 'content': one_shot_output},
     {'role': 'user', 'content': conditioned_frame},
 ]

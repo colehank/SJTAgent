@@ -10,6 +10,7 @@ data_loader = src.DataLoader()
 neopir = data_loader.load("NEO-PI-R", 'zh') 
 # 这里是加载NEO-PI-R的元数据
 neopir_meta = data_loader.load_meta("NEO-PI-R")
+trait_descriptions = data_loader.load('_traits_definition', 'zh')
 #%%
 traits = ["O5", "C5", "E2", "A4", "N4"] #Mussel's 5 big traits
 
@@ -27,13 +28,22 @@ def generate_for_trait(
     trait,
     items,
     n_sjt_per_item=3,
-    model='gpt-4o'
+    model='gpt-5'
     ):
-    trait_name = f"{neopir_meta[trait]['domain']}-{neopir_meta[trait]['facet_name']}"
+    domain = neopir_meta[trait]['domain']
+    facet = neopir_meta[trait]['facet_name']
+    trait_name = f"{domain}-{facet}"
+    trait_description = trait_descriptions[domain]['facet_name'][facet]['description']
+    low_score = trait_descriptions[domain]['facet_name'][facet]['low_score']
+    high_score = trait_descriptions[domain]['facet_name'][facet]['high_score']
+
     results = []
     for item in items:
         sjts = generator.generate_items(
-            trait_name, 
+            trait_name,
+            trait_description,
+            low_score,
+            high_score,
             item,
             n_sjt_per_item, 
             model=model
