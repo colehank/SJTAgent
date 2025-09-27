@@ -61,6 +61,7 @@ one_shot_output = """
 """
 
 one_shot_input = Template(conditioned_frame).substitute(
+    target_population=target_population,
     trait_name=trait,
     item=item,
     trait_description=trait_description,
