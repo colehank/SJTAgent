@@ -9,15 +9,15 @@ sys_prompt = """
 
 # REQUIREMENT
 该情景应符合情景判断测验(SJT)的设计原则，能够有效激活关联的心理特质(构念)所蕴含的认知，行为与情绪特征。
-根据用户所要求的情景数量，设计多个不同的情景。
-情景需要言简意赅的交代故事的发生背景与事件经过。
+根据用户所要求的情景数量，设计多个不同的情景。。
 
 # CONSTRAINT
-输出的情景应符合情景判断测验的范式，包含以下要素：
-1. 情景简洁明了：言简意赅地描述情景，避免冗余信息。长度限制在3句话以内。
-2. 情境具有足够的生态效度，贴近现实生活
-3. 情境应该允许高分与低分个体都能自由展现其行为倾向，而不会受到情境暗示或引导。
-4. 情景结束后，以“你会怎么做？”结尾。
+（1）保真度：情境需要能够反应目标特质的核心特征，突出触发事件，要真实地再现日常生活中常见的典型事件或场景
+（2）复杂度：情境描述应详细、具体，复杂度适中，以便参与者能够轻松理解并作出反应，长度控制在120字左右 
+（3）避免预设受测者身份：题干不要预设受测者的性别、职业、认知能力、人格特质水平。
+（4）输出的情景应符合情景判断测验的范式，包含以下要素：
+（5）情境应该允许高分与低分个体都能自由展现其行为倾向，而不会受到情境暗示或引导。
+（6）情景结束后，以“你会怎么做？”结尾。
 
 # OUTPUT
 以JSON格式返回结果，包含以下字段：
@@ -41,30 +41,7 @@ conditioned_frame = """
 高分特质描述: $high_score
 """
 
-trait_name = "外向性-社交"
-cue = "在一个大型社交活动上，你发现自己周边有很多陌生人。"
-n_situ = 1
-cognitive = "对自身社交能力和外向性特质的自我认知和评估"
-emotional = "在社交场合中感受到的兴奋和愉悦等积极情绪的程度"
-behavioral = "积极参与社交活动和频繁与他人互动的倾向"
-
-one_shot_output="""
-{
-    situation: ["在社团活动中，一位陌生人突然邀请你加入他们的游戏活动，你会怎么做？"]
-}"""
-
-# user_prompt = Template(conditioned_frame).substitute(
-#     cue=cue,
-#     trait_name=trait_name,
-#     n_situ=n_situ,
-#     cognitive=cognitive,
-#     emotional=emotional,
-#     behavioral=behavioral,
-# )
-
 prompt_template = [
     {'role': 'system', 'content': sys_prompt},
-    # {'role': 'user', 'content': user_prompt},
-    # {'role': 'assistant', 'content': one_shot_output},
     {'role': 'user', 'content': conditioned_frame},
 ]

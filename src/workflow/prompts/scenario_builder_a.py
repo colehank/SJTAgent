@@ -10,8 +10,10 @@ sys_prompt = """你是一个心理学家,
 {
     cues: ["触发事件1", "触发事件2", "..."]
 }
-
-请确保分析准确深入，抓住题目核心测量的心理过程。只返回JSON格式数据，不要有其他文字。
+##要求
+1.请确保分析准确深入，抓住题目核心测量的心理过程。
+2.触发事件具有普遍适用性，适用于任何职业、任何人群。
+3.只返回JSON格式数据，不要有其他文字。
 """
 
 conditioned_frame = """
@@ -23,34 +25,7 @@ conditioned_frame = """
 高分特质描述: $high_score
 """
 
-trait_name = "外向性-社交"
-situation_theme = "大学校园里的日常生活"
-n_cue = 3
-cognitive = "对自身社交能力和外向性特质的自我认知和评估"
-emotional = "在社交场合中感受到的兴奋和愉悦等积极情绪的程度"
-behavioral = "积极参与社交活动和频繁与他人互动的倾向"
-
-one_shot_output="""
-{
-    "cues": [
-        "在一个大型社交活动上，你发现自己周边有很多陌生人。",
-        "你被邀请参加一个由同学组织的聚会，认识一些新朋友。",
-        "你在校园里遇到一个老朋友，TA邀请你一起参加一个有趣的活动。"
-    ]
-}"""
-
-# user_prompt = Template(conditioned_frame).substitute(
-#     trait_name=trait_name,
-#     situation_theme=situation_theme,
-#     n_cue=n_cue,
-#     cognitive=cognitive,
-#     emotional=emotional,
-#     behavioral=behavioral,
-# )
-
 prompt_template = [
     {'role': 'system', 'content': sys_prompt},
-    # {'role': 'user', 'content': user_prompt},
-    # {'role': 'assistant', 'content': one_shot_output},
     {'role': 'user', 'content': conditioned_frame},
 ]
