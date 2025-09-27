@@ -1,7 +1,6 @@
 # %%
 from lmitf import TemplateLLM
 import os.path as op
-import json
 import asyncio
 from tqdm import tqdm
 
@@ -10,7 +9,8 @@ class SJTAgent:
     def __init__(
         self, 
         situation_theme="大学校园里的日常生活", 
-        max_concurrency: int = 100
+        max_concurrency: int = 100,
+        show_progress: bool = True,
         ):
         """
         situation_theme: 场景主题
@@ -18,6 +18,7 @@ class SJTAgent:
         """
         self.situation_theme = situation_theme
         self.max_concurrency = max_concurrency
+        self.show_progress = show_progress
 
         # Get the directory where this module is located
         current_dir = op.dirname(op.abspath(__file__))
@@ -122,12 +123,17 @@ class SJTAgent:
         tasks = [process_cue(cue) for cue in cue_list]
 
         results = []
-        for fut in tqdm(
-            asyncio.as_completed(tasks),
-            total=len(tasks),
-            desc=f"Generating {trait_name}'s {n_item} sjts from source item",
-        ):
-            results.append(await fut)
+        if self.show_progress:
+            for fut in tqdm(
+                asyncio.as_completed(tasks),
+                total=len(tasks),
+                desc=f"Generating {trait_name}'s {n_item} sjts from source item",
+                leave=False
+            ):
+                results.append(await fut)
+        else:
+            for fut in asyncio.as_completed(tasks):
+                results.append(await fut)
 
         final_item['n_item'] = n_item
         final_item['trait_decoder'] = res_td
@@ -142,7 +148,7 @@ class SJTAgent:
 
         return final_item
 
-    def generate_items(
+    def run(
         self, 
         trait_name, 
         trait_description, 
@@ -165,12 +171,12 @@ class SJTAgent:
             import nest_asyncio
 
             nest_asyncio.apply()
-            result = loop.run_until_complete(self._generate_items(trait_name, trait_description, item, n_item, model=model))
+            result = loop.run_until_complete(self._generate_items(trait_name, trait_description, low_score, high_score, item, n_item, model=model))
         return result
     
     def _repr_html_(self):
         if not hasattr(self, 'res_td') or not hasattr(self, 'res_sb_a'):
-            return "<p>No generation results available. Please run <code>generate_items</code> first.</p>"
+            return "<p>No generation results available. Please run <code>run</code> first.</p>"
         import pandas as pd
         # Create DataFrame for trait decoder results
         td_df = pd.DataFrame([self.res_td]).T
@@ -192,3 +198,5 @@ class SJTAgent:
         """
 
         return html_output
+
+#%%
