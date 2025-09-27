@@ -8,7 +8,8 @@ from tqdm import tqdm
 class SJTAgent:
     def __init__(
         self, 
-        situation_theme="大学校园里的日常生活", 
+        situation_theme="大学校园里的日常生活",
+        target_population="大学生",
         max_concurrency: int = 100,
         show_progress: bool = True,
         ):
@@ -17,6 +18,7 @@ class SJTAgent:
         max_concurrency: 最大并发度（根据你的接口限速能力调整）
         """
         self.situation_theme = situation_theme
+        self.target_population = target_population
         self.max_concurrency = max_concurrency
         self.show_progress = show_progress
 
@@ -52,6 +54,7 @@ class SJTAgent:
         res_td = await asyncio.to_thread(
             self.td.call,
             trait_name=trait_name,
+            target_population=self.target_population,
             trait_description=trait_description,
             low_score=low_score,
             high_score=high_score,
@@ -62,6 +65,7 @@ class SJTAgent:
         res_tp = await asyncio.to_thread(
             self.tp.call,
             trait_name=trait_name,
+            target_population=self.target_population,
             trait_description=trait_description,
             low_score=res_td['low_score'],
             high_score=res_td['high_score'],
@@ -72,6 +76,7 @@ class SJTAgent:
         cues = await asyncio.to_thread(
             self.sb_a.call,
             trait_name=trait_name,
+            target_population=self.target_population,
             situation_theme=self.situation_theme,
             n_cue=n_item,
             low_score=res_tp['low_score'],
@@ -92,6 +97,7 @@ class SJTAgent:
                     res_sb_b = await asyncio.to_thread(
                         self.sb_b.call,
                         trait_name=trait_name,
+                        target_population=self.target_population,
                         cue=cue,
                         n_situ=1,
                         low_score=res_tp['low_score'],
@@ -104,6 +110,7 @@ class SJTAgent:
                         self.ba.call,
                         situation=res_sb_b["situation"][0],
                         trait_name=trait_name,
+                        target_population=self.target_population,
                         low_score=res_tp['low_score'],
                         high_score=res_tp['high_score'],
                         response_format="json",
