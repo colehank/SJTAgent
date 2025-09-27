@@ -30,9 +30,6 @@ pip install -r requirements.txt
 ### 2. 配置 API 密钥
 
 ```bash
-# 复制配置文件模板
-cp .env_example .env
-
 # 编辑 .env 文件，添加你的 API 配置
 # OPENAI_API_KEY=your_api_key_here
 # OPENAI_BASE_URL=your_base_url_here
@@ -40,53 +37,10 @@ cp .env_example .env
 
 ### 3. 使用示例
 
-#### 3.1 加载 NEO-PI-R 题目数据
+#### 3.1 生成 SJT 题目
 
-```python
-from src import data_loader
-
-data_loader = src.DataLoader()
-
-# 加载 NEO-PI-R 题目 (支持中文 'zh' 或英文 'en')
-neopir = data_loader.load("NEO-PI-R", 'zh')
-
-# 获取题目元信息
-neopir_meta = data_loader.load_meta("NEO-PI-R")
-```
-
-#### 3.2 提取目标题目与构念信息
-
-```python
-# 例如：提取自我意识(N4)第16题
-trait = 'N4'
-trait_name = f"{neopir_meta[trait]['domain']}-{neopir_meta[trait]['facet_name']}"
-item = neopir[trait]['items']['16']
-
-print(f"构念名称: {trait_name}")
-print(f"题目内容: {item}")
-```
-
-#### 3.3 生成情境判断题目
-
-```python
-from src.workflow import SJTAgent
-
-# 设置情境主题（可自定义场景）
-generator = SJTAgent(situation_theme="大学校园里的日常生活")
-
-# 生成 SJT 题目
-sjt_items = generator.generate_items(
-    trait_name=trait_name, 
-    item=item, 
-    n_item=2  # 生成2个SJT题目
-)
-
-# 查看生成的题目
-for i, sjt_item in enumerate(sjt_items, 1):
-    print(f"题目 {i}:")
-    print(sjt_item)
-    print("-" * 50)
-```
+见 `SJTAgent-text.py` 
+- **输出格式**：JSON 文件 + Word 文档
 
 ### 4. 题目质量评估
 

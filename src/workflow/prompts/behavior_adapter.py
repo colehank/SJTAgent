@@ -27,11 +27,17 @@ sys_prompt = """
 # OUTPUT
 以JSON格式返回结果，包含以下字段：
 {
-    options: {
-        "A": "行为选项A描述", "level": "lowest",
-        "B": "行为选项B描述", "level": "low",
-        "C": "行为选项C描述", "level": "high",
-        "D": "行为选项D描述", "level": "highest"
+    "options": {
+        "A": "行为选项A描述",
+        "B": "行为选项B描述",
+        "C": "行为选项C描述",
+        "D": "行为选项D描述",
+        "scoring": {
+            "A": "lowest",
+            "B": "low",
+            "C": "high",
+            "D": "highest"
+        }
     }
 }
 

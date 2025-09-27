@@ -16,6 +16,7 @@ class SJTRunner:
         self, 
         generator: Optional[SJTAgent] = None,
         situation_theme: Optional[str] = None,
+        target_population: Optional[str] = None,
         scale: Optional[dict] = None,
         meta: Optional[dict] = None,
         ):
@@ -36,6 +37,7 @@ class SJTRunner:
         if generator is None:
             self.generator = SJTAgent(
                 situation_theme=situation_theme,
+                target_population=target_population,
                 show_progress=False, # will be handled in SJTRunner
             )
         else:
@@ -182,6 +184,7 @@ class SJTRunner:
         model: str = 'gpt-5-mini',
         trait_concurrency: Optional[int] = None,
         show_progress: bool = True,
+        progress_callback: Optional[callable] = None,
     ):
         """
         Asynchronously generates items by scheduling each trait-item pair concurrently.
@@ -192,6 +195,8 @@ class SJTRunner:
             total number of tasks (``len(traits) * len(items[trait])``), i.e. no throttling.
         show_progress : bool, optional
             Whether to display tqdm progress bars. Defaults to True.
+        progress_callback : callable, optional
+            A callback function to report progress. Should accept (current, total, details) parameters.
         """
         if self.generator is None:
             raise ValueError("Generator must be set before calling _cook_async method")
@@ -212,8 +217,10 @@ class SJTRunner:
 
         task_semaphore = asyncio.Semaphore(concurrency_limit)
         all_items = {trait: [None] * trait_counts[trait] for trait in traits}
+        completed_tasks = 0
 
         async def process_trait_item(trait_key: str, item_index: int, source_item):
+            nonlocal completed_tasks
 
             async with task_semaphore:
                 trait_conf = confs[trait_key]
@@ -227,6 +234,13 @@ class SJTRunner:
                         n_item=n_item,
                         model=model,
                     )
+                    completed_tasks += 1
+                    if progress_callback:
+                        progress_callback(
+                            completed_tasks,
+                            total_tasks,
+                            f"已完成 {trait_key} 特质的第 {item_index + 1} 个题目"
+                        )
                 except Exception as exc:  # pragma: no cover - surface trait context
                     raise RuntimeError(
                         f"Failed to generate items for trait {trait_key} at index {item_index}"
@@ -267,7 +281,8 @@ class SJTRunner:
         model: str = 'gpt-5-mini',
         trait_concurrency: Optional[int] = None,
         show_progress: bool = True,
-        
+        progress_callback: Optional[callable] = None,
+
         save_results: Optional[bool] = False,
         results_dir: str | None = None,
         detailed_fname: str = 'results_detailed',
@@ -292,11 +307,13 @@ class SJTRunner:
             total number of tasks (``len(traits) * len(items[trait])``), i.e. no throttling.
         show_progress : bool, optional
             Whether to display tqdm progress bars. Defaults to True.
+        progress_callback : callable, optional
+            A callback function to report progress. Should accept (current, total, details) parameters.
         Returns
         -------
         dict
             A dictionary where keys are trait names and values are lists of generated items.
-        
+
         """
         if hasattr(self, 'items') and hasattr(self, 'confs') and items is None and confs is None:
             confs = self.confs
@@ -314,6 +331,7 @@ class SJTRunner:
                 model=model,
                 trait_concurrency=trait_concurrency,
                 show_progress=show_progress,
+                progress_callback=progress_callback,
             )
 
         try:
@@ -343,6 +361,7 @@ class SJTRunner:
         import os.path as op
         import json
         import os
+        from .res2doc import res_to_doc
         
         final_item = {
             trait: {
@@ -356,6 +375,7 @@ class SJTRunner:
         os.makedirs(results_dir, exist_ok=True)
         p_detailed = op.join(results_dir, f'{detailed_fname}.json')
         p = op.join(results_dir, f'{fname}.json')
+        p_docx = op.join(results_dir, f'{fname}.docx')
         
         with open(p_detailed, 'w', encoding='utf-8') as f:
             json.dump(all_items, f, ensure_ascii=False, indent=2)
@@ -363,3 +383,5 @@ class SJTRunner:
         with open(p, 'w', encoding='utf-8') as f:
             json.dump(final_item, f, ensure_ascii=False, indent=2)
         print(f"Results saved to {p}")
+        res_to_doc(final_item, p_docx)
+        print(f"Results document saved to {p_docx}")
