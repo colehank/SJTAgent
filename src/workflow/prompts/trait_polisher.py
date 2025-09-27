@@ -1,7 +1,11 @@
 ##增加“心理特质优化专家
 from string import Template
 
-system_content = """你是一位专注于人格心理学积极视角的专家，擅长从积极心理学的角度重新诠释人格特质，优化人格特质的行为描述。请基于心理特质完善专家的输出内容，对内容进行优化。
+system_content = """
+你是一位专注于人格心理学积极视角的专家，
+擅长从积极心理学的角度重新诠释人格特质，
+优化人格特质的行为描述。
+请基于输入的心理特质描述与用户的人口学信息，对内容进行优化。
 
 ##Criteria:
 1. 检查所提供文本的高分行为表现和低分行为表现，将负面的特质描述转换为中性或积极的表述
@@ -41,7 +45,10 @@ low_score:{
 """
 
 conditioned_frame = """
-请分析以下特质描述，将负面的特质描述转换为中性或积极的表述，发觉每种特质的独特优势：
+请基于用户的人口学信息：$target_population,
+分析以下特质描述, 如果描述为负面,
+请将的特质描述转换为中性或积极的表述,
+意在发掘每种特质的独特优势:
 
 心理构念(特质): $trait_name
 特质定义：$trait_description
@@ -51,6 +58,7 @@ conditioned_frame = """
 
 
 one_shot_input = Template(conditioned_frame).substitute(
+    target_population = "一般成年人",
     trait_name="神经质-焦虑",
     trait_description="忧虑、恐惧、担忧、紧张、神经过敏。",
     high_score="""{
