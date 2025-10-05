@@ -8,7 +8,7 @@ SITUATION_THEME = "日常生活中的普遍情景" #情境主题
 TARGET_POPULATION = '普通成年人' #目标人群
 MODEL = 'deepseek-v3.1-thinking' #使用的基座LLM
 
-RESULT_DIR = 'output'  # 保存结果的目录
+RESULT_DIR = 'output/batch'  # 保存结果的目录
 RESULT_SJT_FN = 'sjt-text' # 保存结果的文件名
 RESULT_DETAILED_SJT_FN = 'sjt-text_detailed' # 保存结果的详细文件名
 
@@ -19,22 +19,18 @@ neopir_meta = data_loader.load_meta(SCALE)# 这里是加载NEO-PI-R的元数据
 available_traits = list(neopir.keys())
 assert all(trait in available_traits for trait in TRAITS), \
     f"Some traits are not available. Available traits: {available_traits}"
-
-trait_knowledge = {trait: neopir[trait]['facet_name'] for trait in available_traits}
-available_traits_names = [f'{neopir[trait]['facet_name']}' for trait in available_traits]
-
 # %%
 runner = SJTRunner(
     situation_theme=SITUATION_THEME,
     scale=neopir,
     meta=neopir_meta,
-    target_population='普通成年人',
+    target_population=TARGET_POPULATION,
     )
 
 all_items = runner.cook_async(
     TRAITS,
     n_item=N_ITEM,
-    model='gpt-5-mini',
+    model=MODEL,
     save_results=True,
     results_dir=RESULT_DIR,
     detailed_fname=RESULT_DETAILED_SJT_FN,
